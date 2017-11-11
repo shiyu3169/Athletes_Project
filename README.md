@@ -1,7 +1,3 @@
-My name is Shiyu Wang. I'm graduate student at northeastern. I have some experiences in web development with MEAN and Angular. 
-
-# AngularFourMEANSeed
-
 After you clone this repository and run "npm install"
 To start the project
 Open two terminals, One to start the front end, One to start the backend
@@ -44,3 +40,4 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
