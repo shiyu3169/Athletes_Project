@@ -228,6 +228,7 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_widget_widget_edit_widget_edit_component__ = __webpack_require__("../../../../../src/app/components/widget/widget-edit/widget-edit.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_widget_widget_list_widget_list_component__ = __webpack_require__("../../../../../src/app/components/widget/widget-list/widget-list.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_widget_widget_edit_widget_image_flickr_image_search_flickr_image_search_component__ = __webpack_require__("../../../../../src/app/components/widget/widget-edit/widget-image/flickr-image-search/flickr-image-search.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
 /**
  * Created by sesha on 7/26/17.
  */
@@ -246,9 +247,10 @@ AppModule = __decorate([
 
 
 
+
 var APP_ROUTES = [
     { path: 'test', component: __WEBPACK_IMPORTED_MODULE_1__components_test_test_component__["a" /* TestComponent */] },
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_2__components_user_login_login_component__["a" /* LoginComponent */] },
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_15__components_home_home_component__["a" /* HomeComponent */] },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_2__components_user_login_login_component__["a" /* LoginComponent */] },
     { path: 'register', component: __WEBPACK_IMPORTED_MODULE_4__components_user_register_register_component__["a" /* RegisterComponent */] },
     { path: 'user/:uid', component: __WEBPACK_IMPORTED_MODULE_3__components_user_profile_profile_component__["a" /* ProfileComponent */] },
@@ -290,7 +292,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"container\">\r\n\r\n  <h1>\r\n    Angular 4 MEAN stack app!\r\n  </h1>\r\n\r\n\r\n  <h3>\r\n    App works\r\n  </h3>\r\n\r\n\r\n  <h4>\r\n    <a href=\"test\">Test MongoDB</a>\r\n  </h4>\r\n\r\n</div>\r\n\r\n"
+module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <div class=\"container-fluid\">\r\n    <a routerLink=\"/\"\r\n       class=\"navbar-header pull-left navbar-brand thick\">\r\n      <b class=\"sw-text-white\">Athelete</b>\r\n    </a>\r\n    <p class=\"navbar-text pull-right\">\r\n      <button routerLink=\"/login\"\r\n              class=\"btn btn-xs navbar-link sw-button-transparent\">\r\n        <b>Login</b>\r\n      </button>\r\n      <button routerLink=\"/register\"\r\n              class=\"btn btn-xs navbar-link sw-button-transparent\">\r\n        <b>Sign up</b>\r\n      </button>\r\n    </p>\r\n  </div>\r\n</nav>\r\n\r\n<div class=\"container\">\r\n  <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\r\n    <!-- Indicators -->\r\n    <ol class=\"carousel-indicators\">\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\">\r\n      <div class=\"item active\">\r\n        <img class=\"sw-img-slide\"\r\n             src=\"https://www.harmonygenevemarathon.com/images/uploads/heroes/marathon-header-en.jpg\"\r\n             alt=\"Los Angeles\">\r\n      </div>\r\n\r\n      <div class=\"item\">\r\n        <img class=\"item active\"\r\n             src=\"https://media.wired.com/photos/59c7ae866d668e01c65b1046/2:1/w_2500,c_limit/Berlin-FA-852825046.jpg\"\r\n             alt=\"Chicago\">\r\n      </div>\r\n\r\n      <div class=\"item\">\r\n        <img class=\"item active\"\r\n             src=\"https://eversport.tv/sites/default/files/marathon-frankfurt-.jpg\"\r\n             alt=\"New york\">\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Left and right controls -->\r\n    <a class=\"left carousel-control\" href=\"#myCarousel\" data-slide=\"prev\">\r\n      <span class=\"glyphicon glyphicon-chevron-left\"></span>\r\n      <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#myCarousel\" data-slide=\"next\">\r\n      <span class=\"glyphicon glyphicon-chevron-right\"></span>\r\n      <span class=\"sr-only\">Next</span>\r\n    </a>\r\n  </div>\r\n</div>\r\n\r\n<hr/>\r\n\r\n<div class=\"container\">\r\n  <div class=\"input-group\">\r\n    <input [(ngModel)]=\"searchText\"\r\n           type=\"text\"\r\n           class=\"form-control\"\r\n           placeholder=\"Search events\">\r\n    <span class=\"input-group-btn\">\r\n           <a (click)=\"searchEvents()\" class=\"btn btn-default\" type=\"button\">\r\n               <span class=\"glyphicon glyphicon-search\"></span>\r\n           </a>\r\n   </span>\r\n  </div>\r\n  <div>\r\n    <div *ngFor = \"let result of results\">\r\n      <img (click)=\"selectEvent(result)\"\r\n           width=\"100%\"\r\n           [src] = \"['https://farm' + result+ '.staticflickr.com/' + result.server + '/' +   result.id + '_' + result.secret + '_s.jpg']\"/>\r\n      <p></p>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -313,6 +315,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var HomeComponent = (function () {
     function HomeComponent() {
     }
+    HomeComponent.prototype.searchEvents = function () {
+    };
+    HomeComponent.prototype.selectEvent = function (event) {
+    };
     HomeComponent.prototype.ngOnInit = function () {
     };
     return HomeComponent;
