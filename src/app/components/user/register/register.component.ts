@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import {UserService} from '../../../services/user.service.client';
 import {User} from '../../../models/user.model.client';
 import {NgForm} from '@angular/forms';
+import {SharedService} from "../../../services/shared.service.client";
 
 @Component({
   selector: 'app-register',
@@ -20,7 +21,7 @@ export class RegisterComponent implements OnInit {
   passwordError: boolean;
   user: User;
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private sharedService: SharedService, private userService: UserService, private router: Router) { }
 
   register() {
 
@@ -34,31 +35,14 @@ export class RegisterComponent implements OnInit {
     if (this.password !== this.verifyPassword) {
       this.passwordError = true;
     } else {
-      this.userService.findUserByUsername(this.username)
+      this.userService.register(this.username, this.password)
         .subscribe(
-          (user: User) => {
-            this.user = user;
-            if (!this.user) {
-              const newUser: User = {
-                username: this.username,
-                password: this.password,
-                firstName: '',
-                lastName: '',
-                email: ''
-              };
-              this.userService.createUser(newUser)
-                .subscribe(
-                  (newU: User) => {
-                    this.router.navigate(['user', newU._id]);
-                  }
-                  ,
-                  (error: any) => {
-                    this.usernameError = true;
-                  });
-            } else {
-              this.usernameError = true;
-            }
-      }
+          (user: any) => {
+            this.router.navigate(['/user']);
+          },
+          (error: any) => {
+            this.usernameError = true;
+          }
         );
     }
   }

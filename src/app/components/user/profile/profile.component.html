@@ -3,7 +3,7 @@
   <div class="container-fluid">
 
     <!--heading on the nav bar-->
-    <a routerLink="/user/{{uid}}"
+    <a routerLink="/user"
        class="navbar-header pull-left navbar-brand thick">
       <b class="sw-text-white">Profile</b>
     </a>
@@ -84,14 +84,14 @@
 
   <a class="btn btn-primary btn-block"
      routerLink="/user/{{uid}}/website">Websites</a>
-  <a class="btn btn-danger btn-block "
-     routerLink="/login" >Logout</a>
+  <a class="btn btn-danger btn-block"
+     (click)="logout()">Logout</a>
 </div>
 
 <!-- Footer -->
 <nav class="navbar navbar-default navbar-fixed-bottom sw-nav-blue">
   <div class="container-fluid">
-    <a routerLink="/user/{{uid}}"
+    <a routerLink="/user"
        class="navbar-text pull-right">
       <span class="glyphicon glyphicon-user sw-text-white"></span>
     </a>
