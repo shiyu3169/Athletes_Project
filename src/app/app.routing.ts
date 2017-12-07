@@ -20,7 +20,7 @@ import {WidgetEditComponent} from './components/widget/widget-edit/widget-edit.c
 import {WidgetListComponent} from './components/widget/widget-list/widget-list.component';
 import {FlickrImageSearchComponent} from './components/widget/widget-edit/widget-image/flickr-image-search/flickr-image-search.component';
 import {AuthenticationService} from './services/authentication.service.client';
-import {HomeComponent} from "./components/home/home.component";
+import {HomeComponent} from './components/home/home.component';
 
 const APP_ROUTES: Routes = [
   {path: 'test', component: TestComponent},

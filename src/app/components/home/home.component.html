@@ -81,5 +81,61 @@
       <p></p>
     </div>
   </div>
+  <hr/>
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="col-xs-2">
+      </div>
+      <div class="col-xs-10">
+        <h3>Weather Tracking</h3>
+      </div>
+      <form (ngSubmit)="searchWeather()"
+            #f ="ngForm">
+        <div>
+          <div class="form-group col-xs-6">
+            <input type="text"
+                   id="state"
+                   name="state"
+                   required
+                   ngModel
+                   placeholder="Specify the state"
+                   class="form-control"
+                   #state="ngModel"/>
+          </div>
+          <span class="help-block"
+                *ngIf="!state.valid && state.touched">Please enter city!</span>
+          <div class="form-group col-xs-6">
+            <input type="text"
+                   id="city"
+                   name="city"
+                   required
+                   ngModel
+                   placeholder="Specify the city"
+                   class="form-control"
+                   #city="ngModel"/>
+          </div>
+        </div>
+        <span class="help-block"
+              *ngIf="!city.valid && city.touched">Please enter city!</span>
+        <button class="btn btn-success btn-block"
+                type="submit"
+                [disabled]="!f.valid">Check</button>
+      </form>
+    </div>
+    <div class="col-xs-6">
+      <div class="col-xs-4">
+      </div>
+      <div class="col-xs-8">
+        <img src={{result.icon_url}}>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-body">Weather: {{result.weather}}</div>
+        <div class="panel-body">Weather: {{result.weather}}</div>
+        <div class="panel-body">Temprature: {{result.temperature_string}}</div>
+        <div class="panel-body">Feels like: {{result.feelslike_string}}</div>
+        <div class="panel-body">Wind: {{result.wind_string}}</div>
+      </div>
+    </div>
+  </div>
 </div>
 
