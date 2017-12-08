@@ -121,7 +121,8 @@
   </form>
 
   <a class="btn btn-primary btn-block"
-     routerLink="/user/{{uid}}/website">Websites</a>
+     *ngIf="role === 'organization'"
+     routerLink="/user/{{uid}}/event">Events</a>
   <a class="btn btn-danger btn-block"
      (click)="logout()">Logout</a>
 </div>

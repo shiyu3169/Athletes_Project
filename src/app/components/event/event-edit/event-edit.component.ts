@@ -6,8 +6,8 @@ import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-website-edit',
-  templateUrl: './website-edit.component.html',
-  styleUrls: ['./website-edit.component.css']
+  templateUrl: './event-edit.component.html',
+  styleUrls: ['./event-edit.component.css']
 })
 export class WebsiteEditComponent implements OnInit {
 

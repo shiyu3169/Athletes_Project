@@ -12,9 +12,9 @@ export class WebsiteService {
 
   constructor(private http: Http) {}
 
-  // adds the website parameter instance to the local websites array. The new website's developerId is set to the userId parameter
+  // adds the event parameter instance to the local websites array. The new event's developerId is set to the userId parameter
   createWebsite(userId: String, website: Website) {
-    const url = this.baseUrl + '/api/user/' + userId + '/website';
+    const url = this.baseUrl + '/api/user/' + userId + '/event';
     return this.http.post(url, website)
       .map(
         (response: Response) => {
@@ -25,7 +25,7 @@ export class WebsiteService {
 
   // retrieves the websites in local websites array whose developerId matches the parameter userId
   findWebsitesByUser(userId: String) {
-    const url = this.baseUrl + '/api/user/' + userId + '/website';
+    const url = this.baseUrl + '/api/user/' + userId + '/event';
     return this.http.get(url)
       .map(
         (response: Response) => {
@@ -34,9 +34,9 @@ export class WebsiteService {
       );
   }
 
-  // retrieves the website in local websites array whose _id matches the websiteId parameter
+  // retrieves the event in local websites array whose _id matches the websiteId parameter
   findWebsiteById(websiteId: String) {
-    const url = this.baseUrl + '/api/website/' + websiteId;
+    const url = this.baseUrl + '/api/event/' + websiteId;
     return this.http.get(url)
       .map(
         (response: Response) => {
@@ -45,9 +45,9 @@ export class WebsiteService {
       );
   }
 
-  // updates the website in local websites array whose _id matches the websiteId parameter
+  // updates the event in local websites array whose _id matches the websiteId parameter
   updateWebsite(websiteId: String, website: Website) {
-    const url = this.baseUrl + '/api/website/' + websiteId;
+    const url = this.baseUrl + '/api/event/' + websiteId;
     return this.http.put(url, website)
       .map(
         (response: Response) => {
@@ -56,9 +56,9 @@ export class WebsiteService {
       );
   }
 
-  // removes the website from local websites array whose _id matches the websiteId parameter
+  // removes the event from local websites array whose _id matches the websiteId parameter
   deleteWebsite(websiteId: String) {
-    const url = this.baseUrl + '/api/website/' + websiteId;
+    const url = this.baseUrl + '/api/event/' + websiteId;
     return this.http.delete(url)
       .map(
         (response: Response) => {

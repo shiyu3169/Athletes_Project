@@ -6,8 +6,8 @@ import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-website-new',
-  templateUrl: './website-new.component.html',
-  styleUrls: ['./website-new.component.css']
+  templateUrl: './event-new.component.html',
+  styleUrls: ['./event-new.component.css']
 })
 export class WebsiteNewComponent implements OnInit {
 

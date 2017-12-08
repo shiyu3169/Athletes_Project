@@ -2,11 +2,11 @@ module.exports = function (app) {
 
   var websiteModel = require('../../model/website/website.model.server');
 
-  app.post("/api/user/:uid/website", createWebsite);
-  app.get("/api/user/:uid/website", findAllWebsitesForUser);
-  app.get("/api/website/:wid", findWebsiteById);
-  app.put("/api/website/:wid", updateWebsite);
-  app.delete("/api/website/:wid", deleteWebsite);
+  app.post("/api/user/:uid/event", createWebsite);
+  app.get("/api/user/:uid/event", findAllWebsitesForUser);
+  app.get("/api/event/:wid", findWebsiteById);
+  app.put("/api/event/:wid", updateWebsite);
+  app.delete("/api/event/:wid", deleteWebsite);
 
   function createWebsite(req, res) {
     var userId = req.params["uid"];

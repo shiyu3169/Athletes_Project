@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WebsiteEditComponent } from './website-edit.component';
+import { WebsiteEditComponent } from './event-edit.component';
 
 describe('WebsiteEditComponent', () => {
   let component: WebsiteEditComponent;
