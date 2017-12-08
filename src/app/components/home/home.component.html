@@ -6,23 +6,23 @@
     </a>
     <p class="navbar-text pull-right">
       <button routerLink="/login"
-              *ngIf="user === ''"
+              *ngIf="role === ''"
               class="btn btn-xs navbar-link sw-button-transparent">
         <b>Login</b>
       </button>
-      <button routerLink="/register"
-              *ngIf="user === ''"
+      <button routerLink="/choose"
+              *ngIf="role === ''"
               class="btn btn-xs navbar-link sw-button-transparent">
         <b>Sign up</b>
       </button>
       <button routerLink="/user"
-         *ngIf="user !== ''"
+         *ngIf="role !== ''"
          class="btn btn-xs navbar-link sw-button-transparent glyphicon glyphicon-user sw-icon-padding sw-text-white">
       </button>
     </p>
   </div>
 </nav>
-
+<p>role: {{role}}</p>
 <div class="container">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->

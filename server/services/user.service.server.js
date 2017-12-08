@@ -1,7 +1,4 @@
-
-
 module.exports = function (app) {
-
   var userModel = require('../../model/user/user.model.server');
   var passport = require('passport');
   var LocalStrategy = require('passport-local').Strategy;
@@ -111,7 +108,10 @@ module.exports = function (app) {
   }
 
   function register(req, res) {
+    var role = req.query["role"];
+    console.log(role);
     var user = req.body;
+    user.role = role;
     user.password = bcrypt.hashSync(user.password);
     userModel.findUserByUsername(user.username)
       .then(function (data) {

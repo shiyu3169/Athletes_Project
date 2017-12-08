@@ -1,3 +1,16 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <a routerLink="/"
+       class="navbar-header pull-left navbar-brand thick">
+      <b class="sw-text-white">Athelete</b>
+    </a>
+    <a routerLink="/"
+       class="navbar-header pull-left navbar-brand thick">
+      <b class="sw-text-white">Home</b>
+    </a>
+  </div>
+</nav>
+
 <div class="container">
   <div *ngIf="usernameError"
        class="alert alert-danger" >
@@ -50,6 +63,6 @@
        type="submit"
        [disabled]="!f.valid">Register</button>
     <button class="btn btn-danger btn-block"
-       routerLink="/login" >Cancel</button>
+       routerLink="/choose" >Cancel</button>
   </form>
 </div>

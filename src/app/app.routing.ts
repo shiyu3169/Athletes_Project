@@ -3,9 +3,7 @@
  */
 
 import {Routes, RouterModule} from '@angular/router';
-// import {HomeComponent} from './components/home/home.component';
 import {ModuleWithProviders} from '@angular/core';
-import {TestComponent} from './components/test/test.component';
 import {LoginComponent} from './components/user/login/login.component';
 import {ProfileComponent} from './components/user/profile/profile.component';
 import {RegisterComponent} from './components/user/register/register.component';
@@ -21,14 +19,14 @@ import {WidgetListComponent} from './components/widget/widget-list/widget-list.c
 import {FlickrImageSearchComponent} from './components/widget/widget-edit/widget-image/flickr-image-search/flickr-image-search.component';
 import {AuthenticationService} from './services/authentication.service.client';
 import {HomeComponent} from './components/home/home.component';
+import {ChooseComponent} from './components/user/choose/choose.component';
 
 const APP_ROUTES: Routes = [
-  {path: 'test', component: TestComponent},
   {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'choose', component: ChooseComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'user', component: ProfileComponent, canActivate: [AuthenticationService] },
-  // {path: 'user/:uid', component: ProfileComponent},
   {path: 'user/:uid/website', component: WebsiteListComponent, canActivate: [AuthenticationService] },
   {path: 'user/:uid/website/new', component: WebsiteNewComponent, canActivate: [AuthenticationService] },
   {path: 'user/:uid/website/:wid', component: WebsiteEditComponent, canActivate: [AuthenticationService] },

@@ -16,7 +16,8 @@ export class UserService {
   constructor(private http: Http, private sharedService: SharedService, private router: Router) {}
 
   register(username, password) {
-    const url = this.baseUrl + '/api/register';
+    let url = this.baseUrl + '/api/register?role=';
+    url += this.sharedService.role;
     const credentials = {
       username: username,
       password: password

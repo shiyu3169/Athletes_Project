@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {SharedService} from '../../../services/shared.service.client';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-choose',
@@ -7,7 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChooseComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sharedService: SharedService, private router: Router) { }
+
+  runnerRegister() {
+    this.sharedService.role = 'runner';
+    this.router.navigate(['/register']);
+  }
+
+  volunteerRegister() {
+    this.sharedService.role = 'volunteer';
+    this.router.navigate(['/register']);
+  }
+
+  organizationRegister() {
+    this.sharedService.role = 'organization';
+    this.router.navigate(['/register']);
+  }
 
   ngOnInit() {
   }

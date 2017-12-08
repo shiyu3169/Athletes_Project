@@ -22,13 +22,22 @@ export class ProfileComponent implements OnInit {
   prevUsername: String;
   usernameTaken: boolean;
   submitSuccess: boolean;
+  role: String;
+  gender: String;
+  organization: String;
+  intro: String;
+
   user: User = {
     _id: this.uid,
     username: this.username,
     password: '',
     email: this.email,
     firstName: this.firstName,
-    lastName: this.lastName
+    lastName: this.lastName,
+    role: this.role,
+    gender: this.gender,
+    organization: this.organization,
+    intro: this.intro
   };
   aUser: User;
 
@@ -41,9 +50,13 @@ export class ProfileComponent implements OnInit {
     this.email = this.profileForm.value.email;
     this.firstName = this.profileForm.value.firstName;
     this.lastName = this.profileForm.value.lastName;
+    this.gender = this.profileForm.value.gender;
+    this.organization = this.profileForm.value.organization;
+    this.intro = this.profileForm.value.intro;
 
     this.usernameTaken = false;
     this.submitSuccess = false;
+
     this.userService.findUserByUsername(this.username)
       .subscribe(
         (user: User) => {
@@ -56,7 +69,11 @@ export class ProfileComponent implements OnInit {
               password: this.user.password,
               firstName: this.firstName,
               lastName: this.lastName,
-              email: this.email
+              email: this.email,
+              organization: this.organization,
+              role: this.role,
+              gender: this.gender,
+              intro: this.intro
             };
             this.userService.updateUser(this.uid, updatedUser)
               .subscribe(
@@ -75,7 +92,8 @@ export class ProfileComponent implements OnInit {
     this.userService.logout()
       .subscribe(
         (status) => {
-          this.route.navigate(['/login']);
+          this.sharedService.role = '';
+          this.route.navigate(['/']);
         }
       );
  }
@@ -83,12 +101,16 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.user = this.sharedService.user;
+    this.role = this.sharedService.role;
     this.uid = this.user._id;
     this.username = this.user.username;
     this.email = this.user.email;
     this.firstName = this.user.firstName;
     this.lastName = this.user.lastName;
     this.prevUsername = this.username;
+    this.organization = this.user.organization;
+    this.gender = this.user.gender;
+    this.intro = this.user.intro;
   }
 
 }

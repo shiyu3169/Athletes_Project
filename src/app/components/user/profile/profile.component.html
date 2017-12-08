@@ -8,7 +8,6 @@
       <b class="sw-text-white">Profile</b>
     </a>
 
-
     <!--tick mark-->
     <p class="navbar-text pull-right">
       <button type="submit"
@@ -60,7 +59,8 @@
     </div>
     <span class="help-block"
           *ngIf="!email.valid && email.touched">Invalid email!</span>
-    <div class="form-group">
+    <div class="form-group"
+         *ngIf="role !=='organization'">
       <label for="firstName">First Name</label>
       <input type="text"
              class="form-control"
@@ -70,7 +70,8 @@
              #firstName="ngModel"
              placeholder="Alice">
     </div>
-    <div class="form-group">
+    <div class="form-group"
+         *ngIf="role !=='organization'">
       <label for="lastName">Last Name</label>
       <input type="text"
              class="form-control"
@@ -79,6 +80,43 @@
              ngModel="{{user.lastName}}"
              #lastName="ngModel"
              placeholder="Wonderland">
+    </div>
+    <div class="form-group"
+         *ngIf="role !=='organization'">
+      <label for="gender">Gender</label>
+      <select type="text"
+              id="gender"
+              name="gender"
+              [(ngModel)]="user.gender"
+              #gender="ngModel"
+              placeholder="Gender"
+              class="form-control">
+        <option value='male'>Male</option>
+        <option value='female'>Female</option>
+        <option value='secret'>Not Specified</option>
+      </select>
+    </div>
+    <div class="form-group"
+         *ngIf="role ==='organization'">
+      <label for="organization">Organization Name</label>
+      <input type="text"
+             id="organization"
+             name="organization"
+             ngModel
+             #organization="ngModel"
+             placeholder="Organization name"
+             class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label for="intro">Short Introduction</label>
+      <textarea type="text"
+                id="intro"
+                name="intro"
+                ngModel
+                #intro="ngModel"
+                placeholder="Short introduction"
+                rows="3"
+                class="form-control"></textarea>
     </div>
   </form>
 
