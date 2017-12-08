@@ -2,6 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { HomeService } from '../../services/home.service.client';
+import {SharedService} from '../../services/shared.service.client';
+import {UserService} from '../../services/user.service.client';
+import {User} from '../../models/user.model.client';
 
 @Component({
   selector: 'app-home',
@@ -17,8 +20,9 @@ export class HomeComponent implements OnInit {
   state: String;
   city: String;
   result: Object = '';
+  user = this.sharedService.user;
 
-  constructor(private homeService: HomeService) { }
+  constructor(private homeService: HomeService, private sharedService: SharedService, private userService: UserService) { }
 
   searchEvents() {
 

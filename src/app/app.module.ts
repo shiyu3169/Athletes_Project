@@ -38,6 +38,7 @@ import { SortableDirective } from './directives/sortable.directive';
 import {SharedService} from './services/shared.service.client';
 import {AuthenticationService} from "./services/authentication.service.client";
 import {HomeService} from "./services/home.service.client";
+import { ChooseComponent } from './components/user/choose/choose.component';
 @NgModule({
   // Declare components here
   declarations: [
@@ -62,7 +63,8 @@ import {HomeService} from "./services/home.service.client";
     WidgetHtmlComponent,
     WidgetTextComponent,
     FlickrImageSearchComponent,
-    SortableDirective
+    SortableDirective,
+    ChooseComponent
   ],
   imports: [
     BrowserModule,

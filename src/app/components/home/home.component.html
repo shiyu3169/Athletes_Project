@@ -6,12 +6,18 @@
     </a>
     <p class="navbar-text pull-right">
       <button routerLink="/login"
+              *ngIf="user === ''"
               class="btn btn-xs navbar-link sw-button-transparent">
         <b>Login</b>
       </button>
       <button routerLink="/register"
+              *ngIf="user === ''"
               class="btn btn-xs navbar-link sw-button-transparent">
         <b>Sign up</b>
+      </button>
+      <button routerLink="/user"
+         *ngIf="user !== ''"
+         class="btn btn-xs navbar-link sw-button-transparent glyphicon glyphicon-user sw-icon-padding sw-text-white">
       </button>
     </p>
   </div>
@@ -102,8 +108,6 @@
                    class="form-control"
                    #state="ngModel"/>
           </div>
-          <span class="help-block"
-                *ngIf="!state.valid && state.touched">Please enter city!</span>
           <div class="form-group col-xs-6">
             <input type="text"
                    id="city"
@@ -115,8 +119,6 @@
                    #city="ngModel"/>
           </div>
         </div>
-        <span class="help-block"
-              *ngIf="!city.valid && city.touched">Please enter city!</span>
         <button class="btn btn-success btn-block"
                 type="submit"
                 [disabled]="!f.valid">Check</button>
@@ -128,8 +130,9 @@
       <div class="col-xs-8">
         <img src={{result.icon_url}}>
       </div>
-      <div class="panel panel-default">
-        <div class="panel-body">Weather: {{result.weather}}</div>
+      <hr/>
+      <hr/>
+      <div class="panel panel-default" *ngIf="result !== ''">
         <div class="panel-body">Weather: {{result.weather}}</div>
         <div class="panel-body">Temprature: {{result.temperature_string}}</div>
         <div class="panel-body">Feels like: {{result.feelslike_string}}</div>

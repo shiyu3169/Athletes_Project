@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
           } else {
           this.errorFlag = false;
           this.sharedService.user = user;
-          this.router.navigate(['/user']);
+          this.router.navigate(['/']);
           }
         },
         (error: any) => {
