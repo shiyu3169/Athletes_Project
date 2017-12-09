@@ -111,7 +111,6 @@ export class ProfileComponent implements OnInit {
     this.organization = this.user.organization;
     this.gender = this.user.gender;
     this.intro = this.user.intro;
-    console.log(this.user);
   }
 
 }
