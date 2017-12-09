@@ -20,7 +20,7 @@ const APP_ROUTES: Routes = [
   {path: 'user/:uid/event', component: EventListComponent, canActivate: [AuthenticationService] },
   {path: 'user/:uid/event/new', component: EventNewComponent, canActivate: [AuthenticationService] },
   {path: 'user/:uid/event/:wid', component: EventEditComponent, canActivate: [AuthenticationService] },
-  {path: 'user/:uid/event/detail', component: EventDetailComponent, canActivate: [AuthenticationService] }
+  {path: 'user/:uid/event/:wid/detail', component: EventDetailComponent, canActivate: [AuthenticationService] }
 ];
 
 // Export the routes as module providers
