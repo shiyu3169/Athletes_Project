@@ -1,55 +1,55 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
-import { WebsiteService} from '../../../services/website.service.client';
-import { Website } from '../../../models/website.model.client';
+import { EventService} from '../../../services/event.service.client';
+import { Event } from '../../../models/event.model.client';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-website-edit',
+  selector: 'app-event-edit',
   templateUrl: './event-edit.component.html',
   styleUrls: ['./event-edit.component.css']
 })
-export class WebsiteEditComponent implements OnInit {
+export class EventEditComponent implements OnInit {
 
   @ViewChild('f') webForm: NgForm;
 
   uid: String;
   wid: String;
-  websites: Website[];
+  events: Event[];
   name: String;
   description: String;
-  website: Website = {
+  event: Event = {
     _id: '',
     name: '',
     developerId: '',
     description: ''
   };
 
-  constructor(private websiteService: WebsiteService,
+  constructor(private eventService: EventService,
               private activeRouter: ActivatedRoute, private router: Router) { }
 
   update() {
     this.name = this.webForm.value.name;
     this.description = this.webForm.value.description;
 
-    const updatedWeb: Website = {
+    const updatedWeb: Event = {
       name: this.name,
       developerId: this.uid,
       description: this.description
     };
-    this.websiteService.updateWebsite(this.wid, updatedWeb)
+    this.eventService.updateEvent(this.wid, updatedWeb)
       .subscribe(
-        (website: Website) => {
-          this.router.navigate(['user', this.uid, 'website']);
+        (event: Event) => {
+          this.router.navigate(['user', this.uid, 'event']);
         }
       );
   }
 
   remove() {
-    this.websiteService.deleteWebsite(this.wid)
+    this.eventService.deleteEvent(this.wid)
       .subscribe(
-        (websites: Website[]) => {
-          this.router.navigate(['user', this.uid, 'website']);
+        (events: Event[]) => {
+          this.router.navigate(['user', this.uid, 'event']);
     }
       );
   }
@@ -58,16 +58,16 @@ export class WebsiteEditComponent implements OnInit {
     this.activeRouter.params.subscribe(params => {
       this.uid = params['uid'];
       this.wid = params['wid'];
-      this.websiteService.findWebsitesByUser(this.uid)
+      this.eventService.findEventsByUser(this.uid)
         .subscribe(
-          (websites: Website[]) => {
-            this.websites = websites;
-            this.websiteService.findWebsiteById(this.wid)
+          (events: Event[]) => {
+            this.events = events;
+            this.eventService.findEventById(this.wid)
               .subscribe(
-                (website: Website) => {
-                  this.website = website;
-                  this.name = this.website.name;
-                  this.description = this.website.description;
+                (event: Event) => {
+                  this.event = event;
+                  this.name = this.event.name;
+                  this.description = this.event.description;
                 }
               );
           }

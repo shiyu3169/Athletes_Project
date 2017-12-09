@@ -1,4 +1,3 @@
-
 <!-- top navbar-->
 <nav class="navbar navbar-fixed-top sw-nav-blue">
   <div class="container-fluid">
@@ -8,25 +7,25 @@
         <span class="glyphicon glyphicon-chevron-left"></span>
       </a>
     </p>
-    <a routerLink="/user/{{uid}}/website"
+    <a routerLink="/user/{{uid}}/event"
        class="pull-left navbar-brand thick">
-      <b class="sw-text-white">Websites</b>
+      <b class="sw-text-white">Events</b>
     </a>
-    <button routerLink="/user/{{uid}}/website/new"
+    <button routerLink="/user/{{uid}}/event/new"
        class="btn btn-xs sw-button-transparent navbar-link navbar-text pull-right sw-icon-padding">
       <span class="glyphicon glyphicon-plus sw-text-white"></span>
     </button>
   </div>
 </nav>
 
-<!--websites list-->
+<!--events list-->
 <div  class="container-fluid">
   <ul class="list-group">
     <li class="list-group-item sw-borderless"
-        *ngFor="let website of websites">
+        *ngFor="let event of events">
       <a class="sw-link"
-         routerLink="/user/{{uid}}/website/{{website._id}}/page">{{website.name}}</a>
-      <a routerLink="/user/{{uid}}/website/{{website._id}}">
+         routerLink="/user/{{uid}}/event/{{event._id}}/detail">{{event.name}}</a>
+      <a routerLink="/user/{{uid}}/event/{{event._id}}">
         <span class="glyphicon glyphicon-cog pull-right"></span>
       </a>
     </li>

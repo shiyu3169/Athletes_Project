@@ -24,7 +24,7 @@
       <div class="container-fluid">
         <a routerLink="/user/{{uid}}/event/{{wid}}"
            class="pull-left navbar-brand thick">
-          <b class="sw-text-white">Edit Event</b>
+          <b class="sw-text-white">Event Detail</b>
         </a>
         <button type="submit"
                 [disabled]="!f.valid"
@@ -45,7 +45,7 @@
         <li class="list-group-item sw-borderless"
             *ngFor="let event of events">
           <a class="sw-link"
-             routerLink="/user/{{uid}}/event/{{event._id}}/page">{{event.name}}</a>
+             routerLink="/user/{{uid}}/event/{{event._id}}/detail">{{event.name}}</a>
           <a routerLink="/user/{{uid}}/event/{{event._id}}">
             <span class="glyphicon glyphicon-cog pull-right"></span>
           </a>
@@ -63,19 +63,18 @@
           <input type="text"
                  id="name"
                  name="name"
-                 required
+                 readonly
                  placeholder="any name"
                  ngModel="{{event.name}}"
                  #name="ngModel"
                  class="form-control"/>
         </div>
-        <span class="help-block"
-              *ngIf="!name.valid && name.touched">Name can't be empty!</span>
         <div class="form-group">
           <label for="description">Event Desciption</label>
           <textarea id="description"
                     name="description"
                     rows="5"
+                    readonly
                     placeholder="anything related to this event"
                     ngModel="{{event.description}}"
                     #description="ngModel"
@@ -83,12 +82,8 @@
         </div>
         <div class="row">
           <div class="col-xs-4">
-            <a (click)="remove()"
-               class="btn btn-danger btn-block">Delete</a>
-          </div>
-          <div class="col-xs-4 pull-right">
-            <a routerLink="/user/{{uid}}/event"
-               class="btn btn-warning btn-block">Cancel</a>
+            <a (click)="rsvp()"
+               class="btn btn-danger btn-block">RSVP</a>
           </div>
         </div>
       </form>

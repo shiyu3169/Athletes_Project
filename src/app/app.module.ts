@@ -10,17 +10,18 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/user/login/login.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { RegisterComponent } from './components/user/register/register.component';
-import { WebsiteNewComponent } from './components/event/event-new/event-new.component';
-import { WebsiteEditComponent } from './components/event/event-edit/event-edit.component';
-import { WebsiteListComponent } from './components/event/event-list/event-list.component';
+import { EventNewComponent } from './components/event/event-new/event-new.component';
+import { EventEditComponent } from './components/event/event-edit/event-edit.component';
+import { EventListComponent } from './components/event/event-list/event-list.component';
 
 import { UserService } from './services/user.service.client';
-import { WebsiteService } from './services/website.service.client';
+import { EventService } from './services/event.service.client';
 
-import {SharedService} from './services/shared.service.client';
-import {AuthenticationService} from './services/authentication.service.client';
-import {HomeService} from './services/home.service.client';
+import { SharedService } from './services/shared.service.client';
+import { AuthenticationService } from './services/authentication.service.client';
+import { HomeService } from './services/home.service.client';
 import { ChooseComponent } from './components/user/choose/choose.component';
+import { EventDetailComponent } from './components/event/event-detail/event-detail.component';
 @NgModule({
   // Declare components here
   declarations: [
@@ -29,10 +30,11 @@ import { ChooseComponent } from './components/user/choose/choose.component';
     LoginComponent,
     ProfileComponent,
     RegisterComponent,
-    WebsiteEditComponent,
-    WebsiteNewComponent,
-    WebsiteListComponent,
-    ChooseComponent
+    EventEditComponent,
+    EventNewComponent,
+    EventListComponent,
+    ChooseComponent,
+    EventDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,7 @@ import { ChooseComponent } from './components/user/choose/choose.component';
   // Client Side services here
   providers: [
     UserService,
-    WebsiteService,
+    EventService,
     SharedService,
     AuthenticationService,
     HomeService

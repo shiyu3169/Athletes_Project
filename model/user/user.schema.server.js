@@ -15,7 +15,7 @@ var UserSchema = mongoose.Schema({
   gender: String,
   organization: String,
   intro: String,
-  websites: [{type: mongoose.Schema.Types.ObjectId, ref: 'WebsiteModel'}],
+  events: [{type: mongoose.Schema.Types.ObjectId, ref: 'EventModel'}],
   dateCreated: {type: Date, default: Date.now}
 }, {collection: 'user'});
 

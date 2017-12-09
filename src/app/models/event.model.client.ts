@@ -1,4 +1,4 @@
-export class Website {
+export class Event {
   _id?: String;
   name: String;
   developerId: String;

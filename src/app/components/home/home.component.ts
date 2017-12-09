@@ -19,6 +19,9 @@ export class HomeComponent implements OnInit {
   city: String;
   result: Object = '';
   role: String;
+  user: any = {
+    role: ''
+  };
 
   constructor(private homeService: HomeService, private sharedService: SharedService, private userService: UserService) { }
 
@@ -44,7 +47,12 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.role = this.sharedService.role;
+    this.user = this.sharedService.user;
+    if (this.user === '') {
+      this.role = '';
+    } else {
+      this.role = this.user.role;
+    }
   }
 
 }
