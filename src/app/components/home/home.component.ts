@@ -48,6 +48,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.user = this.sharedService.user;
+    console.log(this.user);
     if (this.user === '') {
       this.role = '';
     } else {

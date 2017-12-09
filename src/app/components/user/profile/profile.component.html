@@ -102,9 +102,9 @@
       <input type="text"
              id="organization"
              name="organization"
-             ngModel
+             ngModel="{{user.organization}}"
              #organization="ngModel"
-             placeholder="Organization name"
+             placeholder="Organization Name"
              class="form-control"/>
     </div>
     <div class="form-group">
@@ -112,7 +112,7 @@
       <textarea type="text"
                 id="intro"
                 name="intro"
-                ngModel
+                ngModel="{{user.intro}}"
                 #intro="ngModel"
                 placeholder="Short introduction"
                 rows="3"

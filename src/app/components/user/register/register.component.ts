@@ -37,6 +37,7 @@ export class RegisterComponent implements OnInit {
       this.userService.register(this.username, this.password)
         .subscribe(
           (user: any) => {
+            this.sharedService.user = user;
             this.router.navigate(['/']);
           },
           (error: any) => {

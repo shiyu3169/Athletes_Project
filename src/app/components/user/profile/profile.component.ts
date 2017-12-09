@@ -92,7 +92,7 @@ export class ProfileComponent implements OnInit {
     this.userService.logout()
       .subscribe(
         (status) => {
-          this.sharedService.role = '';
+          this.sharedService.user = '';
           this.route.navigate(['/']);
         }
       );
@@ -101,7 +101,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.user = this.sharedService.user;
-    this.role = this.sharedService.role;
+    this.role = this.user.role;
     this.uid = this.user._id;
     this.username = this.user.username;
     this.email = this.user.email;
@@ -111,6 +111,7 @@ export class ProfileComponent implements OnInit {
     this.organization = this.user.organization;
     this.gender = this.user.gender;
     this.intro = this.user.intro;
+    console.log(this.user);
   }
 
 }
