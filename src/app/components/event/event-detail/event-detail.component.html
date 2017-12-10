@@ -55,6 +55,10 @@
 
     <!--right editor-->
     <div class="col-sm-8 col-xs-12">
+      <div *ngIf="registered"
+           class="alert alert-success" >
+        Register successfully!
+      </div>
       <form (ngSubmit)="update()"
             #f ="ngForm"
             id="webForm">

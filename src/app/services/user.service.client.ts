@@ -175,6 +175,16 @@ export class UserService {
       );
   }
 
+  cancel(uid, wid) {
+    const url = this.baseUrl + '/api/user/cancel?uid=' + uid + '&wid=' + wid;
+    return this.http.put(url, null)
+      .map(
+        (response: Response) => {
+          return response.json();
+        }
+      );
+  }
+
   checkFollow(uid, oid) {
     const url = this.baseUrl + '/api/user/checkFollow?uid=' + uid + '&oid=' + oid;
     return this.http.get(url)
@@ -192,7 +202,6 @@ export class UserService {
         (response: Response) => {
           return response.json();
         }
-      )
+      );
   }
-
 }

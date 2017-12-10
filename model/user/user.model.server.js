@@ -1,6 +1,8 @@
 var mongoose = require("mongoose");
 var UserSchema = require('./user.schema.server');
 var UserModel = mongoose.model('UserModel', UserSchema);
+var EventSchema = require('./../event/event.schema.server');
+var EventModel = mongoose.model('EventModel', EventSchema);
 
 UserModel.createUser = createUser;
 UserModel.findUserById = findUserById;
@@ -13,6 +15,7 @@ UserModel.follow = follow;
 UserModel.unfollow = unfollow;
 UserModel.checkFollow = checkFollow;
 UserModel.findFollowing = findFollowing;
+UserModel.cancel = cancel;
 
 module.exports = UserModel;
 
@@ -69,6 +72,18 @@ function unfollow(uid, oid) {
     return UserModel.update(
       {_id: oid},
       {$pull: {followed: uid}}
+    );
+  });
+}
+
+function cancel(uid, wid) {
+  return UserModel.update(
+    {_id: uid},
+    {$pull: {register: wid}}
+  ).then(function() {
+    return EventModel.update(
+      {_id: wid},
+      {$pull: {registered: uid}}
     );
   });
 }

@@ -24,7 +24,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-4" *ngIf="user.role !== 'organization'">
+    <div class="col-xs-2" *ngIf="user.role !== 'organization'">
       <div class="panel panel-info">
         <div class = "panel-heading">
           <h3 class = "panel-title">Following Organization</h3>
@@ -146,6 +146,23 @@
          routerLink="/user/{{uid}}/event">Events</a>
       <a class="btn btn-danger btn-block"
          (click)="logout()">Logout</a>
+    </div>
+    <div class="col-xs-2" *ngIf="user.role !== 'organization'">
+      <div class="panel panel-info">
+        <div class = "panel-heading">
+          <h3 class = "panel-title">Registered Events</h3>
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item sw-borderless"
+              *ngFor="let eve of eves">
+            <button class="btn sw-button-transparent" routerLink="/user/{{eve.orgId}}/event/{{eve._id}}/detail">{{eve.name}}</button>
+            <button class="btn pull-right sw-button-transparent">
+              <span class="glyphicon glyphicon-remove sw-text-red"
+                    (click)="cancel(uid, eve._id)"></span>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

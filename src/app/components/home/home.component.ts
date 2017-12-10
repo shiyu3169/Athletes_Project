@@ -78,21 +78,26 @@ export class HomeComponent implements OnInit {
       .subscribe(
         (data: any) => {
           this.login = data;
-          this.user = this.sharedService.user;
+          this.user = this.sharedService.user
         }
       );
   }
 
-  // unfollow(uid, oid) {
-  //   this.userService.unfollow(uid, oid)
-  //     .subscribe(
-  //       (data: any) => {
-  //         this.following = false;
-  //       }
-  //     );
-  // }
+  unfollow(uid, oid) {
+    this.userService.unfollow(uid, oid)
+      .subscribe(
+        (data: any) => {
+          this.following = false;
+        }
+      );
+  }
   selectOrg(orgId) {
-    this.router.navigate(['user', orgId, event]);
+    this.userService.findUserById(orgId)
+      .subscribe(
+        (org: User) => {
+          this.org = org;
+        }
+      );
   }
 
   checkFollow(uid, oid) {

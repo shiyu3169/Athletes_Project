@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
 import { EventService} from '../../../services/event.service.client';
 import { Event } from '../../../models/event.model.client';
-import { NgForm } from '@angular/forms';
 import {SharedService} from '../../../services/shared.service.client';
 
 @Component({
@@ -17,6 +16,8 @@ export class EventDetailComponent implements OnInit {
   events: Event[];
   name: String;
   description: String;
+  registered: boolean;
+  submitSuccess: boolean;
   event: Event = {
     _id: '',
     name: '',
@@ -28,13 +29,21 @@ export class EventDetailComponent implements OnInit {
   constructor(private activeRouter: ActivatedRoute, private eventService: EventService,
               private sharedService: SharedService) { }
 
-  rsvp() {}
+  rsvp() {
+    this.eventService.register(this.user._id, this.event._id)
+      .subscribe(
+        (data: any) => {
+          this.registered = true;
+        }
+      );
+  }
 
   ngOnInit() {
     this.activeRouter.params.subscribe(params => {
       this.uid = params['uid'];
       this.wid = params['wid'];
       this.user = this.sharedService.user;
+      this.registered = false;
       this.eventService.findEventsByUser(this.uid)
         .subscribe(
           (events: Event[]) => {

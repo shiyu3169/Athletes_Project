@@ -12,6 +12,8 @@ EventModel.findEventById = findEventById;
 EventModel.updateEvent = updateEvent;
 EventModel.deleteEvent = deleteEvent;
 EventModel.seachEvent = searchEvent;
+EventModel.register = register;
+EventModel.findEvents = findEvents;
 
 module.exports = EventModel;
 
@@ -56,4 +58,22 @@ function deleteEvent(eventId) {
 function searchEvent(key) {
   return EventModel.find({$text: {$search: key, $caseSensitive: false, $diacriticSensitive: false}})
     .populate('orgId').exec();
+}
+
+function register(uid, wid) {
+  return EventModel.findEventById(wid)
+    .then(function(event) {
+      event.registered.push(uid);
+      return event.save();
+    })
+    .then(function() {
+      return UserModel.findUserById(uid)
+        .then(function (user) {
+          user.register.push(wid);
+          return user.save();
+        })
+    })
+}
+function findEvents(uid) {
+  return EventModel.find({registered: uid});
 }

@@ -18,6 +18,7 @@ var UserSchema = mongoose.Schema({
   events: [{type: mongoose.Schema.Types.ObjectId, ref: 'EventModel'}],
   follow: [{type: mongoose.Schema.Types.ObjectId, ref: 'UserModel'}],
   followed: [{type: mongoose.Schema.Types.ObjectId, ref: 'UserModel'}],
+  register: [{type: mongoose.Schema.Types.ObjectId, ref: 'EventModel'}],
   dateCreated: {type: Date, default: Date.now}
 }, {collection: 'user'});
 

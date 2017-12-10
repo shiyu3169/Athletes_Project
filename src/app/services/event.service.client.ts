@@ -76,4 +76,24 @@ export class EventService {
         }
       );
   }
+
+  register(uid: String, wid: String) {
+    const url = this.baseUrl + '/api/event/' + uid + '/register/' + wid;
+    return this.http.put(url, null)
+      .map(
+        (response: Response) => {
+          return response.json();
+        }
+      );
+  }
+
+  findEvents(uid) {
+    const url = this.baseUrl + '/api/event/' + uid + '/findEvents';
+    return this.http.get(url)
+      .map(
+        (response: Response) => {
+          return response.json();
+        }
+      );
+  }
 }

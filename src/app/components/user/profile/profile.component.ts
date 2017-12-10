@@ -4,6 +4,7 @@ import {UserService} from '../../../services/user.service.client';
 import {User} from '../../../models/user.model.client';
 import {NgForm} from '@angular/forms';
 import {SharedService} from '../../../services/shared.service.client';
+import {EventService} from "../../../services/event.service.client";
 
 @Component({
   selector: 'app-profile',
@@ -27,7 +28,8 @@ export class ProfileComponent implements OnInit {
   organization: String;
   intro: String;
   orgs: [User];
-  org: any = {};
+  org: any;
+  eves: [Event];
 
   user: User = {
     _id: this.uid,
@@ -44,7 +46,7 @@ export class ProfileComponent implements OnInit {
   aUser: User;
 
   constructor(private sharedService: SharedService, private userService: UserService,
-              private router: ActivatedRoute, private route: Router) {
+              private router: ActivatedRoute, private route: Router, private eventService: EventService) {
   }
 
   update() {
@@ -90,20 +92,20 @@ export class ProfileComponent implements OnInit {
       );
   }
 
-  selectOrg(orgId) {
-    this.userService.findUserById(orgId)
-      .subscribe(
-        (org: User) => {
-          this.org = org;
-        }
-      );
-  }
-
   unfollow(uid, oid) {
     this.userService.unfollow(uid, oid)
       .subscribe(
         (data: any) => {
           this.findOrgs();
+        }
+      );
+  }
+
+  cancel(uid, wid) {
+    this.userService.cancel(uid, wid)
+      .subscribe(
+        (data: any) => {
+          this.findEvents();
         }
       );
   }
@@ -123,6 +125,17 @@ export class ProfileComponent implements OnInit {
       .subscribe(
         (orgs: any) => {
           this.orgs = orgs;
+          this.findEvents();
+        }
+      );
+ }
+
+ findEvents() {
+    this.eventService.findEvents(this.uid)
+      .subscribe(
+        (events: any) => {
+          console.log(events);
+          this.eves = events;
         }
       );
  }
@@ -140,6 +153,7 @@ export class ProfileComponent implements OnInit {
     this.organization = this.user.organization;
     this.gender = this.user.gender;
     this.intro = this.user.intro;
+    this.org = {};
     this.findOrgs();
   }
 

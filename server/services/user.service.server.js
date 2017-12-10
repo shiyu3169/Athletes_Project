@@ -10,6 +10,7 @@ module.exports = function (app) {
   app.post("/api/user", createUser);
   app.put("/api/user/follow", follow);
   app.put("/api/user/unfollow", unfollow);
+  app.put("/api/user/cancel", cancel);
   app.get("/api/user/checkFollow", checkFollow);
   app.put("/api/user/:uid", updateUser);
   app.delete("/api/user/:uid", deleteUser);
@@ -215,6 +216,15 @@ module.exports = function (app) {
       })
   }
 
+  function cancel(req, res) {
+    var uid = req.query["uid"];
+    var wid = req.query["wid"];
+    userModel.cancel(uid, wid)
+      .then(function() {
+        res.json(null);
+      })
+  }
+
   function checkFollow(req, res) {
     var uid = req.query["uid"];
     var oid = req.query["oid"];
@@ -229,6 +239,6 @@ module.exports = function (app) {
     userModel.findFollowing(uid)
       .then(function(orgs) {
         res.json(orgs);
-      })
+      });
   }
 };
