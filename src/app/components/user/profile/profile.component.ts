@@ -26,6 +26,7 @@ export class ProfileComponent implements OnInit {
   gender: String;
   organization: String;
   intro: String;
+  orgs: [User];
 
   user: User = {
     _id: this.uid,
@@ -88,12 +89,30 @@ export class ProfileComponent implements OnInit {
       );
   }
 
+  unfollow(uid, oid) {
+    this.userService.unfollow(uid, oid)
+      .subscribe(
+        (data: any) => {
+          this.findOrgs();
+        }
+      );
+  }
+
   logout() {
     this.userService.logout()
       .subscribe(
         (status) => {
           this.sharedService.user = '';
           this.route.navigate(['/']);
+        }
+      );
+ }
+
+ findOrgs() {
+    this.userService.findFollowing(this.uid)
+      .subscribe(
+        (orgs: any) => {
+          this.orgs = orgs;
         }
       );
  }
@@ -111,6 +130,7 @@ export class ProfileComponent implements OnInit {
     this.organization = this.user.organization;
     this.gender = this.user.gender;
     this.intro = this.user.intro;
+    this.findOrgs();
   }
 
 }

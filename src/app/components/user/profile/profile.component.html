@@ -23,112 +23,132 @@
 </nav>
 
 <div class="container-fluid">
-  <div *ngIf="usernameTaken"
-       class="alert alert-danger" >
-    Username was taken!
-  </div>
-  <div *ngIf="submitSuccess"
-       class="alert alert-success" >
-    Submit successfully!
-  </div>
-  <form (ngSubmit)="update()"
-        #f ="ngForm"
-        id="profileForm">
-    <div class="form-group">
-      <label for="username">Username</label>
-      <input type="text"
-             class="form-control"
-             id="username"
-             name="username"
-             required
-             #username="ngModel"
-             ngModel="{{user.username}}"
-             placeholder="username">
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="panel panel-info">
+        <div class = "panel-heading">
+          <h3 class = "panel-title">Following Organization</h3>
+        </div>
+        <ul class="list-group" >
+          <li class="list-group-item sw-borderless"
+              *ngFor="let org of orgs">
+            <button class="btn sw-button-transparent">{{org.organization}}</button>
+            <button class="btn pull-right sw-button-transparent">
+              <span class="glyphicon glyphicon-star sw-text-yellow"
+                    (click)="unfollow(uid, org._id)"></span>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
-    <span class="help-block"
-          *ngIf="!username.valid && username.touched">Username can't be empty!</span>
+    <div class="col-xs-8">
+      <div *ngIf="usernameTaken"
+           class="alert alert-danger" >
+        Username was taken!
+      </div>
+      <div *ngIf="submitSuccess"
+           class="alert alert-success" >
+        Submit successfully!
+      </div>
+      <form (ngSubmit)="update()"
+            #f ="ngForm"
+            id="profileForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text"
+                 class="form-control"
+                 id="username"
+                 name="username"
+                 required
+                 #username="ngModel"
+                 ngModel="{{user.username}}"
+                 placeholder="username">
+        </div>
+        <span class="help-block"
+              *ngIf="!username.valid && username.touched">Username can't be empty!</span>
 
-    <div class="form-group">
-      <label for="email">Email address</label>
-      <input type="email"
-             class="form-control"
-             id="email"
-             name="email"
-             email
-             ngModel="{{user.email}}"
-             #email="ngModel"
-             placeholder="alice.wonderland@unicorn.com">
-    </div>
-    <span class="help-block"
-          *ngIf="!email.valid && email.touched">Invalid email!</span>
-    <div class="form-group"
-         *ngIf="role !=='organization'">
-      <label for="firstName">First Name</label>
-      <input type="text"
-             class="form-control"
-             id="firstName"
-             name="firstName"
-             ngModel="{{user.firstName}}"
-             #firstName="ngModel"
-             placeholder="Alice">
-    </div>
-    <div class="form-group"
-         *ngIf="role !=='organization'">
-      <label for="lastName">Last Name</label>
-      <input type="text"
-             class="form-control"
-             id="lastName"
-             name="lastName"
-             ngModel="{{user.lastName}}"
-             #lastName="ngModel"
-             placeholder="Wonderland">
-    </div>
-    <div class="form-group"
-         *ngIf="role !=='organization'">
-      <label for="gender">Gender</label>
-      <select type="text"
-              id="gender"
-              name="gender"
-              [(ngModel)]="user.gender"
-              #gender="ngModel"
-              placeholder="Gender"
-              class="form-control">
-        <option value='male'>Male</option>
-        <option value='female'>Female</option>
-        <option value='secret'>Not Specified</option>
-      </select>
-    </div>
-    <div class="form-group"
-         *ngIf="role ==='organization'">
-      <label for="organization">Organization Name</label>
-      <input type="text"
-             id="organization"
-             name="organization"
-             ngModel="{{user.organization}}"
-             #organization="ngModel"
-             placeholder="Organization Name"
-             class="form-control"/>
-    </div>
-    <div class="form-group">
-      <label for="intro">Short Introduction</label>
-      <textarea type="text"
-                id="intro"
-                name="intro"
-                ngModel="{{user.intro}}"
-                #intro="ngModel"
-                placeholder="Short introduction"
-                rows="3"
-                class="form-control"></textarea>
-    </div>
-  </form>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email"
+                 class="form-control"
+                 id="email"
+                 name="email"
+                 email
+                 ngModel="{{user.email}}"
+                 #email="ngModel"
+                 placeholder="alice.wonderland@unicorn.com">
+        </div>
+        <span class="help-block"
+              *ngIf="!email.valid && email.touched">Invalid email!</span>
+        <div class="form-group"
+             *ngIf="role !=='organization'">
+          <label for="firstName">First Name</label>
+          <input type="text"
+                 class="form-control"
+                 id="firstName"
+                 name="firstName"
+                 ngModel="{{user.firstName}}"
+                 #firstName="ngModel"
+                 placeholder="Alice">
+        </div>
+        <div class="form-group"
+             *ngIf="role !=='organization'">
+          <label for="lastName">Last Name</label>
+          <input type="text"
+                 class="form-control"
+                 id="lastName"
+                 name="lastName"
+                 ngModel="{{user.lastName}}"
+                 #lastName="ngModel"
+                 placeholder="Wonderland">
+        </div>
+        <div class="form-group"
+             *ngIf="role !=='organization'">
+          <label for="gender">Gender</label>
+          <select type="text"
+                  id="gender"
+                  name="gender"
+                  [(ngModel)]="user.gender"
+                  #gender="ngModel"
+                  placeholder="Gender"
+                  class="form-control">
+            <option value='male'>Male</option>
+            <option value='female'>Female</option>
+            <option value='secret'>Not Specified</option>
+          </select>
+        </div>
+        <div class="form-group"
+             *ngIf="role ==='organization'">
+          <label for="organization">Organization Name</label>
+          <input type="text"
+                 id="organization"
+                 name="organization"
+                 ngModel="{{user.organization}}"
+                 #organization="ngModel"
+                 placeholder="Organization Name"
+                 class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label for="intro">Short Introduction</label>
+          <textarea type="text"
+                    id="intro"
+                    name="intro"
+                    ngModel="{{user.intro}}"
+                    #intro="ngModel"
+                    placeholder="Short introduction"
+                    rows="3"
+                    class="form-control"></textarea>
+        </div>
+      </form>
 
-  <a class="btn btn-primary btn-block"
-     *ngIf="role === 'organization'"
-     routerLink="/user/{{uid}}/event">Events</a>
-  <a class="btn btn-danger btn-block"
-     (click)="logout()">Logout</a>
+      <a class="btn btn-primary btn-block"
+         *ngIf="role === 'organization'"
+         routerLink="/user/{{uid}}/event">Events</a>
+      <a class="btn btn-danger btn-block"
+         (click)="logout()">Logout</a>
+    </div>
+  </div>
 </div>
-
 <!-- Footer -->
 <nav class="navbar navbar-inverse navbar-fixed-bottom">
   <div class="container-fluid">

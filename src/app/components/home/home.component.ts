@@ -83,14 +83,14 @@ export class HomeComponent implements OnInit {
       );
   }
 
-  unfollow(uid, oid) {
-    this.userService.unfollow(uid, oid)
-      .subscribe(
-        (data: any) => {
-          this.following = false;
-        }
-      );
-  }
+  // unfollow(uid, oid) {
+  //   this.userService.unfollow(uid, oid)
+  //     .subscribe(
+  //       (data: any) => {
+  //         this.following = false;
+  //       }
+  //     );
+  // }
   selectOrg(orgId) {
     this.userService.findUserById(orgId)
       .subscribe(

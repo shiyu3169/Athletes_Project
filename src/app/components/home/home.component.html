@@ -169,7 +169,7 @@
         </div>
         <div class="modal-footer">
           <button *ngIf="!following && login" (click)="follow(user._id, org._id)" class="btn btn-lg sw-text-yellow pull-left sw-button-transparent glyphicon glyphicon-star-empty sw-button-transparent"></button>
-          <button *ngIf="following && login" (click)="unfollow(user._id, org._id)" class="btn btn-lg sw-text-yellow pull-left sw-button-transparent glyphicon glyphicon-star sw-button-transparent"></button>
+          <button *ngIf="following && login" class="btn btn-lg sw-text-yellow pull-left sw-button-transparent glyphicon glyphicon-star sw-button-transparent"></button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>

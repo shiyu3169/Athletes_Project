@@ -185,4 +185,14 @@ export class UserService {
       );
   }
 
+  findFollowing(uid) {
+    const url = this.baseUrl + '/api/user/' + uid + '/findFollowing';
+    return this.http.get(url)
+      .map(
+        (response: Response) => {
+          return response.json();
+        }
+      )
+  }
+
 }

@@ -12,6 +12,7 @@ UserModel.findUserByFacebookId = findUserByFacebookId;
 UserModel.follow = follow;
 UserModel.unfollow = unfollow;
 UserModel.checkFollow = checkFollow;
+UserModel.findFollowing = findFollowing;
 
 module.exports = UserModel;
 
@@ -74,4 +75,8 @@ function unfollow(uid, oid) {
 
 function checkFollow(uid, oid) {
   return UserModel.findOne({_id: uid, follow: oid});
+}
+
+function findFollowing(uid) {
+  return UserModel.find({followed: uid});
 }

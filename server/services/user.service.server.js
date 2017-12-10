@@ -13,6 +13,7 @@ module.exports = function (app) {
   app.get("/api/user/checkFollow", checkFollow);
   app.put("/api/user/:uid", updateUser);
   app.delete("/api/user/:uid", deleteUser);
+  app.get("/api/user/:uid/findFollowing", findFollowing);
 
 
   // authentication api
@@ -220,6 +221,14 @@ module.exports = function (app) {
     userModel.checkFollow(uid, oid)
       .then(function(data) {
         res.json(data);
+      })
+  }
+
+  function findFollowing(req, res) {
+    var uid = req.params["uid"];
+    userModel.findFollowing(uid)
+      .then(function(orgs) {
+        res.json(orgs);
       })
   }
 };
