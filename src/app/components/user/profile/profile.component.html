@@ -24,8 +24,8 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-2" *ngIf="user.role !== 'organization'">
-      <div class="panel panel-info">
+    <div class="col-xs-2">
+      <div class="panel panel-info" *ngIf="user.role !== 'organization'">
         <div class = "panel-heading">
           <h3 class = "panel-title">Following Organization</h3>
         </div>
@@ -147,8 +147,8 @@
       <a class="btn btn-danger btn-block"
          (click)="logout()">Logout</a>
     </div>
-    <div class="col-xs-2" *ngIf="user.role !== 'organization'">
-      <div class="panel panel-info">
+    <div class="col-xs-2">
+      <div class="panel panel-info" *ngIf="user.role !== 'organization'">
         <div class = "panel-heading">
           <h3 class = "panel-title">Registered Events</h3>
         </div>

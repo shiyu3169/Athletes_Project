@@ -80,6 +80,50 @@
                     #description="ngModel"
                     class="form-control"></textarea>
         </div>
+        <div class="form-group">
+          <label for="address">Street</label>
+          <input type="text"
+                 id="address"
+                 name="address"
+                 placeholder="Address of the event"
+                 ngModel
+                 #address="ngModel"
+                 class="form-control"/>
+        </div>
+        <div class="col-xs-6">
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text"
+                   id="city"
+                   name="city"
+                   placeholder="City of event"
+                   ngModel
+                   #city="ngModel"
+                   class="form-control"/>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div class="form-group">
+            <label for="state">State</label>
+            <input type="text"
+                   id="state"
+                   name="state"
+                   placeholder="state of the event"
+                   ngModel
+                   #state="ngModel"
+                   class="form-control"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="time">Event Time</label>
+          <input type="datetime-local"
+                 id="time"
+                 name="time"
+                 placeholder="Event Time"
+                 ngModel
+                 #time="ngModel"
+                 class="form-control"/>
+        </div>
         <div>
           <a routerLink="/user/{{uid}}/event"
              class="btn btn-warning btn-block">Cancel</a>

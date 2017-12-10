@@ -3,6 +3,7 @@ import { ActivatedRoute, Router} from '@angular/router';
 import { EventService} from '../../../services/event.service.client';
 import { Event } from '../../../models/event.model.client';
 import {SharedService} from '../../../services/shared.service.client';
+import DateTimeFormat = Intl.DateTimeFormat;
 
 @Component({
   selector: 'app-event-detail',
@@ -16,13 +17,20 @@ export class EventDetailComponent implements OnInit {
   events: Event[];
   name: String;
   description: String;
+  address: String;
+  city: String;
+  state: String;
+  time: DateTimeFormat;
   registered: boolean;
-  submitSuccess: boolean;
   event: Event = {
     _id: '',
     name: '',
     orgId: '',
-    description: ''
+    description: '',
+    address: '',
+    city: '',
+    state: '',
+    time: new DateTimeFormat
   };
   user: any;
 
@@ -54,6 +62,10 @@ export class EventDetailComponent implements OnInit {
                   this.event = event;
                   this.name = this.event.name;
                   this.description = this.event.description;
+                  this.address = this.event.address;
+                  this.city = this.event.city;
+                  this.state = this.event.state;
+                  this.time = this.event.time;
                 }
               );
           }
