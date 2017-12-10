@@ -3,6 +3,7 @@ import { ActivatedRoute, Router} from '@angular/router';
 import { EventService} from '../../../services/event.service.client';
 import { Event } from '../../../models/event.model.client';
 import { NgForm } from '@angular/forms';
+import {SharedService} from '../../../services/shared.service.client';
 
 @Component({
   selector: 'app-event-detail',
@@ -22,8 +23,10 @@ export class EventDetailComponent implements OnInit {
     orgId: '',
     description: ''
   };
+  user: any;
 
-  constructor(private activeRouter: ActivatedRoute, private eventService: EventService) { }
+  constructor(private activeRouter: ActivatedRoute, private eventService: EventService,
+              private sharedService: SharedService) { }
 
   rsvp() {}
 
@@ -31,6 +34,7 @@ export class EventDetailComponent implements OnInit {
     this.activeRouter.params.subscribe(params => {
       this.uid = params['uid'];
       this.wid = params['wid'];
+      this.user = this.sharedService.user;
       this.eventService.findEventsByUser(this.uid)
         .subscribe(
           (events: Event[]) => {

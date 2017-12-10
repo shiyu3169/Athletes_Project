@@ -27,6 +27,7 @@ export class ProfileComponent implements OnInit {
   organization: String;
   intro: String;
   orgs: [User];
+  org: any = {};
 
   user: User = {
     _id: this.uid,
@@ -85,6 +86,15 @@ export class ProfileComponent implements OnInit {
             this.submitSuccess = true;
             this.prevUsername = this.username;
           }
+        }
+      );
+  }
+
+  selectOrg(orgId) {
+    this.userService.findUserById(orgId)
+      .subscribe(
+        (org: User) => {
+          this.org = org;
         }
       );
   }

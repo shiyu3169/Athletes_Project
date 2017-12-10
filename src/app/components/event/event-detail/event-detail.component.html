@@ -5,7 +5,7 @@
     <div class="col-xs-4 hidden-xs">
       <div class="container-fluid">
         <p class="navbar-text pull-left">
-          <a routerLink="/user"
+          <a routerLink="/user/{{uid}}/event"
              class="navbar-link sw-text-white">
             <span class="glyphicon glyphicon-chevron-left"></span>
           </a>
@@ -81,9 +81,9 @@
                     class="form-control"></textarea>
         </div>
         <div class="row">
-          <div class="col-xs-4">
+          <div class="col-xs-4" *ngIf="user.role !== 'organization'">
             <a (click)="rsvp()"
-               class="btn btn-danger btn-block">RSVP</a>
+               class="btn btn-success btn-block">RSVP</a>
           </div>
         </div>
       </form>

@@ -24,15 +24,15 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-4">
+    <div class="col-xs-4" *ngIf="user.role !== 'organization'">
       <div class="panel panel-info">
         <div class = "panel-heading">
           <h3 class = "panel-title">Following Organization</h3>
         </div>
-        <ul class="list-group" >
+        <ul class="list-group">
           <li class="list-group-item sw-borderless"
               *ngFor="let org of orgs">
-            <button class="btn sw-button-transparent">{{org.organization}}</button>
+            <button class="btn sw-button-transparent" routerLink="/user/{{org._id}}/event">{{org.organization}}</button>
             <button class="btn pull-right sw-button-transparent">
               <span class="glyphicon glyphicon-star sw-text-yellow"
                     (click)="unfollow(uid, org._id)"></span>
@@ -149,6 +149,7 @@
     </div>
   </div>
 </div>
+
 <!-- Footer -->
 <nav class="navbar navbar-inverse navbar-fixed-bottom">
   <div class="container-fluid">

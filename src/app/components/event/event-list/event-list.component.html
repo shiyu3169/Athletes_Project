@@ -25,7 +25,8 @@
         *ngFor="let event of events">
       <a class="sw-link"
          routerLink="/user/{{uid}}/event/{{event._id}}/detail">{{event.name}}</a>
-      <a routerLink="/user/{{uid}}/event/{{event._id}}">
+      <a routerLink="/user/{{uid}}/event/{{event._id}}"
+         *ngIf="user.role === 'organization'">
         <span class="glyphicon glyphicon-cog pull-right"></span>
       </a>
     </li>

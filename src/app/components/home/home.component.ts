@@ -92,12 +92,7 @@ export class HomeComponent implements OnInit {
   //     );
   // }
   selectOrg(orgId) {
-    this.userService.findUserById(orgId)
-      .subscribe(
-        (org: User) => {
-          this.org = org;
-        }
-      );
+    this.router.navigate(['user', orgId, event]);
   }
 
   checkFollow(uid, oid) {
