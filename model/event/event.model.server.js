@@ -54,5 +54,6 @@ function deleteEvent(eventId) {
 }
 
 function searchEvent(key) {
-  return EventModel.find({$text: {$search: key, $caseSensitive: false, $diacriticSensitive: false}});
+  return EventModel.find({$text: {$search: key, $caseSensitive: false, $diacriticSensitive: false}})
+    .populate('orgId', 'organization').exec();
 }

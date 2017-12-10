@@ -93,7 +93,8 @@
         <tbody *ngFor = "let event of events" >
           <tr>
             <td>{{event.name}}</td>
-            <td>{{event.orgId}}</td>
+            <td>{{event.orgId.organization}}</td>
+            <td>{{event.dateCreated}}</td>
           </tr>
         </tbody>
       </table>
