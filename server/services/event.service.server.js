@@ -7,6 +7,7 @@ module.exports = function (app) {
   app.get("/api/event/:wid", findEventById);
   app.put("/api/event/:wid", updateEvent);
   app.delete("/api/event/:wid", deleteEvent);
+  app.get("/api/event/search/:key", searchEvent);
 
   function createEvent(req, res) {
     var userId = req.params["uid"];
@@ -47,6 +48,15 @@ module.exports = function (app) {
     eventModel.deleteEvent(wid)
       .then(function() {
       res.json(null);
+    });
+  }
+
+  function searchEvent(req, res) {
+    var key = req.params["key"];
+    eventModel.seachEvent(key)
+      .then(function(events) {
+        console.log(events);
+        res.json(events);
     });
   }
 };

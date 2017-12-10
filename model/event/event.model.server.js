@@ -11,6 +11,7 @@ EventModel.findAllEventsForUser = findAllEventsForUser;
 EventModel.findEventById = findEventById;
 EventModel.updateEvent = updateEvent;
 EventModel.deleteEvent = deleteEvent;
+EventModel.seachEvent = searchEvent;
 
 module.exports = EventModel;
 
@@ -27,7 +28,7 @@ function createEventForUser(userId, event) {
 }
 
 function findAllEventsForUser(userId) {
-  return EventModel.find({developerId: userId});
+  return EventModel.find({orgId: userId});
 }
 
 function findEventById(eventId) {
@@ -39,15 +40,19 @@ function updateEvent(eventId, event) {
 }
 
 function deleteEvent(eventId) {
-  var developerId = null;
+  var orgId = null;
   return EventModel.findEventById(eventId)
     .then(function(event) {
-      developerId = event.developerId;
+      orgId = event.orgId;
       return  EventModel.remove({_id: event._id})
         .then(function() {
           return UserModel.update(
-            {_id: developerId},
+            {_id: orgId},
             {$pull: {events: eventId}});
         });
     });
+}
+
+function searchEvent(key) {
+  return EventModel.find({$text: {$search: key, $caseSensitive: false, $diacriticSensitive: false}});
 }

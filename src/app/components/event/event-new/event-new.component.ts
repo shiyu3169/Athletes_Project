@@ -27,7 +27,7 @@ export class EventNewComponent implements OnInit {
 
     const newEvent: Event = {
       name: this.name,
-      developerId: this.uid,
+      orgId: this.uid,
       description: this.description
     };
     this.eventService.createEvent(this.uid, newEvent)

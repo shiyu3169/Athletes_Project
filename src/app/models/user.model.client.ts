@@ -2,15 +2,16 @@ export class User {
   _id?: String;
   username: String;
   password: String;
-  firstName: String;
-  lastName: String;
+  firstName?: String;
+  lastName?: String;
   email: String;
   role: String;
   gender: String;
   organization?: String;
   intro: String;
+  follow?: [String];
 
-  constructor(_id, username, password, firstName, lastName, email, role, gender, organization, intro) {
+  constructor(_id, username, password, firstName, lastName, email, role, gender, organization, intro, follow) {
     this._id = _id;
     this.username = username;
     this.password = password;
@@ -21,5 +22,6 @@ export class User {
     this.gender = gender;
     this.organization = organization;
     this.intro = intro;
+    this.follow = follow;
   }
 }

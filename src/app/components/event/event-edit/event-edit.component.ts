@@ -21,7 +21,7 @@ export class EventEditComponent implements OnInit {
   event: Event = {
     _id: '',
     name: '',
-    developerId: '',
+    orgId: '',
     description: ''
   };
 
@@ -34,7 +34,7 @@ export class EventEditComponent implements OnInit {
 
     const updatedWeb: Event = {
       name: this.name,
-      developerId: this.uid,
+      orgId: this.uid,
       description: this.description
     };
     this.eventService.updateEvent(this.wid, updatedWeb)

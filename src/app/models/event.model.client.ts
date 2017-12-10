@@ -1,12 +1,12 @@
 export class Event {
   _id?: String;
   name: String;
-  developerId: String;
+  orgId: String;
   description: String;
 
-  constructor(_id, name, developerId) {
+  constructor(_id, name, orgId) {
     this._id = _id;
     this.name = name;
-    this.developerId = developerId;
+    this.orgId = orgId;
   }
 }

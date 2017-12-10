@@ -23,7 +23,7 @@ export class EventService {
       );
   }
 
-  // retrieves the events in local events array whose developerId matches the parameter userId
+  // retrieves the events in local events array whose orgId matches the parameter userId
   findEventsByUser(userId: String) {
     const url = this.baseUrl + '/api/user/' + userId + '/event';
     return this.http.get(url)
@@ -60,6 +60,16 @@ export class EventService {
   deleteEvent(eventId: String) {
     const url = this.baseUrl + '/api/event/' + eventId;
     return this.http.delete(url)
+      .map(
+        (response: Response) => {
+          return response.json();
+        }
+      );
+  }
+
+  searchEvent(key: String) {
+    const url = this.baseUrl + '/api/event/search/' + key;
+    return this.http.get(url)
       .map(
         (response: Response) => {
           return response.json();

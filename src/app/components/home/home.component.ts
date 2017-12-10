@@ -3,6 +3,8 @@ import { NgForm } from '@angular/forms';
 import { HomeService } from '../../services/home.service.client';
 import { SharedService } from '../../services/shared.service.client';
 import { UserService } from '../../services/user.service.client';
+import {EventService} from '../../services/event.service.client';
+import {Event} from '../../models/event.model.client';
 
 @Component({
   selector: 'app-home',
@@ -19,19 +21,14 @@ export class HomeComponent implements OnInit {
   city: String;
   result: Object = '';
   role: String;
+  key: String;
   user: any = {
     role: ''
   };
+  events: [Event];
 
-  constructor(private homeService: HomeService, private sharedService: SharedService, private userService: UserService) { }
-
-  searchEvents() {
-
-  }
-
-  selectEvent(event) {
-
-  }
+  constructor(private homeService: HomeService, private sharedService: SharedService,
+              private userService: UserService, private eventService: EventService) { }
 
   searchWeather() {
     this.city = this.homeForm.value.city;
@@ -39,11 +36,19 @@ export class HomeComponent implements OnInit {
     this.homeService.searchWeather(this.city, this.state)
       .subscribe(
         (data: any) => {
-          console.log(data);
           this.result = data.current_observation;
         }
       );
+  }
 
+  searchEvents() {
+    this.eventService.searchEvent(this.key)
+      .subscribe(
+        (events: any) => {
+          console.log(events);
+          this.events = events;
+        }
+      );
   }
 
   ngOnInit() {
@@ -55,5 +60,4 @@ export class HomeComponent implements OnInit {
       this.role = this.user.role;
     }
   }
-
 }
