@@ -6,17 +6,17 @@
     </a>
     <p class="navbar-text pull-right">
       <button routerLink="/login"
-              *ngIf="role === ''"
+              *ngIf="!login"
               class="btn btn-xs navbar-link sw-button-transparent">
         <b>Login</b>
       </button>
       <button routerLink="/choose"
-              *ngIf="role === ''"
+              *ngIf="!login"
               class="btn btn-xs navbar-link sw-button-transparent">
         <b>Sign up</b>
       </button>
       <button routerLink="/user"
-         *ngIf="role !== ''"
+         *ngIf="login"
          class="btn btn-xs navbar-link sw-button-transparent glyphicon glyphicon-user sw-icon-padding sw-text-white">
       </button>
     </p>
@@ -92,8 +92,8 @@
         </thead>
         <tbody *ngFor = "let event of events" >
           <tr>
-            <td>{{event.name}}</td>
-            <td>{{event.orgId.organization}}</td>
+            <td><a (click)="selectEvent(event._id)" class="btn sw-button-transparent sw-link sw-button-transparent">{{event.name}}</a></td>
+            <td><a class="btn sw-button-transparent sw-link sw-button-transparent" data-toggle="modal" data-target="#myModal" (click)="selectOrg(event.orgId._id)">{{event.orgId.organization}}</a></td>
             <td>{{event.dateCreated}}</td>
           </tr>
         </tbody>
@@ -151,6 +151,27 @@
         <div class="panel-body">Temprature: {{result.temperature_string}}</div>
         <div class="panel-body">Feels like: {{result.feelslike_string}}</div>
         <div class="panel-body">Wind: {{result.wind_string}}</div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">{{org.organization}}</h4>
+        </div>
+        <div class="modal-body">
+          <p>{{org.intro}}</p>
+        </div>
+        <div class="modal-footer">
+          <button *ngIf="!following && login" (click)="follow(user._id, org._id)" class="btn btn-lg sw-text-yellow pull-left sw-button-transparent glyphicon glyphicon-star-empty sw-button-transparent"></button>
+          <button *ngIf="following && login" (click)="unfollow(user._id, org._id)" class="btn btn-lg sw-text-yellow pull-left sw-button-transparent glyphicon glyphicon-star sw-button-transparent"></button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>

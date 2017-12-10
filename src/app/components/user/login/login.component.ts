@@ -29,7 +29,6 @@ export class LoginComponent implements OnInit {
       .subscribe(
         (user) => {
           if (!user) {
-            console.log(this.errorFlag);
             this.errorFlag = true;
           } else {
           this.errorFlag = false;

@@ -9,6 +9,9 @@ UserModel.findUserByCredentials = findUserByCredentials;
 UserModel.updateUser = updateUser;
 UserModel.deleteUser = deleteUser;
 UserModel.findUserByFacebookId = findUserByFacebookId;
+UserModel.follow = follow;
+UserModel.unfollow = unfollow;
+UserModel.checkFollow = checkFollow;
 
 module.exports = UserModel;
 
@@ -40,4 +43,35 @@ function updateUser(userId, user) {
 
 function deleteUser(userId) {
   return UserModel.remove({_id: userId});
+}
+
+function follow(uid, oid) {
+  return UserModel.findUserById(uid)
+    .then(function (user) {
+      user.follow.push(oid);
+      return user.save();
+    })
+    .then(function() {
+      return UserModel.findUserById(oid)
+        .then(function(org) {
+          org.followed.push(uid);
+          return org.save();
+        });
+    });
+}
+
+function unfollow(uid, oid) {
+  return UserModel.update(
+    {_id: uid},
+    {$pull: {follow: oid}}
+  ).then(function() {
+    return UserModel.update(
+      {_id: oid},
+      {$pull: {followed: uid}}
+    );
+  });
+}
+
+function checkFollow(uid, oid) {
+  return UserModel.findOne({_id: uid, follow: oid});
 }

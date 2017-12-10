@@ -11,6 +11,10 @@ body {
   color: #fff;
 }
 
+.sw-text-yellow{
+  color: yellow;
+}
+
 .sw-borderless {
   border-top: 0 none;
   border-bottom: 0 none;

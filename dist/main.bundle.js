@@ -244,6 +244,8 @@ module.exports = "\n<!-- top navbar-->\n<nav class=\"navbar navbar-inverse navba
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventDetailComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__ = __webpack_require__("../../../../../src/app/services/event.service.client.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -254,11 +256,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var EventDetailComponent = (function () {
-    function EventDetailComponent() {
+    function EventDetailComponent(activeRouter, eventService) {
+        this.activeRouter = activeRouter;
+        this.eventService = eventService;
+        this.event = {
+            _id: '',
+            name: '',
+            orgId: '',
+            description: ''
+        };
     }
     EventDetailComponent.prototype.rsvp = function () { };
     EventDetailComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.activeRouter.params.subscribe(function (params) {
+            _this.uid = params['uid'];
+            _this.wid = params['wid'];
+            _this.eventService.findEventsByUser(_this.uid)
+                .subscribe(function (events) {
+                _this.events = events;
+                _this.eventService.findEventById(_this.wid)
+                    .subscribe(function (event) {
+                    _this.event = event;
+                    _this.name = _this.event.name;
+                    _this.description = _this.event.description;
+                });
+            });
+        });
     };
     return EventDetailComponent;
 }());
@@ -268,9 +295,10 @@ EventDetailComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/event/event-detail/event-detail.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/event/event-detail/event-detail.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__["a" /* EventService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__["a" /* EventService */]) === "function" && _b || Object])
 ], EventDetailComponent);
 
+var _a, _b;
 //# sourceMappingURL=event-detail.component.js.map
 
 /***/ }),
@@ -586,7 +614,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <div class=\"container-fluid\">\r\n    <a routerLink=\"/\"\r\n       class=\"navbar-header pull-left navbar-brand thick\">\r\n      <b class=\"sw-text-white\">Athelete</b>\r\n    </a>\r\n    <p class=\"navbar-text pull-right\">\r\n      <button routerLink=\"/login\"\r\n              *ngIf=\"role === ''\"\r\n              class=\"btn btn-xs navbar-link sw-button-transparent\">\r\n        <b>Login</b>\r\n      </button>\r\n      <button routerLink=\"/choose\"\r\n              *ngIf=\"role === ''\"\r\n              class=\"btn btn-xs navbar-link sw-button-transparent\">\r\n        <b>Sign up</b>\r\n      </button>\r\n      <button routerLink=\"/user\"\r\n         *ngIf=\"role !== ''\"\r\n         class=\"btn btn-xs navbar-link sw-button-transparent glyphicon glyphicon-user sw-icon-padding sw-text-white\">\r\n      </button>\r\n    </p>\r\n  </div>\r\n</nav>\r\n\r\n<div class=\"container\">\r\n  <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\r\n    <!-- Indicators -->\r\n    <ol class=\"carousel-indicators\">\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\">\r\n      <div class=\"item active\">\r\n        <img class=\"sw-img-slide\"\r\n             src=\"https://www.harmonygenevemarathon.com/images/uploads/heroes/marathon-header-en.jpg\"\r\n             alt=\"Los Angeles\">\r\n      </div>\r\n\r\n      <div class=\"item\">\r\n        <img class=\"item active\"\r\n             src=\"https://media.wired.com/photos/59c7ae866d668e01c65b1046/2:1/w_2500,c_limit/Berlin-FA-852825046.jpg\"\r\n             alt=\"Chicago\">\r\n      </div>\r\n\r\n      <div class=\"item\">\r\n        <img class=\"item active\"\r\n             src=\"https://eversport.tv/sites/default/files/marathon-frankfurt-.jpg\"\r\n             alt=\"New york\">\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Left and right controls -->\r\n    <a class=\"left carousel-control\" href=\"#myCarousel\" data-slide=\"prev\">\r\n      <span class=\"glyphicon glyphicon-chevron-left\"></span>\r\n      <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#myCarousel\" data-slide=\"next\">\r\n      <span class=\"glyphicon glyphicon-chevron-right\"></span>\r\n      <span class=\"sr-only\">Next</span>\r\n    </a>\r\n  </div>\r\n</div>\r\n\r\n<hr/>\r\n\r\n<div class=\"container\">\r\n  <div class=\"input-group\">\r\n    <input [(ngModel)]=\"key\"\r\n           type=\"text\"\r\n           class=\"form-control\"\r\n           placeholder=\"Search events\">\r\n    <span class=\"input-group-btn\">\r\n           <a (click)=\"searchEvents()\" class=\"btn btn-default\" type=\"button\">\r\n               <span class=\"glyphicon glyphicon-search\"></span>\r\n           </a>\r\n   </span>\r\n  </div>\r\n  <div class=\"container\" *ngIf=\"events\">\r\n    <h4>Searching Results for '{{key}}'</h4>\r\n    <div class=\"panel panel-default\">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n        <tr>\r\n          <th>Name</th>\r\n          <th>Organization</th>\r\n          <th>Post time</th>\r\n        </tr>\r\n        </thead>\r\n        <tbody *ngFor = \"let event of events\" >\r\n          <tr>\r\n            <td>{{event.name}}</td>\r\n            <td>{{event.orgId.organization}}</td>\r\n            <td>{{event.dateCreated}}</td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n  </div>\r\n\r\n  <hr/>\r\n  <div class=\"row\">\r\n    <div class=\"col-xs-6\">\r\n      <div class=\"col-xs-2\">\r\n      </div>\r\n      <div class=\"col-xs-10\">\r\n        <h3>Weather Tracking</h3>\r\n      </div>\r\n      <form (ngSubmit)=\"searchWeather()\"\r\n            #f =\"ngForm\">\r\n        <div>\r\n          <div class=\"form-group col-xs-6\">\r\n            <input type=\"text\"\r\n                   id=\"state\"\r\n                   name=\"state\"\r\n                   required\r\n                   ngModel\r\n                   placeholder=\"Specify the state\"\r\n                   class=\"form-control\"\r\n                   #state=\"ngModel\"/>\r\n          </div>\r\n          <div class=\"form-group col-xs-6\">\r\n            <input type=\"text\"\r\n                   id=\"city\"\r\n                   name=\"city\"\r\n                   required\r\n                   ngModel\r\n                   placeholder=\"Specify the city\"\r\n                   class=\"form-control\"\r\n                   #city=\"ngModel\"/>\r\n          </div>\r\n        </div>\r\n        <button class=\"btn btn-success btn-block\"\r\n                type=\"submit\"\r\n                [disabled]=\"!f.valid\">Check</button>\r\n      </form>\r\n    </div>\r\n    <div class=\"col-xs-6\">\r\n      <div class=\"col-xs-4\">\r\n      </div>\r\n      <div class=\"col-xs-8\">\r\n        <img src={{result.icon_url}}>\r\n      </div>\r\n      <hr/>\r\n      <hr/>\r\n      <div class=\"panel panel-default\" *ngIf=\"result !== ''\">\r\n        <div class=\"panel-body\">Weather: {{result.weather}}</div>\r\n        <div class=\"panel-body\">Temprature: {{result.temperature_string}}</div>\r\n        <div class=\"panel-body\">Feels like: {{result.feelslike_string}}</div>\r\n        <div class=\"panel-body\">Wind: {{result.wind_string}}</div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n"
+module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <div class=\"container-fluid\">\r\n    <a routerLink=\"/\"\r\n       class=\"navbar-header pull-left navbar-brand thick\">\r\n      <b class=\"sw-text-white\">Athelete</b>\r\n    </a>\r\n    <p class=\"navbar-text pull-right\">\r\n      <button routerLink=\"/login\"\r\n              *ngIf=\"!login\"\r\n              class=\"btn btn-xs navbar-link sw-button-transparent\">\r\n        <b>Login</b>\r\n      </button>\r\n      <button routerLink=\"/choose\"\r\n              *ngIf=\"!login\"\r\n              class=\"btn btn-xs navbar-link sw-button-transparent\">\r\n        <b>Sign up</b>\r\n      </button>\r\n      <button routerLink=\"/user\"\r\n         *ngIf=\"login\"\r\n         class=\"btn btn-xs navbar-link sw-button-transparent glyphicon glyphicon-user sw-icon-padding sw-text-white\">\r\n      </button>\r\n    </p>\r\n  </div>\r\n</nav>\r\n\r\n<div class=\"container\">\r\n  <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\r\n    <!-- Indicators -->\r\n    <ol class=\"carousel-indicators\">\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\">\r\n      <div class=\"item active\">\r\n        <img class=\"sw-img-slide\"\r\n             src=\"https://www.harmonygenevemarathon.com/images/uploads/heroes/marathon-header-en.jpg\"\r\n             alt=\"Los Angeles\">\r\n      </div>\r\n\r\n      <div class=\"item\">\r\n        <img class=\"item active\"\r\n             src=\"https://media.wired.com/photos/59c7ae866d668e01c65b1046/2:1/w_2500,c_limit/Berlin-FA-852825046.jpg\"\r\n             alt=\"Chicago\">\r\n      </div>\r\n\r\n      <div class=\"item\">\r\n        <img class=\"item active\"\r\n             src=\"https://eversport.tv/sites/default/files/marathon-frankfurt-.jpg\"\r\n             alt=\"New york\">\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Left and right controls -->\r\n    <a class=\"left carousel-control\" href=\"#myCarousel\" data-slide=\"prev\">\r\n      <span class=\"glyphicon glyphicon-chevron-left\"></span>\r\n      <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#myCarousel\" data-slide=\"next\">\r\n      <span class=\"glyphicon glyphicon-chevron-right\"></span>\r\n      <span class=\"sr-only\">Next</span>\r\n    </a>\r\n  </div>\r\n</div>\r\n\r\n<hr/>\r\n\r\n<div class=\"container\">\r\n  <div class=\"input-group\">\r\n    <input [(ngModel)]=\"key\"\r\n           type=\"text\"\r\n           class=\"form-control\"\r\n           placeholder=\"Search events\">\r\n    <span class=\"input-group-btn\">\r\n           <a (click)=\"searchEvents()\" class=\"btn btn-default\" type=\"button\">\r\n               <span class=\"glyphicon glyphicon-search\"></span>\r\n           </a>\r\n   </span>\r\n  </div>\r\n  <div class=\"container\" *ngIf=\"events\">\r\n    <h4>Searching Results for '{{key}}'</h4>\r\n    <div class=\"panel panel-default\">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n        <tr>\r\n          <th>Name</th>\r\n          <th>Organization</th>\r\n          <th>Post time</th>\r\n        </tr>\r\n        </thead>\r\n        <tbody *ngFor = \"let event of events\" >\r\n          <tr>\r\n            <td><a (click)=\"selectEvent(event._id)\" class=\"btn sw-button-transparent sw-link sw-button-transparent\">{{event.name}}</a></td>\r\n            <td><a class=\"btn sw-button-transparent sw-link sw-button-transparent\" data-toggle=\"modal\" data-target=\"#myModal\" (click)=\"selectOrg(event.orgId._id)\">{{event.orgId.organization}}</a></td>\r\n            <td>{{event.dateCreated}}</td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n  </div>\r\n\r\n  <hr/>\r\n  <div class=\"row\">\r\n    <div class=\"col-xs-6\">\r\n      <div class=\"col-xs-2\">\r\n      </div>\r\n      <div class=\"col-xs-10\">\r\n        <h3>Weather Tracking</h3>\r\n      </div>\r\n      <form (ngSubmit)=\"searchWeather()\"\r\n            #f =\"ngForm\">\r\n        <div>\r\n          <div class=\"form-group col-xs-6\">\r\n            <input type=\"text\"\r\n                   id=\"state\"\r\n                   name=\"state\"\r\n                   required\r\n                   ngModel\r\n                   placeholder=\"Specify the state\"\r\n                   class=\"form-control\"\r\n                   #state=\"ngModel\"/>\r\n          </div>\r\n          <div class=\"form-group col-xs-6\">\r\n            <input type=\"text\"\r\n                   id=\"city\"\r\n                   name=\"city\"\r\n                   required\r\n                   ngModel\r\n                   placeholder=\"Specify the city\"\r\n                   class=\"form-control\"\r\n                   #city=\"ngModel\"/>\r\n          </div>\r\n        </div>\r\n        <button class=\"btn btn-success btn-block\"\r\n                type=\"submit\"\r\n                [disabled]=\"!f.valid\">Check</button>\r\n      </form>\r\n    </div>\r\n    <div class=\"col-xs-6\">\r\n      <div class=\"col-xs-4\">\r\n      </div>\r\n      <div class=\"col-xs-8\">\r\n        <img src={{result.icon_url}}>\r\n      </div>\r\n      <hr/>\r\n      <hr/>\r\n      <div class=\"panel panel-default\" *ngIf=\"result !== ''\">\r\n        <div class=\"panel-body\">Weather: {{result.weather}}</div>\r\n        <div class=\"panel-body\">Temprature: {{result.temperature_string}}</div>\r\n        <div class=\"panel-body\">Feels like: {{result.feelslike_string}}</div>\r\n        <div class=\"panel-body\">Wind: {{result.wind_string}}</div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"myModal\" role=\"dialog\">\r\n    <div class=\"modal-dialog\">\r\n\r\n      <!-- Modal content-->\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n          <h4 class=\"modal-title\">{{org.organization}}</h4>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <p>{{org.intro}}</p>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button *ngIf=\"!following && login\" (click)=\"follow(user._id, org._id)\" class=\"btn btn-lg sw-text-yellow pull-left sw-button-transparent glyphicon glyphicon-star-empty sw-button-transparent\"></button>\r\n          <button *ngIf=\"following && login\" (click)=\"unfollow(user._id, org._id)\" class=\"btn btn-lg sw-text-yellow pull-left sw-button-transparent glyphicon glyphicon-star sw-button-transparent\"></button>\r\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -601,6 +629,7 @@ module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <d
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__ = __webpack_require__("../../../../../src/app/services/shared.service.client.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__ = __webpack_require__("../../../../../src/app/services/user.service.client.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_event_service_client__ = __webpack_require__("../../../../../src/app/services/event.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -616,13 +645,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomeComponent = (function () {
-    function HomeComponent(homeService, sharedService, userService, eventService) {
+    function HomeComponent(homeService, sharedService, userService, eventService, router) {
         this.homeService = homeService;
         this.sharedService = sharedService;
         this.userService = userService;
         this.eventService = eventService;
+        this.router = router;
         this.result = '';
+        this.org = {};
         this.user = {
             role: ''
         };
@@ -640,19 +672,61 @@ var HomeComponent = (function () {
         var _this = this;
         this.eventService.searchEvent(this.key)
             .subscribe(function (events) {
-            console.log(events);
             _this.events = events;
         });
     };
+    HomeComponent.prototype.selectEvent = function (id) {
+        var _this = this;
+        this.eventService.findEventById(id)
+            .subscribe(function (event) {
+            _this.event = event;
+            _this.router.navigate(['user', event.orgId, 'event', event._id, 'detail']);
+        });
+    };
+    HomeComponent.prototype.follow = function (uid, oid) {
+        var _this = this;
+        this.userService.follow(uid, oid)
+            .subscribe(function (data) {
+            _this.following = true;
+        });
+    };
+    HomeComponent.prototype.loggedIn = function () {
+        var _this = this;
+        this.userService.checkLogin()
+            .subscribe(function (data) {
+            _this.login = data;
+            _this.user = _this.sharedService.user;
+        });
+    };
+    HomeComponent.prototype.unfollow = function (uid, oid) {
+        var _this = this;
+        this.userService.unfollow(uid, oid)
+            .subscribe(function (data) {
+            _this.following = false;
+        });
+    };
+    HomeComponent.prototype.selectOrg = function (orgId) {
+        var _this = this;
+        this.userService.findUserById(orgId)
+            .subscribe(function (org) {
+            _this.org = org;
+        });
+    };
+    HomeComponent.prototype.checkFollow = function (uid, oid) {
+        var _this = this;
+        this.userService.checkFollow(uid, oid)
+            .subscribe(function (data) {
+            console.log(data);
+            if (data) {
+                _this.following = true;
+            }
+            else {
+                _this.following = false;
+            }
+        });
+    };
     HomeComponent.prototype.ngOnInit = function () {
-        this.user = this.sharedService.user;
-        console.log(this.user);
-        if (this.user === '') {
-            this.role = '';
-        }
-        else {
-            this.role = this.user.role;
-        }
+        this.loggedIn();
     };
     return HomeComponent;
 }());
@@ -666,10 +740,10 @@ HomeComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/home/home.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/home/home.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_home_service_client__["a" /* HomeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_home_service_client__["a" /* HomeService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__["a" /* SharedService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__["a" /* UserService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_event_service_client__["a" /* EventService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_event_service_client__["a" /* EventService */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_home_service_client__["a" /* HomeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_home_service_client__["a" /* HomeService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__["a" /* SharedService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__["a" /* UserService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_event_service_client__["a" /* EventService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_event_service_client__["a" /* EventService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */]) === "function" && _f || Object])
 ], HomeComponent);
 
-var _a, _b, _c, _d, _e;
+var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=home.component.js.map
 
 /***/ }),
@@ -816,7 +890,6 @@ var LoginComponent = (function () {
         this.userService.login(this.username, this.password)
             .subscribe(function (user) {
             if (!user) {
-                console.log(_this.errorFlag);
                 _this.errorFlag = true;
             }
             else {
@@ -1356,6 +1429,22 @@ var UserService = (function () {
             return response;
         });
     };
+    UserService.prototype.checkLogin = function () {
+        var _this = this;
+        var url = this.baseUrl + '/api/loggedIn';
+        this.options.withCredentials = true;
+        return this.http.post(url, {}, this.options)
+            .map(function (res) {
+            var user = res.json();
+            if (user !== 0) {
+                _this.sharedService.user = user;
+                return true;
+            }
+            else {
+                return false;
+            }
+        });
+    };
     UserService.prototype.loggedIn = function () {
         var _this = this;
         var url = this.baseUrl + '/api/loggedIn';
@@ -1417,6 +1506,27 @@ var UserService = (function () {
     UserService.prototype.deleteUser = function (userId) {
         var url = this.baseUrl + '/api/user/' + userId;
         return this.http.delete(url)
+            .map(function (response) {
+            return response.json();
+        });
+    };
+    UserService.prototype.follow = function (uid, oid) {
+        var url = this.baseUrl + '/api/user/follow?uid=' + uid + '&oid=' + oid;
+        return this.http.put(url, null)
+            .map(function (response) {
+            return response.json();
+        });
+    };
+    UserService.prototype.unfollow = function (uid, oid) {
+        var url = this.baseUrl + '/api/user/unfollow?uid=' + uid + '&oid=' + oid;
+        return this.http.put(url, null)
+            .map(function (response) {
+            return response.json();
+        });
+    };
+    UserService.prototype.checkFollow = function (uid, oid) {
+        var url = this.baseUrl + '/api/user/checkFollow?uid=' + uid + '&oid=' + oid;
+        return this.http.get(url)
             .map(function (response) {
             return response.json();
         });

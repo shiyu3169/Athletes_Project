@@ -5,6 +5,8 @@ import { SharedService } from '../../services/shared.service.client';
 import { UserService } from '../../services/user.service.client';
 import {EventService} from '../../services/event.service.client';
 import {Event} from '../../models/event.model.client';
+import {Router} from '@angular/router';
+import {User} from '../../models/user.model.client';
 
 @Component({
   selector: 'app-home',
@@ -15,20 +17,22 @@ export class HomeComponent implements OnInit {
 
   @ViewChild('f') homeForm: NgForm;
 
-  searchText: String;
-  results: [String];
+  event: Event;
   state: String;
   city: String;
+  following: boolean;
+  login: boolean;
   result: Object = '';
   role: String;
   key: String;
+  org: any = {};
   user: any = {
     role: ''
   };
   events: [Event];
 
   constructor(private homeService: HomeService, private sharedService: SharedService,
-              private userService: UserService, private eventService: EventService) { }
+              private userService: UserService, private eventService: EventService, private router: Router) { }
 
   searchWeather() {
     this.city = this.homeForm.value.city;
@@ -45,19 +49,72 @@ export class HomeComponent implements OnInit {
     this.eventService.searchEvent(this.key)
       .subscribe(
         (events: any) => {
-          console.log(events);
           this.events = events;
         }
       );
   }
 
+  selectEvent(id) {
+    this.eventService.findEventById(id)
+      .subscribe(
+        (event: any) => {
+          this.event = event;
+          this.router.navigate(['user', event.orgId, 'event', event._id, 'detail']);
+        }
+      );
+  }
+
+  follow(uid, oid) {
+    this.userService.follow(uid, oid)
+      .subscribe(
+        (data: any) => {
+          this.following = true;
+        }
+      );
+  }
+
+  loggedIn() {
+    this.userService.checkLogin()
+      .subscribe(
+        (data: any) => {
+          this.login = data;
+          this.user = this.sharedService.user;
+        }
+      );
+  }
+
+  unfollow(uid, oid) {
+    this.userService.unfollow(uid, oid)
+      .subscribe(
+        (data: any) => {
+          this.following = false;
+        }
+      );
+  }
+  selectOrg(orgId) {
+    this.userService.findUserById(orgId)
+      .subscribe(
+        (org: User) => {
+          this.org = org;
+        }
+      );
+  }
+
+  checkFollow(uid, oid) {
+    this.userService.checkFollow(uid, oid)
+      .subscribe(
+        (data: any) => {
+          console.log(data);
+          if (data) {
+            this.following = true;
+          } else {
+            this.following = false;
+          }
+        }
+      );
+  }
+
   ngOnInit() {
-    this.user = this.sharedService.user;
-    console.log(this.user);
-    if (this.user === '') {
-      this.role = '';
-    } else {
-      this.role = this.user.role;
-    }
+    this.loggedIn();
   }
 }

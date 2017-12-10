@@ -56,6 +56,22 @@ export class UserService {
         }
       );
   }
+  checkLogin() {
+    const url = this.baseUrl + '/api/loggedIn';
+    this.options.withCredentials = true;
+    return this.http.post(url, {}, this.options)
+      .map(
+        (res: Response) => {
+          const user = res.json();
+          if (user !== 0) {
+            this.sharedService.user = user;
+            return true;
+          } else {
+            return false;
+          }
+        }
+      );
+  }
 
   loggedIn() {
     const url = this.baseUrl + '/api/loggedIn';
@@ -132,6 +148,36 @@ export class UserService {
   deleteUser(userId: String) {
     const url = this.baseUrl + '/api/user/' + userId;
     return this.http.delete(url)
+      .map(
+        (response: Response) => {
+          return response.json();
+        }
+      );
+  }
+
+  follow(uid, oid) {
+    const url = this.baseUrl + '/api/user/follow?uid=' + uid + '&oid=' + oid;
+    return this.http.put(url, null)
+      .map(
+        (response: Response) => {
+          return response.json();
+        }
+      );
+  }
+
+  unfollow(uid, oid) {
+    const url = this.baseUrl + '/api/user/unfollow?uid=' + uid + '&oid=' + oid;
+    return this.http.put(url, null)
+      .map(
+        (response: Response) => {
+          return response.json();
+        }
+      );
+  }
+
+  checkFollow(uid, oid) {
+    const url = this.baseUrl + '/api/user/checkFollow?uid=' + uid + '&oid=' + oid;
+    return this.http.get(url)
       .map(
         (response: Response) => {
           return response.json();

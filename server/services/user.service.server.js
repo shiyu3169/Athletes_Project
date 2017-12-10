@@ -8,8 +8,12 @@ module.exports = function (app) {
   app.get("/api/user", findUsers);
   app.get("/api/user/:uid", findUserByID);
   app.post("/api/user", createUser);
+  app.put("/api/user/follow", follow);
+  app.put("/api/user/unfollow", unfollow);
+  app.get("/api/user/checkFollow", checkFollow);
   app.put("/api/user/:uid", updateUser);
   app.delete("/api/user/:uid", deleteUser);
+
 
   // authentication api
   app.post('/api/login', passport.authenticate('local'), login);
@@ -109,7 +113,6 @@ module.exports = function (app) {
 
   function register(req, res) {
     var role = req.query["role"];
-    console.log(role);
     var user = req.body;
     user.role = role;
     user.password = bcrypt.hashSync(user.password);
@@ -190,6 +193,33 @@ module.exports = function (app) {
     userModel.updateUser(uid, newUser)
       .then(function() {
         res.json(null);
+      })
+  }
+
+  function follow(req, res) {
+    var uid = req.query["uid"];
+    var oid = req.query["oid"];
+    userModel.follow(uid, oid)
+      .then(function() {
+        res.json(null);
+    })
+  }
+
+  function unfollow(req, res) {
+    var uid = req.query["uid"];
+    var oid = req.query["oid"];
+    userModel.unfollow(uid, oid)
+      .then(function() {
+        res.json(null);
+      })
+  }
+
+  function checkFollow(req, res) {
+    var uid = req.query["uid"];
+    var oid = req.query["oid"];
+    userModel.checkFollow(uid, oid)
+      .then(function(data) {
+        res.json(data);
       })
   }
 };

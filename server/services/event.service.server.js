@@ -55,7 +55,6 @@ module.exports = function (app) {
     var key = req.params["key"];
     eventModel.seachEvent(key)
       .then(function(events) {
-        console.log(events);
         res.json(events);
     });
   }
