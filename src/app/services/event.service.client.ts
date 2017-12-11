@@ -96,4 +96,15 @@ export class EventService {
         }
       );
   }
+
+  findAll() {
+    const url = this.baseUrl + '/api/event/findAll';
+    return this.http.get(url)
+      .map(
+        (response: Response) => {
+          return response.json();
+        }
+      );
+  }
+
 }

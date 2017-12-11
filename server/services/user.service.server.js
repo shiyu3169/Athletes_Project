@@ -6,6 +6,7 @@ module.exports = function (app) {
   var bcrypt = require("bcrypt-nodejs");
 
   app.get("/api/user", findUsers);
+  app.get("/api/user/findAll", findAll);
   app.get("/api/user/:uid", findUserByID);
   app.post("/api/user", createUser);
   app.put("/api/user/follow", follow);
@@ -185,8 +186,8 @@ module.exports = function (app) {
   function deleteUser(req, res) {
     var uid = req.params["uid"];
     userModel.deleteUser(uid)
-      .then(function(user) {
-        res.json(user);
+      .then(function() {
+        res.json(null);
       });
   }
 
@@ -247,6 +248,13 @@ module.exports = function (app) {
     var wid = req.params["wid"];
     var role = req.params["role"];
     userModel.findRegister(wid, role)
+      .then(function(users) {
+        res.json(users);
+      });
+  }
+
+  function findAll(req, res) {
+    userModel.findAll()
       .then(function(users) {
         res.json(users);
       });

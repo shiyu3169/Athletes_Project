@@ -92,8 +92,12 @@
         </thead>
         <tbody *ngFor = "let event of events" >
           <tr>
-            <td><a (click)="selectEvent(event._id)" class="btn sw-button-transparent sw-link sw-button-transparent">{{event.name}}</a></td>
-            <td><a class="btn sw-button-transparent sw-link sw-button-transparent" data-toggle="modal" data-target="#myModal" (click)="selectOrg(event.orgId._id)">{{event.orgId.organization}}</a></td>
+            <td><a (click)="selectEvent(event._id)"
+                   class="btn sw-button-transparent sw-link sw-button-transparent">{{event.name}}</a></td>
+            <td><a class="btn sw-button-transparent sw-link sw-button-transparent"
+                   data-toggle="modal"
+                   data-target="#myModal"
+                   (click)="selectOrg(event.orgId._id)">{{event.orgId.organization}}</a></td>
             <td>{{event.dateCreated}}</td>
           </tr>
         </tbody>
@@ -154,10 +158,20 @@
       </div>
     </div>
   </div>
+  <hr/>
+  <div *ngIf="user.role === 'admin'">
+    <button class="btn btn-warning btn-block"
+            data-toggle="modal"
+            data-target="#userModal"
+            (click)="list('user')">All Users</button>
+    <button class="btn btn-warning btn-block"
+            data-toggle="modal"
+            data-target="#eventModal"
+            (click)="list('event')">All Events</button>
+  </div>
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
-
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
@@ -170,6 +184,82 @@
         <div class="modal-footer">
           <button *ngIf="!following && login" (click)="follow(user._id, org._id)" class="btn btn-lg sw-text-yellow pull-left sw-button-transparent glyphicon glyphicon-star-empty sw-button-transparent"></button>
           <button *ngIf="following && login && user.role !== 'organization'" class="btn btn-lg sw-text-yellow pull-left sw-button-transparent glyphicon glyphicon-star sw-button-transparent"></button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="userModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">All Users</h4>
+        </div>
+        <div class="modal-body">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Username</th>
+              <th>Role</th>
+              <th>Date Created</th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody *ngFor = "let data of userData" >
+            <tr>
+              <td><a (click)="selectUser(data._id)" class="btn sw-button-transparent sw-link sw-button-transparent">{{data.username}}</a></td>
+              <td>{{data.role}}</td>
+              <td>{{data.dateCreated}}</td>
+              <td><button class="btn pull-right sw-button-transparent">
+                  <span class="glyphicon glyphicon-remove sw-text-red"
+                        (click)="deleteUser(data._id)"></span></button></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button routerLink="/choose" class="btn btn-block" data-dismiss="modal">Create New User</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="eventModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">All Events</h4>
+        </div>
+        <div class="modal-body">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Date Created</th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody *ngFor = "let data of eventData" >
+            <tr>
+              <td><a (click)="selectEvent(data._id)" class="btn sw-button-transparent sw-link sw-button-transparent">{{data.name}}</a></td>
+              <td>{{data.dateCreated}}</td>
+              <td><button class="btn pull-right sw-button-transparent">
+                  <span class="glyphicon glyphicon-remove sw-text-red"
+                        (click)="deleteEvent(data._id)"></span></button></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>

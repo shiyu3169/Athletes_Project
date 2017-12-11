@@ -144,17 +144,6 @@ export class UserService {
       );
   }
 
-  // removes the user whose _id matches the userId parameter
-  deleteUser(userId: String) {
-    const url = this.baseUrl + '/api/user/' + userId;
-    return this.http.delete(url)
-      .map(
-        (response: Response) => {
-          return response.json();
-        }
-      );
-  }
-
   follow(uid, oid) {
     const url = this.baseUrl + '/api/user/follow?uid=' + uid + '&oid=' + oid;
     return this.http.put(url, null)
@@ -208,6 +197,26 @@ export class UserService {
   findRegister(wid, role) {
     const url = this.baseUrl + '/api/user/' + wid + '/findRegister/' + role;
     return this.http.get(url)
+      .map(
+        (response: Response) => {
+          return response.json();
+        }
+      );
+  }
+
+  findAll() {
+    const url = this.baseUrl + '/api/user/findAll';
+    return this.http.get(url)
+      .map(
+        (response: Response) => {
+          return response.json();
+        }
+      );
+  }
+
+  deleteUser(uid) {
+    const url = this.baseUrl + '/api/user/' + uid;
+    return this.http.delete(url)
       .map(
         (response: Response) => {
           return response.json();

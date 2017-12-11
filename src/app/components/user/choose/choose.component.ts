@@ -11,6 +11,8 @@ export class ChooseComponent implements OnInit {
 
   constructor(private sharedService: SharedService, private router: Router) { }
 
+  user: any;
+
   runnerRegister() {
     this.sharedService.role = 'runner';
     this.router.navigate(['/register']);
@@ -27,6 +29,7 @@ export class ChooseComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.user = this.sharedService.user;
   }
 
 }

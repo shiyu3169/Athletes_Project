@@ -30,6 +30,8 @@ export class HomeComponent implements OnInit {
     role: ''
   };
   events: [Event];
+  userData: [User];
+  eventData: [Event];
 
   constructor(private homeService: HomeService, private sharedService: SharedService,
               private userService: UserService, private eventService: EventService, private router: Router) { }
@@ -43,6 +45,42 @@ export class HomeComponent implements OnInit {
           this.result = data.current_observation;
         }
       );
+  }
+
+  deleteUser(uid) {
+    this.userService.deleteUser(uid)
+      .subscribe(
+        (data: any) => {
+          this.list('user');
+        }
+      );
+  }
+
+  deleteEvent(wid) {
+    this.eventService.deleteEvent(wid)
+      .subscribe(
+        (data: any) => {
+          this.list('event');
+        }
+      );
+  }
+
+  list(role) {
+    if (role === 'user') {
+      this.userService.findAll()
+        .subscribe(
+          (data: any) => {
+            this.userData = data;
+          }
+        );
+    } else {
+      this.eventService.findAll()
+        .subscribe(
+          (data: any) => {
+            this.eventData = data;
+          }
+        );
+    }
   }
 
   searchEvents() {

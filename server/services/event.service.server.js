@@ -3,6 +3,7 @@ module.exports = function (app) {
   var eventModel = require('../../model/event/event.model.server');
 
   app.post("/api/user/:uid/event", createEvent);
+  app.get("/api/event/findAll", findAll);
   app.get("/api/user/:uid/event", findAllEventsForUser)
   app.get("/api/event/search/:key", searchEvent);;
   app.get("/api/event/:wid", findEventById);
@@ -10,7 +11,6 @@ module.exports = function (app) {
   app.put("/api/event/:wid", updateEvent);
   app.put("/api/event/:uid/register/:wid", register);
   app.delete("/api/event/:wid", deleteEvent);
-
 
 
   function createEvent(req, res) {
@@ -75,6 +75,13 @@ module.exports = function (app) {
   function findEvents(req, res) {
     var uid = req.params["uid"];
     eventModel.findEvents(uid)
+      .then(function(events) {
+        res.json(events);
+      });
+  }
+
+  function findAll(req, res) {
+    eventModel.findAll()
       .then(function(events) {
         res.json(events);
       });

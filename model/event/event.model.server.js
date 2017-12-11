@@ -14,6 +14,7 @@ EventModel.deleteEvent = deleteEvent;
 EventModel.seachEvent = searchEvent;
 EventModel.register = register;
 EventModel.findEvents = findEvents;
+EventModel.findAll = findAll;
 
 module.exports = EventModel;
 
@@ -76,4 +77,10 @@ function register(uid, wid) {
 }
 function findEvents(uid) {
   return EventModel.find({registered: uid});
+}
+
+
+
+function findAll() {
+  return EventModel.find();
 }
