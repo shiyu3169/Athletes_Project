@@ -26,12 +26,6 @@
            class="pull-left navbar-brand thick">
           <b class="sw-text-white">Event Detail</b>
         </a>
-        <button type="submit"
-                [disabled]="!f.valid"
-                form="webForm"
-                class="btn btn-xs sw-button-transparent navbar-link navbar-text pull-right sw-icon-padding">
-          <span class="glyphicon glyphicon-ok sw-text-white"></span>
-        </button>
       </div>
     </div>
   </div>
@@ -68,7 +62,6 @@
                  id="name"
                  name="name"
                  readonly
-                 placeholder="any name"
                  ngModel="{{event.name}}"
                  #name="ngModel"
                  class="form-control"/>
@@ -79,7 +72,6 @@
                     name="description"
                     rows="5"
                     readonly
-                    placeholder="anything related to this event"
                     ngModel="{{event.description}}"
                     #description="ngModel"
                     class="form-control"></textarea>
@@ -90,7 +82,6 @@
                  id="address"
                  name="address"
                  readonly
-                 placeholder="Address of the event"
                  ngModel="{{event.address}}"
                  #address="ngModel"
                  class="form-control"/>
@@ -102,7 +93,6 @@
                    id="city"
                    name="city"
                    readonly
-                   placeholder="City of event"
                    ngModel="{{event.city}}"
                    #city="ngModel"
                    class="form-control"/>
@@ -115,7 +105,6 @@
                    id="state"
                    name="state"
                    readonly
-                   placeholder="state of the event"
                    ngModel="{{event.state}}"
                    #state="ngModel"
                    class="form-control"/>
@@ -127,7 +116,6 @@
                  id="time"
                  name="time"
                  readonly
-                 placeholder="Event Time"
                  ngModel="{{event.time}}"
                  #time="ngModel"
                  class="form-control"/>
@@ -139,7 +127,7 @@
           </div>
         </div>
       </form>
-      <div class="col-xs-6" *ngIf="user.role==='organization'">
+      <div class="col-xs-3" *ngIf="user.role==='organization'">
         <div class="panel panel-info">
           <div class = "panel-heading">
             <h3 class = "panel-title">Registered Runner</h3>
@@ -153,7 +141,7 @@
           </ul>
         </div>
       </div>
-      <div class="col-xs-6" *ngIf="user.role==='organization'">
+      <div class="col-xs-3" *ngIf="user.role==='organization'">
         <div class="panel panel-info">
           <div class = "panel-heading">
             <h3 class = "panel-title">Registered Volunteers</h3>
@@ -165,6 +153,21 @@
                       routerLink="/user/{{vol._id}}/detail">{{vol.username}}</button>
             </li>
           </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-8">
+          <img src={{result.icon_url}}>
+        </div>
+        <hr/>
+        <hr/>
+        <div class="panel panel-default" *ngIf="result !== ''">
+          <div class="panel-body">Today's Weather: {{result.weather}}</div>
+          <div class="panel-body">Temprature: {{result.temperature_string}}</div>
+          <div class="panel-body">Feels like: {{result.feelslike_string}}</div>
+          <div class="panel-body">Wind: {{result.wind_string}}</div>
         </div>
       </div>
     </div>

@@ -240,7 +240,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/event/event-detail/event-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<!-- top navbar-->\n<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n  <div class=\"row\">\n    <div class=\"col-xs-4 hidden-xs\">\n      <div class=\"container-fluid\">\n        <p class=\"navbar-text pull-left\">\n          <a routerLink=\"/user/{{uid}}/event\"\n             class=\"navbar-link sw-text-white\">\n            <span class=\"glyphicon glyphicon-chevron-left\"></span>\n          </a>\n        </p>\n        <a routerLink=\"/user/{{uid}}/event\"\n           class=\"pull-left navbar-brand thick\">\n          <b class=\"sw-text-white\">Events</b>\n        </a>\n        <a routerLink=\"/user/{{uid}}/event/new\"\n           class=\"navbar-link navbar-text pull-right sw-icon-padding\">\n          <span class=\"glyphicon glyphicon-plus sw-text-white\"></span>\n        </a>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-8 pull-right\">\n      <div class=\"container-fluid\">\n        <a routerLink=\"/user/{{uid}}/event/{{wid}}\"\n           class=\"pull-left navbar-brand thick\">\n          <b class=\"sw-text-white\">Event Detail</b>\n        </a>\n        <button type=\"submit\"\n                [disabled]=\"!f.valid\"\n                form=\"webForm\"\n                class=\"btn btn-xs sw-button-transparent navbar-link navbar-text pull-right sw-icon-padding\">\n          <span class=\"glyphicon glyphicon-ok sw-text-white\"></span>\n        </button>\n      </div>\n    </div>\n  </div>\n</nav>\n\n<!--left events-->\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-xs-4 hidden-xs\">\n      <ul class=\"list-group\">\n        <li class=\"list-group-item sw-borderless\"\n            *ngFor=\"let event of events\">\n          <a class=\"sw-link\"\n             routerLink=\"/user/{{uid}}/event/{{event._id}}/detail\">{{event.name}}</a>\n          <a routerLink=\"/user/{{uid}}/event/{{event._id}}\">\n            <span class=\"glyphicon glyphicon-cog pull-right\"></span>\n          </a>\n        </li>\n      </ul>\n    </div>\n\n    <!--right editor-->\n    <div class=\"col-sm-8 col-xs-12\">\n      <div *ngIf=\"registered\"\n           class=\"alert alert-success\" >\n        Register successfully!\n      </div>\n      <form (ngSubmit)=\"update()\"\n            #f =\"ngForm\"\n            id=\"webForm\">\n        <div class=\"form-group\">\n          <label for=\"name\">Name</label>\n          <input type=\"text\"\n                 id=\"name\"\n                 name=\"name\"\n                 readonly\n                 placeholder=\"any name\"\n                 ngModel=\"{{event.name}}\"\n                 #name=\"ngModel\"\n                 class=\"form-control\"/>\n        </div>\n        <div class=\"form-group\">\n          <label for=\"description\">Event Desciption</label>\n          <textarea id=\"description\"\n                    name=\"description\"\n                    rows=\"5\"\n                    readonly\n                    placeholder=\"anything related to this event\"\n                    ngModel=\"{{event.description}}\"\n                    #description=\"ngModel\"\n                    class=\"form-control\"></textarea>\n        </div>\n        <div class=\"form-group\">\n          <label for=\"address\">Street</label>\n          <input type=\"text\"\n                 id=\"address\"\n                 name=\"address\"\n                 readonly\n                 placeholder=\"Address of the event\"\n                 ngModel=\"{{event.address}}\"\n                 #address=\"ngModel\"\n                 class=\"form-control\"/>\n        </div>\n        <div class=\"col-xs-6\">\n          <div class=\"form-group\">\n            <label for=\"city\">City</label>\n            <input type=\"text\"\n                   id=\"city\"\n                   name=\"city\"\n                   readonly\n                   placeholder=\"City of event\"\n                   ngModel=\"{{event.city}}\"\n                   #city=\"ngModel\"\n                   class=\"form-control\"/>\n          </div>\n        </div>\n        <div class=\"col-xs-6\">\n          <div class=\"form-group\">\n            <label for=\"state\">State</label>\n            <input type=\"text\"\n                   id=\"state\"\n                   name=\"state\"\n                   readonly\n                   placeholder=\"state of the event\"\n                   ngModel=\"{{event.state}}\"\n                   #state=\"ngModel\"\n                   class=\"form-control\"/>\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <label for=\"time\">Event Time</label>\n          <input type=\"datetime-local\"\n                 id=\"time\"\n                 name=\"time\"\n                 readonly\n                 placeholder=\"Event Time\"\n                 ngModel=\"{{event.time}}\"\n                 #time=\"ngModel\"\n                 class=\"form-control\"/>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-xs-4\" *ngIf=\"user.role !== 'organization'\">\n            <a (click)=\"rsvp()\"\n               class=\"btn btn-success btn-block\">RSVP</a>\n          </div>\n        </div>\n      </form>\n      <div class=\"col-xs-6\" *ngIf=\"user.role==='organization'\">\n        <div class=\"panel panel-info\">\n          <div class = \"panel-heading\">\n            <h3 class = \"panel-title\">Registered Runner</h3>\n          </div>\n          <ul class=\"list-group\">\n            <li class=\"list-group-item sw-borderless\"\n                *ngFor=\"let runner of runners\">\n              <button class=\"btn sw-button-transparent\"\n                      routerLink=\"/user/{{runner._id}}/detail\">{{runner.username}}</button>\n            </li>\n          </ul>\n        </div>\n      </div>\n      <div class=\"col-xs-6\" *ngIf=\"user.role==='organization'\">\n        <div class=\"panel panel-info\">\n          <div class = \"panel-heading\">\n            <h3 class = \"panel-title\">Registered Volunteers</h3>\n          </div>\n          <ul class=\"list-group\">\n            <li class=\"list-group-item sw-borderless\"\n                *ngFor=\"let vol of vols\">\n              <button class=\"btn sw-button-transparent\"\n                      routerLink=\"/user/{{vol._id}}/detail\">{{vol.username}}</button>\n            </li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- Footer -->\n<nav class=\"navbar navbar-inverse navbar-fixed-bottom\">\n  <div class=\"container-fluid\">\n    <a routerLink=\"/user\"\n       class=\"navbar-text pull-right\">\n      <span class=\"glyphicon glyphicon-user sw-icon-padding sw-text-white\"></span>\n    </a>\n  </div>\n</nav>\n"
+module.exports = "\n<!-- top navbar-->\n<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n  <div class=\"row\">\n    <div class=\"col-xs-4 hidden-xs\">\n      <div class=\"container-fluid\">\n        <p class=\"navbar-text pull-left\">\n          <a routerLink=\"/user/{{uid}}/event\"\n             class=\"navbar-link sw-text-white\">\n            <span class=\"glyphicon glyphicon-chevron-left\"></span>\n          </a>\n        </p>\n        <a routerLink=\"/user/{{uid}}/event\"\n           class=\"pull-left navbar-brand thick\">\n          <b class=\"sw-text-white\">Events</b>\n        </a>\n        <a routerLink=\"/user/{{uid}}/event/new\"\n           class=\"navbar-link navbar-text pull-right sw-icon-padding\">\n          <span class=\"glyphicon glyphicon-plus sw-text-white\"></span>\n        </a>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-8 pull-right\">\n      <div class=\"container-fluid\">\n        <a routerLink=\"/user/{{uid}}/event/{{wid}}\"\n           class=\"pull-left navbar-brand thick\">\n          <b class=\"sw-text-white\">Event Detail</b>\n        </a>\n      </div>\n    </div>\n  </div>\n</nav>\n\n<!--left events-->\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-xs-4 hidden-xs\">\n      <ul class=\"list-group\">\n        <li class=\"list-group-item sw-borderless\"\n            *ngFor=\"let event of events\">\n          <a class=\"sw-link\"\n             routerLink=\"/user/{{uid}}/event/{{event._id}}/detail\">{{event.name}}</a>\n          <a routerLink=\"/user/{{uid}}/event/{{event._id}}\">\n            <span class=\"glyphicon glyphicon-cog pull-right\"></span>\n          </a>\n        </li>\n      </ul>\n    </div>\n\n    <!--right editor-->\n    <div class=\"col-sm-8 col-xs-12\">\n      <div *ngIf=\"registered\"\n           class=\"alert alert-success\" >\n        Register successfully!\n      </div>\n      <form (ngSubmit)=\"update()\"\n            #f =\"ngForm\"\n            id=\"webForm\">\n        <div class=\"form-group\">\n          <label for=\"name\">Name</label>\n          <input type=\"text\"\n                 id=\"name\"\n                 name=\"name\"\n                 readonly\n                 ngModel=\"{{event.name}}\"\n                 #name=\"ngModel\"\n                 class=\"form-control\"/>\n        </div>\n        <div class=\"form-group\">\n          <label for=\"description\">Event Desciption</label>\n          <textarea id=\"description\"\n                    name=\"description\"\n                    rows=\"5\"\n                    readonly\n                    ngModel=\"{{event.description}}\"\n                    #description=\"ngModel\"\n                    class=\"form-control\"></textarea>\n        </div>\n        <div class=\"form-group\">\n          <label for=\"address\">Street</label>\n          <input type=\"text\"\n                 id=\"address\"\n                 name=\"address\"\n                 readonly\n                 ngModel=\"{{event.address}}\"\n                 #address=\"ngModel\"\n                 class=\"form-control\"/>\n        </div>\n        <div class=\"col-xs-6\">\n          <div class=\"form-group\">\n            <label for=\"city\">City</label>\n            <input type=\"text\"\n                   id=\"city\"\n                   name=\"city\"\n                   readonly\n                   ngModel=\"{{event.city}}\"\n                   #city=\"ngModel\"\n                   class=\"form-control\"/>\n          </div>\n        </div>\n        <div class=\"col-xs-6\">\n          <div class=\"form-group\">\n            <label for=\"state\">State</label>\n            <input type=\"text\"\n                   id=\"state\"\n                   name=\"state\"\n                   readonly\n                   ngModel=\"{{event.state}}\"\n                   #state=\"ngModel\"\n                   class=\"form-control\"/>\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <label for=\"time\">Event Time</label>\n          <input type=\"datetime-local\"\n                 id=\"time\"\n                 name=\"time\"\n                 readonly\n                 ngModel=\"{{event.time}}\"\n                 #time=\"ngModel\"\n                 class=\"form-control\"/>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-xs-4\" *ngIf=\"user.role !== 'organization'\">\n            <a (click)=\"rsvp()\"\n               class=\"btn btn-success btn-block\">RSVP</a>\n          </div>\n        </div>\n      </form>\n      <div class=\"col-xs-3\" *ngIf=\"user.role==='organization'\">\n        <div class=\"panel panel-info\">\n          <div class = \"panel-heading\">\n            <h3 class = \"panel-title\">Registered Runner</h3>\n          </div>\n          <ul class=\"list-group\">\n            <li class=\"list-group-item sw-borderless\"\n                *ngFor=\"let runner of runners\">\n              <button class=\"btn sw-button-transparent\"\n                      routerLink=\"/user/{{runner._id}}/detail\">{{runner.username}}</button>\n            </li>\n          </ul>\n        </div>\n      </div>\n      <div class=\"col-xs-3\" *ngIf=\"user.role==='organization'\">\n        <div class=\"panel panel-info\">\n          <div class = \"panel-heading\">\n            <h3 class = \"panel-title\">Registered Volunteers</h3>\n          </div>\n          <ul class=\"list-group\">\n            <li class=\"list-group-item sw-borderless\"\n                *ngFor=\"let vol of vols\">\n              <button class=\"btn sw-button-transparent\"\n                      routerLink=\"/user/{{vol._id}}/detail\">{{vol.username}}</button>\n            </li>\n          </ul>\n        </div>\n      </div>\n      <div class=\"col-xs-6\">\n        <div class=\"col-xs-4\">\n        </div>\n        <div class=\"col-xs-8\">\n          <img src={{result.icon_url}}>\n        </div>\n        <hr/>\n        <hr/>\n        <div class=\"panel panel-default\" *ngIf=\"result !== ''\">\n          <div class=\"panel-body\">Today's Weather: {{result.weather}}</div>\n          <div class=\"panel-body\">Temprature: {{result.temperature_string}}</div>\n          <div class=\"panel-body\">Feels like: {{result.feelslike_string}}</div>\n          <div class=\"panel-body\">Wind: {{result.wind_string}}</div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- Footer -->\n<nav class=\"navbar navbar-inverse navbar-fixed-bottom\">\n  <div class=\"container-fluid\">\n    <a routerLink=\"/user\"\n       class=\"navbar-text pull-right\">\n      <span class=\"glyphicon glyphicon-user sw-icon-padding sw-text-white\"></span>\n    </a>\n  </div>\n</nav>\n"
 
 /***/ }),
 
@@ -254,6 +254,7 @@ module.exports = "\n<!-- top navbar-->\n<nav class=\"navbar navbar-inverse navba
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__ = __webpack_require__("../../../../../src/app/services/event.service.client.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__ = __webpack_require__("../../../../../src/app/services/shared.service.client.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__ = __webpack_require__("../../../../../src/app/services/user.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_home_service_client__ = __webpack_require__("../../../../../src/app/services/home.service.client.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -269,12 +270,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var DateTimeFormat = Intl.DateTimeFormat;
 
+
 var EventDetailComponent = (function () {
-    function EventDetailComponent(activeRouter, eventService, sharedService, userService) {
+    function EventDetailComponent(activeRouter, eventService, sharedService, userService, homeService) {
         this.activeRouter = activeRouter;
         this.eventService = eventService;
         this.sharedService = sharedService;
         this.userService = userService;
+        this.homeService = homeService;
+        this.result = '';
         this.event = {
             _id: '',
             name: '',
@@ -301,7 +305,15 @@ var EventDetailComponent = (function () {
             _this.userService.findRegister(wid, 'volunteer')
                 .subscribe(function (data2) {
                 _this.vols = data2;
+                _this.searchWeather();
             });
+        });
+    };
+    EventDetailComponent.prototype.searchWeather = function () {
+        var _this = this;
+        this.homeService.searchWeather(this.city, this.state)
+            .subscribe(function (data) {
+            _this.result = data.current_observation;
         });
     };
     EventDetailComponent.prototype.ngOnInit = function () {
@@ -336,10 +348,10 @@ EventDetailComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/event/event-detail/event-detail.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/event/event-detail/event-detail.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__["a" /* EventService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__["a" /* EventService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__["a" /* SharedService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__["a" /* UserService */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__["a" /* EventService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__["a" /* EventService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__["a" /* SharedService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__["a" /* UserService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_home_service_client__["a" /* HomeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_home_service_client__["a" /* HomeService */]) === "function" && _e || Object])
 ], EventDetailComponent);
 
-var _a, _b, _c, _d;
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=event-detail.component.js.map
 
 /***/ }),
@@ -1023,7 +1035,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/user/profile/detail/detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  detail works!\n</p>\n"
+module.exports = "\n<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n  <div class=\"container-fluid\">\n    <a routerLink=\"/\"\n       class=\"navbar-header pull-left navbar-brand thick\">\n      <b class=\"sw-text-white\">Home</b>\n    </a>\n    <a routerLink=\"/user\"\n       class=\"navbar-header pull-left navbar-brand thick\">\n      <b class=\"sw-text-white\">Profile</b>\n    </a>\n  </div>\n</nav>\n\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-xs-2\">\n    </div>\n    <div class=\"col-xs-8\">\n      <form (ngSubmit)=\"update()\"\n            #f =\"ngForm\"\n            id=\"profileForm\">\n        <div class=\"form-group\">\n          <label for=\"username\">Username</label>\n          <input type=\"text\"\n                 class=\"form-control\"\n                 id=\"username\"\n                 name=\"username\"\n                 readonly\n                 #username=\"ngModel\"\n                 ngModel=\"{{user.username}}\">\n        </div>\n        <span class=\"help-block\"\n              *ngIf=\"!username.valid && username.touched\">Username can't be empty!</span>\n\n        <div class=\"form-group\">\n          <label for=\"email\">Email address</label>\n          <input type=\"email\"\n                 class=\"form-control\"\n                 id=\"email\"\n                 name=\"email\"\n                 email\n                 readonly\n                 ngModel=\"{{user.email}}\"\n                 #email=\"ngModel\">\n        </div>\n        <div class=\"form-group\">\n          <label for=\"firstName\">First Name</label>\n          <input type=\"text\"\n                 class=\"form-control\"\n                 id=\"firstName\"\n                 name=\"firstName\"\n                 readonly\n                 ngModel=\"{{user.firstName}}\"\n                 #firstName=\"ngModel\">\n        </div>\n        <div class=\"form-group\">\n          <label for=\"lastName\">Last Name</label>\n          <input type=\"text\"\n                 class=\"form-control\"\n                 id=\"lastName\"\n                 name=\"lastName\"\n                 readonly\n                 ngModel=\"{{user.lastName}}\"\n                 #lastName=\"ngModel\">\n        </div>\n        <div class=\"form-group\">\n          <label for=\"gender\">Gender</label>\n          <input type=\"text\"\n                 id=\"gender\"\n                 readonly\n                 name=\"gender\"\n                 [(ngModel)]=\"user.gender\"\n                 #gender=\"ngModel\"\n                 class=\"form-control\">\n        </div>\n        <div class=\"form-group\">\n          <label for=\"intro\">Short Introduction</label>\n          <textarea type=\"text\"\n                    id=\"intro\"\n                    name=\"intro\"\n                    ngModel=\"{{user.intro}}\"\n                    #intro=\"ngModel\"\n                    rows=\"3\"\n                    readonly\n                    class=\"form-control\"></textarea>\n        </div>\n      </form>\n    </div>\n    <div class=\"col-xs-2\">\n    </div>\n  </div>\n</div>\n\n<!-- Footer -->\n<nav class=\"navbar navbar-inverse navbar-fixed-bottom\">\n  <div class=\"container-fluid\">\n    <a routerLink=\"/user\"\n       class=\"navbar-text pull-right\">\n      <span class=\"glyphicon glyphicon-user sw-text-white\"></span>\n    </a>\n  </div>\n</nav>\n"
 
 /***/ }),
 
@@ -1033,6 +1045,8 @@ module.exports = "<p>\n  detail works!\n</p>\n"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__ = __webpack_require__("../../../../../src/app/services/user.service.client.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1043,10 +1057,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var DetailComponent = (function () {
-    function DetailComponent() {
+    function DetailComponent(activeRouter, userService) {
+        this.activeRouter = activeRouter;
+        this.userService = userService;
+        this.user = {
+            _id: this.uid,
+            username: '',
+            password: '',
+            email: '',
+            firstName: '',
+            lastName: '',
+            role: '',
+            gender: '',
+            intro: ''
+        };
     }
     DetailComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.activeRouter.params.subscribe(function (params) {
+            _this.uid = params['uid'];
+            _this.userService.findUserById(_this.uid)
+                .subscribe(function (user) {
+                _this.user = user;
+            });
+        });
     };
     return DetailComponent;
 }());
@@ -1056,9 +1093,10 @@ DetailComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/user/profile/detail/detail.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/user/profile/detail/detail.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__["a" /* UserService */]) === "function" && _b || Object])
 ], DetailComponent);
 
+var _a, _b;
 //# sourceMappingURL=detail.component.js.map
 
 /***/ }),

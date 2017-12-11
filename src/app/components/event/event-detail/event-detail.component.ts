@@ -6,6 +6,7 @@ import {SharedService} from '../../../services/shared.service.client';
 import DateTimeFormat = Intl.DateTimeFormat;
 import {User} from '../../../models/user.model.client';
 import {UserService} from '../../../services/user.service.client';
+import {HomeService} from "../../../services/home.service.client";
 
 @Component({
   selector: 'app-event-detail',
@@ -26,6 +27,7 @@ export class EventDetailComponent implements OnInit {
   state: String;
   time: DateTimeFormat;
   registered: boolean;
+  result: Object = '';
   event: Event = {
     _id: '',
     name: '',
@@ -39,7 +41,8 @@ export class EventDetailComponent implements OnInit {
   user: any;
 
   constructor(private activeRouter: ActivatedRoute, private eventService: EventService,
-              private sharedService: SharedService, private userService: UserService) { }
+              private sharedService: SharedService, private userService: UserService,
+              private homeService: HomeService) { }
 
   rsvp() {
     this.eventService.register(this.user._id, this.event._id)
@@ -59,12 +62,21 @@ export class EventDetailComponent implements OnInit {
             .subscribe(
               (data2: any) => {
                 this.vols = data2;
+                this.searchWeather();
               }
             );
         }
       );
   }
 
+  searchWeather() {
+    this.homeService.searchWeather(this.city, this.state)
+      .subscribe(
+        (data: any) => {
+          this.result = data.current_observation;
+        }
+      );
+  }
 
 
   ngOnInit() {
