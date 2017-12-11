@@ -10,6 +10,7 @@ import { AuthenticationService } from './services/authentication.service.client'
 import { HomeComponent } from './components/home/home.component';
 import { ChooseComponent } from './components/user/choose/choose.component';
 import { EventDetailComponent } from './components/event/event-detail/event-detail.component';
+import {DetailComponent} from './components/user/profile/detail/detail.component';
 
 const APP_ROUTES: Routes = [
   {path: '', component: HomeComponent},
@@ -17,6 +18,7 @@ const APP_ROUTES: Routes = [
   {path: 'choose', component: ChooseComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'user', component: ProfileComponent, canActivate: [AuthenticationService] },
+  {path: 'user/:uid/detail', component: DetailComponent, canActivate: [AuthenticationService] },
   {path: 'user/:uid/event', component: EventListComponent, canActivate: [AuthenticationService] },
   {path: 'user/:uid/event/new', component: EventNewComponent, canActivate: [AuthenticationService] },
   {path: 'user/:uid/event/:wid', component: EventEditComponent, canActivate: [AuthenticationService] },

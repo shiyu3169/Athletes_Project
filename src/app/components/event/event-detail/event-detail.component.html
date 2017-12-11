@@ -139,6 +139,34 @@
           </div>
         </div>
       </form>
+      <div class="col-xs-6" *ngIf="user.role==='organization'">
+        <div class="panel panel-info">
+          <div class = "panel-heading">
+            <h3 class = "panel-title">Registered Runner</h3>
+          </div>
+          <ul class="list-group">
+            <li class="list-group-item sw-borderless"
+                *ngFor="let runner of runners">
+              <button class="btn sw-button-transparent"
+                      routerLink="/user/{{runner._id}}/detail">{{runner.username}}</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6" *ngIf="user.role==='organization'">
+        <div class="panel panel-info">
+          <div class = "panel-heading">
+            <h3 class = "panel-title">Registered Volunteers</h3>
+          </div>
+          <ul class="list-group">
+            <li class="list-group-item sw-borderless"
+                *ngFor="let vol of vols">
+              <button class="btn sw-button-transparent"
+                      routerLink="/user/{{vol._id}}/detail">{{vol.username}}</button>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>

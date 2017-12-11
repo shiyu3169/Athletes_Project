@@ -204,4 +204,14 @@ export class UserService {
         }
       );
   }
+
+  findRegister(wid, role) {
+    const url = this.baseUrl + '/api/user/' + wid + '/findRegister/' + role;
+    return this.http.get(url)
+      .map(
+        (response: Response) => {
+          return response.json();
+        }
+      );
+  }
 }

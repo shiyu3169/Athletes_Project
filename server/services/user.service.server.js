@@ -15,6 +15,7 @@ module.exports = function (app) {
   app.put("/api/user/:uid", updateUser);
   app.delete("/api/user/:uid", deleteUser);
   app.get("/api/user/:uid/findFollowing", findFollowing);
+  app.get("/api/user/:wid/findRegister/:role", findRegister);
 
 
   // authentication api
@@ -239,6 +240,15 @@ module.exports = function (app) {
     userModel.findFollowing(uid)
       .then(function(orgs) {
         res.json(orgs);
+      });
+  }
+
+  function findRegister(req, res) {
+    var wid = req.params["wid"];
+    var role = req.params["role"];
+    userModel.findRegister(wid, role)
+      .then(function(users) {
+        res.json(users);
       });
   }
 };

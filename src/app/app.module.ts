@@ -22,6 +22,7 @@ import { AuthenticationService } from './services/authentication.service.client'
 import { HomeService } from './services/home.service.client';
 import { ChooseComponent } from './components/user/choose/choose.component';
 import { EventDetailComponent } from './components/event/event-detail/event-detail.component';
+import { DetailComponent } from './components/user/profile/detail/detail.component';
 @NgModule({
   // Declare components here
   declarations: [
@@ -34,7 +35,8 @@ import { EventDetailComponent } from './components/event/event-detail/event-deta
     EventNewComponent,
     EventListComponent,
     ChooseComponent,
-    EventDetailComponent
+    EventDetailComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

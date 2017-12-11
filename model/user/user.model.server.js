@@ -16,6 +16,7 @@ UserModel.unfollow = unfollow;
 UserModel.checkFollow = checkFollow;
 UserModel.findFollowing = findFollowing;
 UserModel.cancel = cancel;
+UserModel.findRegister = findRegister;
 
 module.exports = UserModel;
 
@@ -94,4 +95,8 @@ function checkFollow(uid, oid) {
 
 function findFollowing(uid) {
   return UserModel.find({followed: uid});
+}
+
+function findRegister(wid, role) {
+  return UserModel.find({register: wid, role: role});
 }

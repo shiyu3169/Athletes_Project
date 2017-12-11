@@ -4,6 +4,8 @@ import { EventService} from '../../../services/event.service.client';
 import { Event } from '../../../models/event.model.client';
 import {SharedService} from '../../../services/shared.service.client';
 import DateTimeFormat = Intl.DateTimeFormat;
+import {User} from '../../../models/user.model.client';
+import {UserService} from '../../../services/user.service.client';
 
 @Component({
   selector: 'app-event-detail',
@@ -14,7 +16,9 @@ export class EventDetailComponent implements OnInit {
 
   uid: String;
   wid: String;
-  events: Event[];
+  events: [Event];
+  runners: [User];
+  vols: [User];
   name: String;
   description: String;
   address: String;
@@ -35,7 +39,7 @@ export class EventDetailComponent implements OnInit {
   user: any;
 
   constructor(private activeRouter: ActivatedRoute, private eventService: EventService,
-              private sharedService: SharedService) { }
+              private sharedService: SharedService, private userService: UserService) { }
 
   rsvp() {
     this.eventService.register(this.user._id, this.event._id)
@@ -46,6 +50,23 @@ export class EventDetailComponent implements OnInit {
       );
   }
 
+  findRegister(wid) {
+    this.userService.findRegister(wid, 'runner')
+      .subscribe(
+        (data: any) => {
+          this.runners = data;
+          this.userService.findRegister(wid, 'volunteer')
+            .subscribe(
+              (data2: any) => {
+                this.vols = data2;
+              }
+            );
+        }
+      );
+  }
+
+
+
   ngOnInit() {
     this.activeRouter.params.subscribe(params => {
       this.uid = params['uid'];
@@ -54,7 +75,7 @@ export class EventDetailComponent implements OnInit {
       this.registered = false;
       this.eventService.findEventsByUser(this.uid)
         .subscribe(
-          (events: Event[]) => {
+          (events: [Event]) => {
             this.events = events;
             this.eventService.findEventById(this.wid)
               .subscribe(
@@ -66,6 +87,7 @@ export class EventDetailComponent implements OnInit {
                   this.city = this.event.city;
                   this.state = this.event.state;
                   this.time = this.event.time;
+                  this.findRegister(this.wid);
                 }
               );
           }
