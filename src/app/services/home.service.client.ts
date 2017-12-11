@@ -9,7 +9,7 @@ export class HomeService {
 
   searchWeather(city: String, state: String) {
     const url
-      = 'http://api.wunderground.com/api/5aef84f6a4fe075e/conditions/q/' + state + '/' + city + '.json';
+      = 'https://api.wunderground.com/api/5aef84f6a4fe075e/conditions/q/' + state + '/' + city + '.json';
     return this.http.get(url)
       .map(
         (response: Response) => {
