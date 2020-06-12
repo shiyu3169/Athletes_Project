@@ -1,24 +1,28 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
-    <a routerLink="/"
-       class="navbar-header pull-left navbar-brand thick">
+    <a routerLink="/" class="navbar-header pull-left navbar-brand thick">
       <b class="sw-text-white">Athlete</b>
     </a>
     <p class="navbar-text pull-right">
-      <button routerLink="/login"
-              *ngIf="!login"
-              class="btn btn-xs navbar-link sw-button-transparent">
+      <button
+        routerLink="/login"
+        *ngIf="!login"
+        class="btn btn-xs navbar-link sw-button-transparent"
+      >
         <b>Login</b>
       </button>
-      <button routerLink="/choose"
-              *ngIf="!login"
-              class="btn btn-xs navbar-link sw-button-transparent">
+      <button
+        routerLink="/choose"
+        *ngIf="!login"
+        class="btn btn-xs navbar-link sw-button-transparent"
+      >
         <b>Sign up</b>
       </button>
-      <button routerLink="/user"
-         *ngIf="login"
-         class="btn btn-xs navbar-link sw-button-transparent glyphicon glyphicon-user sw-icon-padding sw-text-white">
-      </button>
+      <button
+        routerLink="/user"
+        *ngIf="login"
+        class="btn btn-xs navbar-link sw-button-transparent glyphicon glyphicon-user sw-icon-padding sw-text-white"
+      ></button>
     </p>
   </div>
 </nav>
@@ -35,21 +39,27 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img class="sw-img-slide"
-             src="https://www.harmonygenevemarathon.com/images/uploads/heroes/marathon-header-en.jpg"
-             alt="Los Angeles">
+        <img
+          class="sw-img-slide"
+          src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1047&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F35%2F2020%2F03%2Ffb-average-marathon-time-2000.jpg"
+          alt="Los Angeles"
+        />
       </div>
 
       <div class="item">
-        <img class="item active"
-             src="https://media.wired.com/photos/59c7ae866d668e01c65b1046/2:1/w_2500,c_limit/Berlin-FA-852825046.jpg"
-             alt="Chicago">
+        <img
+          class="item active"
+          src="https://media.wired.com/photos/59c7ae866d668e01c65b1046/2:1/w_2500,c_limit/Berlin-FA-852825046.jpg"
+          alt="Chicago"
+        />
       </div>
 
       <div class="item">
-        <img class="item active"
-             src="https://eversport.tv/sites/default/files/marathon-frankfurt-.jpg"
-             alt="New york">
+        <img
+          class="item active"
+          src="https://eversport.tv/sites/default/files/marathon-frankfurt-.jpg"
+          alt="New york"
+        />
       </div>
     </div>
 
@@ -65,109 +75,136 @@
   </div>
 </div>
 
-<hr/>
+<hr />
 
 <div class="container">
   <div class="input-group">
-    <input [(ngModel)]="key"
-           type="text"
-           class="form-control"
-           placeholder="Search events">
+    <input
+      [(ngModel)]="key"
+      type="text"
+      class="form-control"
+      placeholder="Search events"
+    />
     <span class="input-group-btn">
-           <a (click)="searchEvents()" class="btn btn-default" type="button">
-               <span class="glyphicon glyphicon-search"></span>
-           </a>
-   </span>
+      <a (click)="searchEvents()" class="btn btn-default" type="button">
+        <span class="glyphicon glyphicon-search"></span>
+      </a>
+    </span>
   </div>
   <div class="container" *ngIf="events">
-    <h4>Searching Results for '{{key}}'</h4>
+    <h4>Searching Results for '{{ key }}'</h4>
     <div class="panel panel-default">
       <table class="table table-striped">
         <thead>
-        <tr>
-          <th>Name</th>
-          <th>Organization</th>
-          <th>Post time</th>
-        </tr>
-        </thead>
-        <tbody *ngFor = "let event of events" >
           <tr>
-            <td><a (click)="selectEvent(event._id)"
-                   class="btn sw-button-transparent sw-link sw-button-transparent">{{event.name}}</a></td>
-            <td><a class="btn sw-button-transparent sw-link sw-button-transparent"
-                   data-toggle="modal"
-                   data-target="#myModal"
-                   (click)="selectOrg(event.orgId._id)">{{event.orgId.organization}}</a></td>
-            <td>{{event.dateCreated}}</td>
+            <th>Name</th>
+            <th>Organization</th>
+            <th>Post time</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let event of events">
+          <tr>
+            <td>
+              <a
+                (click)="selectEvent(event._id)"
+                class="btn sw-button-transparent sw-link sw-button-transparent"
+                >{{ event.name }}</a
+              >
+            </td>
+            <td>
+              <a
+                class="btn sw-button-transparent sw-link sw-button-transparent"
+                data-toggle="modal"
+                data-target="#myModal"
+                (click)="selectOrg(event.orgId._id)"
+                >{{ event.orgId.organization }}</a
+              >
+            </td>
+            <td>{{ event.dateCreated }}</td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <hr/>
+  <hr />
   <div class="row">
     <div class="col-xs-6">
-      <div class="col-xs-2">
-      </div>
+      <div class="col-xs-2"></div>
       <div class="col-xs-10">
         <h3>Weather Tracking</h3>
       </div>
-      <form (ngSubmit)="searchWeather()"
-            #f ="ngForm">
+      <form (ngSubmit)="searchWeather()" #f="ngForm">
         <div>
           <div class="form-group col-xs-6">
-            <input type="text"
-                   id="state"
-                   name="state"
-                   required
-                   ngModel
-                   placeholder="Specify the state"
-                   class="form-control"
-                   #state="ngModel"/>
+            <input
+              type="text"
+              id="state"
+              name="state"
+              required
+              ngModel
+              placeholder="Specify the state"
+              class="form-control"
+              #state="ngModel"
+            />
           </div>
           <div class="form-group col-xs-6">
-            <input type="text"
-                   id="city"
-                   name="city"
-                   required
-                   ngModel
-                   placeholder="Specify the city"
-                   class="form-control"
-                   #city="ngModel"/>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              required
+              ngModel
+              placeholder="Specify the city"
+              class="form-control"
+              #city="ngModel"
+            />
           </div>
         </div>
-        <button class="btn btn-success btn-block"
-                type="submit"
-                [disabled]="!f.valid">Check</button>
+        <button
+          class="btn btn-success btn-block"
+          type="submit"
+          [disabled]="!f.valid"
+        >
+          Check
+        </button>
       </form>
     </div>
     <div class="col-xs-6">
-      <div class="col-xs-4">
-      </div>
+      <div class="col-xs-4"></div>
       <div class="col-xs-8">
-        <img src={{result.icon_url}}>
+        <img src="{{ result.icon_url }}" />
       </div>
-      <hr/>
-      <hr/>
+      <hr />
+      <hr />
       <div class="panel panel-default" *ngIf="result !== ''">
-        <div class="panel-body">Weather: {{result.weather}}</div>
-        <div class="panel-body">Temprature: {{result.temperature_string}}</div>
-        <div class="panel-body">Feels like: {{result.feelslike_string}}</div>
-        <div class="panel-body">Wind: {{result.wind_string}}</div>
+        <div class="panel-body">Weather: {{ result.weather }}</div>
+        <div class="panel-body">
+          Temprature: {{ result.temperature_string }}
+        </div>
+        <div class="panel-body">Feels like: {{ result.feelslike_string }}</div>
+        <div class="panel-body">Wind: {{ result.wind_string }}</div>
       </div>
     </div>
   </div>
-  <hr/>
+  <hr />
   <div *ngIf="user.role === 'admin'">
-    <button class="btn btn-warning btn-block"
-            data-toggle="modal"
-            data-target="#userModal"
-            (click)="list('user')">All Users</button>
-    <button class="btn btn-warning btn-block"
-            data-toggle="modal"
-            data-target="#eventModal"
-            (click)="list('event')">All Events</button>
+    <button
+      class="btn btn-warning btn-block"
+      data-toggle="modal"
+      data-target="#userModal"
+      (click)="list('user')"
+    >
+      All Users
+    </button>
+    <button
+      class="btn btn-warning btn-block"
+      data-toggle="modal"
+      data-target="#eventModal"
+      (click)="list('event')"
+    >
+      All Events
+    </button>
   </div>
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
@@ -175,16 +212,27 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">{{org.organization}}</h4>
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+          <h4 class="modal-title">{{ org.organization }}</h4>
         </div>
         <div class="modal-body">
-          <p>{{org.intro}}</p>
+          <p>{{ org.intro }}</p>
         </div>
         <div class="modal-footer">
-          <button *ngIf="!following && login" (click)="follow(user._id, org._id)" class="btn btn-lg sw-text-yellow pull-left sw-button-transparent glyphicon glyphicon-star-empty sw-button-transparent"></button>
-          <button *ngIf="following && login && user.role !== 'organization'" class="btn btn-lg sw-text-yellow pull-left sw-button-transparent glyphicon glyphicon-star sw-button-transparent"></button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button
+            *ngIf="!following && login"
+            (click)="follow(user._id, org._id)"
+            class="btn btn-lg sw-text-yellow pull-left sw-button-transparent glyphicon glyphicon-star-empty sw-button-transparent"
+          ></button>
+          <button
+            *ngIf="following && login && user.role !== 'organization'"
+            class="btn btn-lg sw-text-yellow pull-left sw-button-transparent glyphicon glyphicon-star sw-button-transparent"
+          ></button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            Close
+          </button>
         </div>
       </div>
     </div>
@@ -196,34 +244,55 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
           <h4 class="modal-title">All Users</h4>
         </div>
         <div class="modal-body">
           <table class="table table-striped">
             <thead>
-            <tr>
-              <th>Username</th>
-              <th>Role</th>
-              <th>Date Created</th>
-              <th></th>
-            </tr>
+              <tr>
+                <th>Username</th>
+                <th>Role</th>
+                <th>Date Created</th>
+                <th></th>
+              </tr>
             </thead>
-            <tbody *ngFor = "let data of userData" >
-            <tr>
-              <td><a (click)="selectUser(data._id)" class="btn sw-button-transparent sw-link sw-button-transparent">{{data.username}}</a></td>
-              <td>{{data.role}}</td>
-              <td>{{data.dateCreated}}</td>
-              <td><button class="btn pull-right sw-button-transparent">
-                  <span class="glyphicon glyphicon-remove sw-text-red"
-                        (click)="deleteUser(data._id)"></span></button></td>
-            </tr>
+            <tbody *ngFor="let data of userData">
+              <tr>
+                <td>
+                  <a
+                    (click)="selectUser(data._id)"
+                    class="btn sw-button-transparent sw-link sw-button-transparent"
+                    >{{ data.username }}</a
+                  >
+                </td>
+                <td>{{ data.role }}</td>
+                <td>{{ data.dateCreated }}</td>
+                <td>
+                  <button class="btn pull-right sw-button-transparent">
+                    <span
+                      class="glyphicon glyphicon-remove sw-text-red"
+                      (click)="deleteUser(data._id)"
+                    ></span>
+                  </button>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
         <div class="modal-footer">
-          <button routerLink="/choose" class="btn btn-block" data-dismiss="modal">Create New User</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button
+            routerLink="/choose"
+            class="btn btn-block"
+            data-dismiss="modal"
+          >
+            Create New User
+          </button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            Close
+          </button>
         </div>
       </div>
     </div>
@@ -232,38 +301,51 @@
   <!-- Modal -->
   <div class="modal fade" id="eventModal" role="dialog">
     <div class="modal-dialog">
-
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
           <h4 class="modal-title">All Events</h4>
         </div>
         <div class="modal-body">
           <table class="table table-striped">
             <thead>
-            <tr>
-              <th>Name</th>
-              <th>Date Created</th>
-              <th></th>
-            </tr>
+              <tr>
+                <th>Name</th>
+                <th>Date Created</th>
+                <th></th>
+              </tr>
             </thead>
-            <tbody *ngFor = "let data of eventData" >
-            <tr>
-              <td><a (click)="selectEvent(data._id)" class="btn sw-button-transparent sw-link sw-button-transparent">{{data.name}}</a></td>
-              <td>{{data.dateCreated}}</td>
-              <td><button class="btn pull-right sw-button-transparent">
-                  <span class="glyphicon glyphicon-remove sw-text-red"
-                        (click)="deleteEvent(data._id)"></span></button></td>
-            </tr>
+            <tbody *ngFor="let data of eventData">
+              <tr>
+                <td>
+                  <a
+                    (click)="selectEvent(data._id)"
+                    class="btn sw-button-transparent sw-link sw-button-transparent"
+                    >{{ data.name }}</a
+                  >
+                </td>
+                <td>{{ data.dateCreated }}</td>
+                <td>
+                  <button class="btn pull-right sw-button-transparent">
+                    <span
+                      class="glyphicon glyphicon-remove sw-text-red"
+                      (click)="deleteEvent(data._id)"
+                    ></span>
+                  </button>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            Close
+          </button>
         </div>
       </div>
     </div>
   </div>
 </div>
-

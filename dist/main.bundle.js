@@ -1,6 +1,6 @@
 webpackJsonp(["main"],{
 
-/***/ "../../../../../src/$$_gendir lazy recursive":
+/***/ "./src/$$_gendir lazy recursive":
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,41 +13,30 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
+webpackEmptyAsyncContext.id = "./src/$$_gendir lazy recursive";
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.component.css":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/app/app.component.css":
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+module.exports = ""
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.component.html":
+/***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<!-- Meta tags for making event for mobile-->\r\n<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\r\n<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">\r\n<meta name=\"viewport\" content=\"initial-scale=1.25, user-scalable=no\">\r\n<meta charset=\"UTF-8\">\r\n<link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" rel=\"stylesheet\"/>\r\n\r\n<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.component.ts":
+/***/ "./src/app/app.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -64,8 +53,8 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-root',
-        template: __webpack_require__("../../../../../src/app/app.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/app.component.css")]
+        template: __webpack_require__("./src/app/app.component.html"),
+        styles: [__webpack_require__("./src/app/app.component.css")]
     })
 ], AppComponent);
 
@@ -73,33 +62,33 @@ AppComponent = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.module.ts":
+/***/ "./src/app/app.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_quill_editor__ = __webpack_require__("../../../../ngx-quill-editor/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_user_login_login_component__ = __webpack_require__("../../../../../src/app/components/user/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_user_profile_profile_component__ = __webpack_require__("../../../../../src/app/components/user/profile/profile.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_user_register_register_component__ = __webpack_require__("../../../../../src/app/components/user/register/register.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_event_event_new_event_new_component__ = __webpack_require__("../../../../../src/app/components/event/event-new/event-new.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_event_event_edit_event_edit_component__ = __webpack_require__("../../../../../src/app/components/event/event-edit/event-edit.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_event_event_list_event_list_component__ = __webpack_require__("../../../../../src/app/components/event/event-list/event-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_user_service_client__ = __webpack_require__("../../../../../src/app/services/user.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_event_service_client__ = __webpack_require__("../../../../../src/app/services/event.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_shared_service_client__ = __webpack_require__("../../../../../src/app/services/shared.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_authentication_service_client__ = __webpack_require__("../../../../../src/app/services/authentication.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_home_service_client__ = __webpack_require__("../../../../../src/app/services/home.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_user_choose_choose_component__ = __webpack_require__("../../../../../src/app/components/user/choose/choose.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_event_event_detail_event_detail_component__ = __webpack_require__("../../../../../src/app/components/event/event-detail/event-detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_user_profile_detail_detail_component__ = __webpack_require__("../../../../../src/app/components/user/profile/detail/detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/@angular/platform-browser.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_quill_editor__ = __webpack_require__("./node_modules/ngx-quill-editor/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_home_home_component__ = __webpack_require__("./src/app/components/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_routing__ = __webpack_require__("./src/app/app.routing.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__("./node_modules/@angular/http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_user_login_login_component__ = __webpack_require__("./src/app/components/user/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_user_profile_profile_component__ = __webpack_require__("./src/app/components/user/profile/profile.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_user_register_register_component__ = __webpack_require__("./src/app/components/user/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_event_event_new_event_new_component__ = __webpack_require__("./src/app/components/event/event-new/event-new.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_event_event_edit_event_edit_component__ = __webpack_require__("./src/app/components/event/event-edit/event-edit.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_event_event_list_event_list_component__ = __webpack_require__("./src/app/components/event/event-list/event-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_user_service_client__ = __webpack_require__("./src/app/services/user.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_event_service_client__ = __webpack_require__("./src/app/services/event.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_shared_service_client__ = __webpack_require__("./src/app/services/shared.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_authentication_service_client__ = __webpack_require__("./src/app/services/authentication.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_home_service_client__ = __webpack_require__("./src/app/services/home.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_user_choose_choose_component__ = __webpack_require__("./src/app/components/user/choose/choose.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_event_event_detail_event_detail_component__ = __webpack_require__("./src/app/components/event/event-detail/event-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_user_profile_detail_detail_component__ = __webpack_require__("./src/app/components/user/profile/detail/detail.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -172,23 +161,23 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.routing.ts":
+/***/ "./src/app/app.routing.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Routing; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_user_login_login_component__ = __webpack_require__("../../../../../src/app/components/user/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_user_profile_profile_component__ = __webpack_require__("../../../../../src/app/components/user/profile/profile.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_user_register_register_component__ = __webpack_require__("../../../../../src/app/components/user/register/register.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_event_event_edit_event_edit_component__ = __webpack_require__("../../../../../src/app/components/event/event-edit/event-edit.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_event_event_list_event_list_component__ = __webpack_require__("../../../../../src/app/components/event/event-list/event-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_event_event_new_event_new_component__ = __webpack_require__("../../../../../src/app/components/event/event-new/event-new.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_authentication_service_client__ = __webpack_require__("../../../../../src/app/services/authentication.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_user_choose_choose_component__ = __webpack_require__("../../../../../src/app/components/user/choose/choose.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_event_event_detail_event_detail_component__ = __webpack_require__("../../../../../src/app/components/event/event-detail/event-detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_user_profile_detail_detail_component__ = __webpack_require__("../../../../../src/app/components/user/profile/detail/detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_user_login_login_component__ = __webpack_require__("./src/app/components/user/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_user_profile_profile_component__ = __webpack_require__("./src/app/components/user/profile/profile.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_user_register_register_component__ = __webpack_require__("./src/app/components/user/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_event_event_edit_event_edit_component__ = __webpack_require__("./src/app/components/event/event-edit/event-edit.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_event_event_list_event_list_component__ = __webpack_require__("./src/app/components/event/event-list/event-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_event_event_new_event_new_component__ = __webpack_require__("./src/app/components/event/event-new/event-new.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_authentication_service_client__ = __webpack_require__("./src/app/services/authentication.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_home_home_component__ = __webpack_require__("./src/app/components/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_user_choose_choose_component__ = __webpack_require__("./src/app/components/user/choose/choose.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_event_event_detail_event_detail_component__ = __webpack_require__("./src/app/components/event/event-detail/event-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_user_profile_detail_detail_component__ = __webpack_require__("./src/app/components/user/profile/detail/detail.component.ts");
 
 
 
@@ -219,42 +208,31 @@ var Routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* RouterModule 
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/event/event-detail/event-detail.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/event/event-detail/event-detail.component.html":
+/***/ "./src/app/components/event/event-detail/event-detail.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "\n<!-- top navbar-->\n<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n  <div class=\"row\">\n    <div class=\"col-xs-4 hidden-xs\">\n      <div class=\"container-fluid\">\n        <p class=\"navbar-text pull-left\">\n          <a routerLink=\"/user/{{uid}}/event\"\n             class=\"navbar-link sw-text-white\">\n            <span class=\"glyphicon glyphicon-chevron-left\"></span>\n          </a>\n        </p>\n        <a routerLink=\"/user/{{uid}}/event\"\n           class=\"pull-left navbar-brand thick\">\n          <b class=\"sw-text-white\">Events</b>\n        </a>\n        <a routerLink=\"/user/{{uid}}/event/new\"\n           class=\"navbar-link navbar-text pull-right sw-icon-padding\">\n          <span class=\"glyphicon glyphicon-plus sw-text-white\"></span>\n        </a>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-8 pull-right\">\n      <div class=\"container-fluid\">\n        <a routerLink=\"/user/{{uid}}/event/{{wid}}\"\n           class=\"pull-left navbar-brand thick\">\n          <b class=\"sw-text-white\">Event Detail</b>\n        </a>\n      </div>\n    </div>\n  </div>\n</nav>\n\n<!--left events-->\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-xs-4 hidden-xs\">\n      <ul class=\"list-group\">\n        <li class=\"list-group-item sw-borderless\"\n            *ngFor=\"let event of events\">\n          <a class=\"sw-link\"\n             routerLink=\"/user/{{uid}}/event/{{event._id}}/detail\">{{event.name}}</a>\n          <a routerLink=\"/user/{{uid}}/event/{{event._id}}\">\n            <span class=\"glyphicon glyphicon-cog pull-right\"></span>\n          </a>\n        </li>\n      </ul>\n    </div>\n\n    <!--right editor-->\n    <div class=\"col-sm-8 col-xs-12\">\n      <div *ngIf=\"registered\"\n           class=\"alert alert-success\" >\n        Register successfully!\n      </div>\n      <form (ngSubmit)=\"update()\"\n            #f =\"ngForm\"\n            id=\"webForm\">\n        <div class=\"form-group\">\n          <label for=\"name\">Name</label>\n          <input type=\"text\"\n                 id=\"name\"\n                 name=\"name\"\n                 readonly\n                 ngModel=\"{{event.name}}\"\n                 #name=\"ngModel\"\n                 class=\"form-control\"/>\n        </div>\n        <div class=\"form-group\">\n          <label for=\"description\">Event Desciption</label>\n          <textarea id=\"description\"\n                    name=\"description\"\n                    rows=\"5\"\n                    readonly\n                    ngModel=\"{{event.description}}\"\n                    #description=\"ngModel\"\n                    class=\"form-control\"></textarea>\n        </div>\n        <div class=\"form-group\">\n          <label for=\"address\">Street</label>\n          <input type=\"text\"\n                 id=\"address\"\n                 name=\"address\"\n                 readonly\n                 ngModel=\"{{event.address}}\"\n                 #address=\"ngModel\"\n                 class=\"form-control\"/>\n        </div>\n        <div class=\"col-xs-6\">\n          <div class=\"form-group\">\n            <label for=\"city\">City</label>\n            <input type=\"text\"\n                   id=\"city\"\n                   name=\"city\"\n                   readonly\n                   ngModel=\"{{event.city}}\"\n                   #city=\"ngModel\"\n                   class=\"form-control\"/>\n          </div>\n        </div>\n        <div class=\"col-xs-6\">\n          <div class=\"form-group\">\n            <label for=\"state\">State</label>\n            <input type=\"text\"\n                   id=\"state\"\n                   name=\"state\"\n                   readonly\n                   ngModel=\"{{event.state}}\"\n                   #state=\"ngModel\"\n                   class=\"form-control\"/>\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <label for=\"time\">Event Time</label>\n          <input type=\"datetime-local\"\n                 id=\"time\"\n                 name=\"time\"\n                 readonly\n                 ngModel=\"{{event.time}}\"\n                 #time=\"ngModel\"\n                 class=\"form-control\"/>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-xs-4\" *ngIf=\"user.role !== 'organization'\">\n            <a (click)=\"rsvp()\"\n               class=\"btn btn-success btn-block\">RSVP</a>\n          </div>\n        </div>\n      </form>\n      <div class=\"col-xs-3\" *ngIf=\"user.role==='organization'\">\n        <div class=\"panel panel-info\">\n          <div class = \"panel-heading\">\n            <h3 class = \"panel-title\">Registered Runner</h3>\n          </div>\n          <ul class=\"list-group\">\n            <li class=\"list-group-item sw-borderless\"\n                *ngFor=\"let runner of runners\">\n              <button class=\"btn sw-button-transparent\"\n                      routerLink=\"/user/{{runner._id}}/detail\">{{runner.username}}</button>\n            </li>\n          </ul>\n        </div>\n      </div>\n      <div class=\"col-xs-3\" *ngIf=\"user.role==='organization'\">\n        <div class=\"panel panel-info\">\n          <div class = \"panel-heading\">\n            <h3 class = \"panel-title\">Registered Volunteers</h3>\n          </div>\n          <ul class=\"list-group\">\n            <li class=\"list-group-item sw-borderless\"\n                *ngFor=\"let vol of vols\">\n              <button class=\"btn sw-button-transparent\"\n                      routerLink=\"/user/{{vol._id}}/detail\">{{vol.username}}</button>\n            </li>\n          </ul>\n        </div>\n      </div>\n      <div class=\"col-xs-6\">\n        <div class=\"col-xs-4\">\n        </div>\n        <div class=\"col-xs-8\">\n          <img src={{result.icon_url}}>\n        </div>\n        <hr/>\n        <hr/>\n        <div class=\"panel panel-default\" *ngIf=\"result !== ''\">\n          <div class=\"panel-body\">Today's Weather: {{result.weather}}</div>\n          <div class=\"panel-body\">Temprature: {{result.temperature_string}}</div>\n          <div class=\"panel-body\">Feels like: {{result.feelslike_string}}</div>\n          <div class=\"panel-body\">Wind: {{result.wind_string}}</div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- Footer -->\n<nav class=\"navbar navbar-inverse navbar-fixed-bottom\">\n  <div class=\"container-fluid\">\n    <a routerLink=\"/user\"\n       class=\"navbar-text pull-right\">\n      <span class=\"glyphicon glyphicon-user sw-icon-padding sw-text-white\"></span>\n    </a>\n  </div>\n</nav>\n"
+module.exports = ""
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/event/event-detail/event-detail.component.ts":
+/***/ "./src/app/components/event/event-detail/event-detail.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<!-- top navbar-->\r\n<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xs-4 hidden-xs\">\r\n      <div class=\"container-fluid\">\r\n        <p class=\"navbar-text pull-left\">\r\n          <a routerLink=\"/user/{{uid}}/event\"\r\n             class=\"navbar-link sw-text-white\">\r\n            <span class=\"glyphicon glyphicon-chevron-left\"></span>\r\n          </a>\r\n        </p>\r\n        <a routerLink=\"/user/{{uid}}/event\"\r\n           class=\"pull-left navbar-brand thick\">\r\n          <b class=\"sw-text-white\">Events</b>\r\n        </a>\r\n        <a routerLink=\"/user/{{uid}}/event/new\"\r\n           class=\"navbar-link navbar-text pull-right sw-icon-padding\">\r\n          <span class=\"glyphicon glyphicon-plus sw-text-white\"></span>\r\n        </a>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-xs-12 col-sm-8 pull-right\">\r\n      <div class=\"container-fluid\">\r\n        <a routerLink=\"/user/{{uid}}/event/{{wid}}\"\r\n           class=\"pull-left navbar-brand thick\">\r\n          <b class=\"sw-text-white\">Event Detail</b>\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</nav>\r\n\r\n<!--left events-->\r\n<div class=\"container-fluid\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xs-4 hidden-xs\">\r\n      <ul class=\"list-group\">\r\n        <li class=\"list-group-item sw-borderless\"\r\n            *ngFor=\"let event of events\">\r\n          <a class=\"sw-link\"\r\n             routerLink=\"/user/{{uid}}/event/{{event._id}}/detail\">{{event.name}}</a>\r\n          <a routerLink=\"/user/{{uid}}/event/{{event._id}}\">\r\n            <span class=\"glyphicon glyphicon-cog pull-right\"></span>\r\n          </a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n\r\n    <!--right editor-->\r\n    <div class=\"col-sm-8 col-xs-12\">\r\n      <div *ngIf=\"registered\"\r\n           class=\"alert alert-success\" >\r\n        Register successfully!\r\n      </div>\r\n      <form (ngSubmit)=\"update()\"\r\n            #f =\"ngForm\"\r\n            id=\"webForm\">\r\n        <div class=\"form-group\">\r\n          <label for=\"name\">Name</label>\r\n          <input type=\"text\"\r\n                 id=\"name\"\r\n                 name=\"name\"\r\n                 readonly\r\n                 ngModel=\"{{event.name}}\"\r\n                 #name=\"ngModel\"\r\n                 class=\"form-control\"/>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"description\">Event Desciption</label>\r\n          <textarea id=\"description\"\r\n                    name=\"description\"\r\n                    rows=\"5\"\r\n                    readonly\r\n                    ngModel=\"{{event.description}}\"\r\n                    #description=\"ngModel\"\r\n                    class=\"form-control\"></textarea>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"address\">Street</label>\r\n          <input type=\"text\"\r\n                 id=\"address\"\r\n                 name=\"address\"\r\n                 readonly\r\n                 ngModel=\"{{event.address}}\"\r\n                 #address=\"ngModel\"\r\n                 class=\"form-control\"/>\r\n        </div>\r\n        <div class=\"col-xs-6\">\r\n          <div class=\"form-group\">\r\n            <label for=\"city\">City</label>\r\n            <input type=\"text\"\r\n                   id=\"city\"\r\n                   name=\"city\"\r\n                   readonly\r\n                   ngModel=\"{{event.city}}\"\r\n                   #city=\"ngModel\"\r\n                   class=\"form-control\"/>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-xs-6\">\r\n          <div class=\"form-group\">\r\n            <label for=\"state\">State</label>\r\n            <input type=\"text\"\r\n                   id=\"state\"\r\n                   name=\"state\"\r\n                   readonly\r\n                   ngModel=\"{{event.state}}\"\r\n                   #state=\"ngModel\"\r\n                   class=\"form-control\"/>\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"time\">Event Time</label>\r\n          <input type=\"datetime-local\"\r\n                 id=\"time\"\r\n                 name=\"time\"\r\n                 readonly\r\n                 ngModel=\"{{event.time}}\"\r\n                 #time=\"ngModel\"\r\n                 class=\"form-control\"/>\r\n        </div>\r\n        <div class=\"row\">\r\n          <div class=\"col-xs-4\" *ngIf=\"user.role !== 'organization'\">\r\n            <a (click)=\"rsvp()\"\r\n               class=\"btn btn-success btn-block\">RSVP</a>\r\n          </div>\r\n        </div>\r\n      </form>\r\n      <div class=\"col-xs-3\" *ngIf=\"user.role==='organization'\">\r\n        <div class=\"panel panel-info\">\r\n          <div class = \"panel-heading\">\r\n            <h3 class = \"panel-title\">Registered Runner</h3>\r\n          </div>\r\n          <ul class=\"list-group\">\r\n            <li class=\"list-group-item sw-borderless\"\r\n                *ngFor=\"let runner of runners\">\r\n              <button class=\"btn sw-button-transparent\"\r\n                      routerLink=\"/user/{{runner._id}}/detail\">{{runner.username}}</button>\r\n            </li>\r\n          </ul>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-xs-3\" *ngIf=\"user.role==='organization'\">\r\n        <div class=\"panel panel-info\">\r\n          <div class = \"panel-heading\">\r\n            <h3 class = \"panel-title\">Registered Volunteers</h3>\r\n          </div>\r\n          <ul class=\"list-group\">\r\n            <li class=\"list-group-item sw-borderless\"\r\n                *ngFor=\"let vol of vols\">\r\n              <button class=\"btn sw-button-transparent\"\r\n                      routerLink=\"/user/{{vol._id}}/detail\">{{vol.username}}</button>\r\n            </li>\r\n          </ul>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-xs-6\">\r\n        <div class=\"col-xs-4\">\r\n        </div>\r\n        <div class=\"col-xs-8\">\r\n          <img src={{result.icon_url}}>\r\n        </div>\r\n        <hr/>\r\n        <hr/>\r\n        <div class=\"panel panel-default\" *ngIf=\"result !== ''\">\r\n          <div class=\"panel-body\">Today's Weather: {{result.weather}}</div>\r\n          <div class=\"panel-body\">Temprature: {{result.temperature_string}}</div>\r\n          <div class=\"panel-body\">Feels like: {{result.feelslike_string}}</div>\r\n          <div class=\"panel-body\">Wind: {{result.wind_string}}</div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Footer -->\r\n<nav class=\"navbar navbar-inverse navbar-fixed-bottom\">\r\n  <div class=\"container-fluid\">\r\n    <a routerLink=\"/user\"\r\n       class=\"navbar-text pull-right\">\r\n      <span class=\"glyphicon glyphicon-user sw-icon-padding sw-text-white\"></span>\r\n    </a>\r\n  </div>\r\n</nav>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/event/event-detail/event-detail.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventDetailComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__ = __webpack_require__("../../../../../src/app/services/event.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__ = __webpack_require__("../../../../../src/app/services/shared.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__ = __webpack_require__("../../../../../src/app/services/user.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_home_service_client__ = __webpack_require__("../../../../../src/app/services/home.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__ = __webpack_require__("./src/app/services/event.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__ = __webpack_require__("./src/app/services/shared.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__ = __webpack_require__("./src/app/services/user.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_home_service_client__ = __webpack_require__("./src/app/services/home.service.client.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -345,8 +323,8 @@ var EventDetailComponent = (function () {
 EventDetailComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-event-detail',
-        template: __webpack_require__("../../../../../src/app/components/event/event-detail/event-detail.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/event/event-detail/event-detail.component.css")]
+        template: __webpack_require__("./src/app/components/event/event-detail/event-detail.component.html"),
+        styles: [__webpack_require__("./src/app/components/event/event-detail/event-detail.component.css")]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__["a" /* EventService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__["a" /* EventService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__["a" /* SharedService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__["a" /* UserService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_home_service_client__["a" /* HomeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_home_service_client__["a" /* HomeService */]) === "function" && _e || Object])
 ], EventDetailComponent);
@@ -356,40 +334,29 @@ var _a, _b, _c, _d, _e;
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/event/event-edit/event-edit.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".sw-nav-blue {\r\n  background-color: #337ab7;\r\n}\r\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/event/event-edit/event-edit.component.html":
+/***/ "./src/app/components/event/event-edit/event-edit.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "\n<!-- top navbar-->\n<nav class=\"navbar navbar-fixed-top navbar-inverse\">\n  <div class=\"row\">\n    <div class=\"col-xs-4 hidden-xs\">\n      <div class=\"container-fluid\">\n        <p class=\"navbar-text pull-left\">\n          <a routerLink=\"/user\"\n             class=\"navbar-link sw-text-white\">\n            <span class=\"glyphicon glyphicon-chevron-left\"></span>\n          </a>\n        </p>\n        <a routerLink=\"/user/{{uid}}/event\"\n           class=\"pull-left navbar-brand thick\">\n          <b class=\"sw-text-white\">Events</b>\n        </a>\n        <a routerLink=\"/user/{{uid}}/event/new\"\n           class=\"navbar-link navbar-text pull-right sw-icon-padding\">\n          <span class=\"glyphicon glyphicon-plus sw-text-white\"></span>\n        </a>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-8 pull-right\">\n      <div class=\"container-fluid\">\n        <a routerLink=\"/user/{{uid}}/event/{{wid}}\"\n           class=\"pull-left navbar-brand thick\">\n          <b class=\"sw-text-white\">Edit Event</b>\n        </a>\n        <button type=\"submit\"\n                [disabled]=\"!f.valid\"\n                form=\"webForm\"\n                class=\"btn btn-xs sw-button-transparent navbar-link navbar-text pull-right sw-icon-padding\">\n          <span class=\"glyphicon glyphicon-ok sw-text-white\"></span>\n        </button>\n      </div>\n    </div>\n  </div>\n</nav>\n\n<!--left events-->\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-xs-4 hidden-xs\">\n      <ul class=\"list-group\">\n        <li class=\"list-group-item sw-borderless\"\n            *ngFor=\"let event of events\">\n          <a class=\"sw-link\"\n             routerLink=\"/user/{{uid}}/event/{{event._id}}/page\">{{event.name}}</a>\n          <a routerLink=\"/user/{{uid}}/event/{{event._id}}\">\n            <span class=\"glyphicon glyphicon-cog pull-right\"></span>\n          </a>\n        </li>\n      </ul>\n    </div>\n\n    <!--right editor-->\n    <div class=\"col-sm-8 col-xs-12\">\n      <form (ngSubmit)=\"update()\"\n            #f =\"ngForm\"\n            id=\"webForm\">\n        <div class=\"form-group\">\n          <label for=\"name\">Name</label>\n          <input type=\"text\"\n                 id=\"name\"\n                 name=\"name\"\n                 required\n                 placeholder=\"any name\"\n                 ngModel=\"{{event.name}}\"\n                 #name=\"ngModel\"\n                 class=\"form-control\"/>\n        </div>\n        <span class=\"help-block\"\n              *ngIf=\"!name.valid && name.touched\">Name can't be empty!</span>\n        <div class=\"form-group\">\n          <label for=\"description\">Event Desciption</label>\n          <textarea id=\"description\"\n                    name=\"description\"\n                    rows=\"5\"\n                    placeholder=\"anything related to this event\"\n                    ngModel=\"{{event.description}}\"\n                    #description=\"ngModel\"\n                    class=\"form-control\"></textarea>\n        </div>\n        <div class=\"form-group\">\n          <label for=\"address\">Street</label>\n          <input type=\"text\"\n                 id=\"address\"\n                 name=\"address\"\n                 placeholder=\"Address of the event\"\n                 ngModel=\"{{event.address}}\"\n                 #address=\"ngModel\"\n                 class=\"form-control\"/>\n        </div>\n        <div class=\"col-xs-6\">\n          <div class=\"form-group\">\n            <label for=\"city\">City</label>\n            <input type=\"text\"\n                   id=\"city\"\n                   name=\"city\"\n                   placeholder=\"City of event\"\n                   ngModel=\"{{event.city}}\"\n                   #city=\"ngModel\"\n                   class=\"form-control\"/>\n          </div>\n        </div>\n        <div class=\"col-xs-6\">\n          <div class=\"form-group\">\n            <label for=\"state\">State</label>\n            <input type=\"text\"\n                   id=\"state\"\n                   name=\"state\"\n                   placeholder=\"state of the event\"\n                   ngModel=\"{{event.state}}\"\n                   #state=\"ngModel\"\n                   class=\"form-control\"/>\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <label for=\"time\">Event Time</label>\n          <input type=\"datetime-local\"\n                 id=\"time\"\n                 name=\"time\"\n                 placeholder=\"Event Time\"\n                 ngModel=\"{{event.time}}\"\n                 #time=\"ngModel\"\n                 class=\"form-control\"/>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-xs-4\">\n            <a (click)=\"remove()\"\n               class=\"btn btn-danger btn-block\">Delete</a>\n          </div>\n          <div class=\"col-xs-4 pull-right\">\n            <a routerLink=\"/user/{{uid}}/event\"\n               class=\"btn btn-warning btn-block\">Cancel</a>\n          </div>\n        </div>\n      </form>\n    </div>\n  </div>\n</div>\n\n<!-- Footer -->\n<nav class=\"navbar navbar-inverse navbar-fixed-bottom\">\n  <div class=\"container-fluid\">\n    <a routerLink=\"/user\"\n       class=\"navbar-text pull-right\">\n      <span class=\"glyphicon glyphicon-user sw-icon-padding sw-text-white\"></span>\n    </a>\n  </div>\n</nav>\n"
+module.exports = ".sw-nav-blue {\r\n  background-color: #337ab7;\r\n}\r\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/event/event-edit/event-edit.component.ts":
+/***/ "./src/app/components/event/event-edit/event-edit.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<!-- top navbar-->\r\n<nav class=\"navbar navbar-fixed-top navbar-inverse\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xs-4 hidden-xs\">\r\n      <div class=\"container-fluid\">\r\n        <p class=\"navbar-text pull-left\">\r\n          <a routerLink=\"/user\"\r\n             class=\"navbar-link sw-text-white\">\r\n            <span class=\"glyphicon glyphicon-chevron-left\"></span>\r\n          </a>\r\n        </p>\r\n        <a routerLink=\"/user/{{uid}}/event\"\r\n           class=\"pull-left navbar-brand thick\">\r\n          <b class=\"sw-text-white\">Events</b>\r\n        </a>\r\n        <a routerLink=\"/user/{{uid}}/event/new\"\r\n           class=\"navbar-link navbar-text pull-right sw-icon-padding\">\r\n          <span class=\"glyphicon glyphicon-plus sw-text-white\"></span>\r\n        </a>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-xs-12 col-sm-8 pull-right\">\r\n      <div class=\"container-fluid\">\r\n        <a routerLink=\"/user/{{uid}}/event/{{wid}}\"\r\n           class=\"pull-left navbar-brand thick\">\r\n          <b class=\"sw-text-white\">Edit Event</b>\r\n        </a>\r\n        <button type=\"submit\"\r\n                [disabled]=\"!f.valid\"\r\n                form=\"webForm\"\r\n                class=\"btn btn-xs sw-button-transparent navbar-link navbar-text pull-right sw-icon-padding\">\r\n          <span class=\"glyphicon glyphicon-ok sw-text-white\"></span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</nav>\r\n\r\n<!--left events-->\r\n<div class=\"container-fluid\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xs-4 hidden-xs\">\r\n      <ul class=\"list-group\">\r\n        <li class=\"list-group-item sw-borderless\"\r\n            *ngFor=\"let event of events\">\r\n          <a class=\"sw-link\"\r\n             routerLink=\"/user/{{uid}}/event/{{event._id}}/page\">{{event.name}}</a>\r\n          <a routerLink=\"/user/{{uid}}/event/{{event._id}}\">\r\n            <span class=\"glyphicon glyphicon-cog pull-right\"></span>\r\n          </a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n\r\n    <!--right editor-->\r\n    <div class=\"col-sm-8 col-xs-12\">\r\n      <form (ngSubmit)=\"update()\"\r\n            #f =\"ngForm\"\r\n            id=\"webForm\">\r\n        <div class=\"form-group\">\r\n          <label for=\"name\">Name</label>\r\n          <input type=\"text\"\r\n                 id=\"name\"\r\n                 name=\"name\"\r\n                 required\r\n                 placeholder=\"any name\"\r\n                 ngModel=\"{{event.name}}\"\r\n                 #name=\"ngModel\"\r\n                 class=\"form-control\"/>\r\n        </div>\r\n        <span class=\"help-block\"\r\n              *ngIf=\"!name.valid && name.touched\">Name can't be empty!</span>\r\n        <div class=\"form-group\">\r\n          <label for=\"description\">Event Desciption</label>\r\n          <textarea id=\"description\"\r\n                    name=\"description\"\r\n                    rows=\"5\"\r\n                    placeholder=\"anything related to this event\"\r\n                    ngModel=\"{{event.description}}\"\r\n                    #description=\"ngModel\"\r\n                    class=\"form-control\"></textarea>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"address\">Street</label>\r\n          <input type=\"text\"\r\n                 id=\"address\"\r\n                 name=\"address\"\r\n                 placeholder=\"Address of the event\"\r\n                 ngModel=\"{{event.address}}\"\r\n                 #address=\"ngModel\"\r\n                 class=\"form-control\"/>\r\n        </div>\r\n        <div class=\"col-xs-6\">\r\n          <div class=\"form-group\">\r\n            <label for=\"city\">City</label>\r\n            <input type=\"text\"\r\n                   id=\"city\"\r\n                   name=\"city\"\r\n                   placeholder=\"City of event\"\r\n                   ngModel=\"{{event.city}}\"\r\n                   #city=\"ngModel\"\r\n                   class=\"form-control\"/>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-xs-6\">\r\n          <div class=\"form-group\">\r\n            <label for=\"state\">State</label>\r\n            <input type=\"text\"\r\n                   id=\"state\"\r\n                   name=\"state\"\r\n                   placeholder=\"state of the event\"\r\n                   ngModel=\"{{event.state}}\"\r\n                   #state=\"ngModel\"\r\n                   class=\"form-control\"/>\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"time\">Event Time</label>\r\n          <input type=\"datetime-local\"\r\n                 id=\"time\"\r\n                 name=\"time\"\r\n                 placeholder=\"Event Time\"\r\n                 ngModel=\"{{event.time}}\"\r\n                 #time=\"ngModel\"\r\n                 class=\"form-control\"/>\r\n        </div>\r\n        <div class=\"row\">\r\n          <div class=\"col-xs-4\">\r\n            <a (click)=\"remove()\"\r\n               class=\"btn btn-danger btn-block\">Delete</a>\r\n          </div>\r\n          <div class=\"col-xs-4 pull-right\">\r\n            <a routerLink=\"/user/{{uid}}/event\"\r\n               class=\"btn btn-warning btn-block\">Cancel</a>\r\n          </div>\r\n        </div>\r\n      </form>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Footer -->\r\n<nav class=\"navbar navbar-inverse navbar-fixed-bottom\">\r\n  <div class=\"container-fluid\">\r\n    <a routerLink=\"/user\"\r\n       class=\"navbar-text pull-right\">\r\n      <span class=\"glyphicon glyphicon-user sw-icon-padding sw-text-white\"></span>\r\n    </a>\r\n  </div>\r\n</nav>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/event/event-edit/event-edit.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventEditComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__ = __webpack_require__("../../../../../src/app/services/event.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__ = __webpack_require__("./src/app/services/event.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/@angular/forms.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -479,8 +446,8 @@ __decorate([
 EventEditComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-event-edit',
-        template: __webpack_require__("../../../../../src/app/components/event/event-edit/event-edit.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/event/event-edit/event-edit.component.css")]
+        template: __webpack_require__("./src/app/components/event/event-edit/event-edit.component.html"),
+        styles: [__webpack_require__("./src/app/components/event/event-edit/event-edit.component.css")]
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__["a" /* EventService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__["a" /* EventService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _d || Object])
 ], EventEditComponent);
@@ -490,41 +457,30 @@ var _a, _b, _c, _d;
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/event/event-list/event-list.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".sw-nav-blue {\r\n  background-color: #337ab7;\r\n}\r\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/event/event-list/event-list.component.html":
+/***/ "./src/app/components/event/event-list/event-list.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- top navbar-->\n<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n  <div class=\"container-fluid\">\n    <p class=\"navbar-text pull-left\">\n      <a routerLink=\"/user\"\n         class=\"navbar-link sw-text-white\">\n        <span class=\"glyphicon glyphicon-chevron-left\"></span>\n      </a>\n    </p>\n    <a routerLink=\"/user/{{uid}}/event\"\n       class=\"pull-left navbar-brand thick\">\n      <b class=\"sw-text-white\">Events of {{org.organization}}</b>\n    </a>\n    <button routerLink=\"/user/{{uid}}/event/new\"\n       class=\"btn btn-xs sw-button-transparent navbar-link navbar-text pull-right sw-icon-padding\">\n      <span class=\"glyphicon glyphicon-plus sw-text-white\"></span>\n    </button>\n  </div>\n</nav>\n\n<!--events list-->\n<div  class=\"container-fluid\">\n  <ul class=\"list-group\">\n    <li class=\"list-group-item sw-borderless\"\n        *ngFor=\"let event of events\">\n      <a class=\"sw-link\"\n         routerLink=\"/user/{{uid}}/event/{{event._id}}/detail\">{{event.name}}</a>\n      <a routerLink=\"/user/{{uid}}/event/{{event._id}}\"\n         *ngIf=\"user.role === 'organization'\">\n        <span class=\"glyphicon glyphicon-cog pull-right\"></span>\n      </a>\n    </li>\n  </ul>\n</div>\n\n<!-- Footer -->\n<nav class=\"navbar navbar-inverse navbar-fixed-bottom\">\n  <div class=\"container-fluid\">\n    <a routerLink=\"/user\" class=\"navbar-text pull-right\">\n      <span class=\"glyphicon glyphicon-user sw-icon-padding sw-text-white\"></span>\n    </a>\n  </div>\n</nav>\n"
+module.exports = ".sw-nav-blue {\r\n  background-color: #337ab7;\r\n}\r\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/event/event-list/event-list.component.ts":
+/***/ "./src/app/components/event/event-list/event-list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!-- top navbar-->\r\n<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <div class=\"container-fluid\">\r\n    <p class=\"navbar-text pull-left\">\r\n      <a routerLink=\"/user\"\r\n         class=\"navbar-link sw-text-white\">\r\n        <span class=\"glyphicon glyphicon-chevron-left\"></span>\r\n      </a>\r\n    </p>\r\n    <a routerLink=\"/user/{{uid}}/event\"\r\n       class=\"pull-left navbar-brand thick\">\r\n      <b class=\"sw-text-white\">Events of {{org.organization}}</b>\r\n    </a>\r\n    <button routerLink=\"/user/{{uid}}/event/new\"\r\n       class=\"btn btn-xs sw-button-transparent navbar-link navbar-text pull-right sw-icon-padding\">\r\n      <span class=\"glyphicon glyphicon-plus sw-text-white\"></span>\r\n    </button>\r\n  </div>\r\n</nav>\r\n\r\n<!--events list-->\r\n<div  class=\"container-fluid\">\r\n  <ul class=\"list-group\">\r\n    <li class=\"list-group-item sw-borderless\"\r\n        *ngFor=\"let event of events\">\r\n      <a class=\"sw-link\"\r\n         routerLink=\"/user/{{uid}}/event/{{event._id}}/detail\">{{event.name}}</a>\r\n      <a routerLink=\"/user/{{uid}}/event/{{event._id}}\"\r\n         *ngIf=\"user.role === 'organization'\">\r\n        <span class=\"glyphicon glyphicon-cog pull-right\"></span>\r\n      </a>\r\n    </li>\r\n  </ul>\r\n</div>\r\n\r\n<!-- Footer -->\r\n<nav class=\"navbar navbar-inverse navbar-fixed-bottom\">\r\n  <div class=\"container-fluid\">\r\n    <a routerLink=\"/user\" class=\"navbar-text pull-right\">\r\n      <span class=\"glyphicon glyphicon-user sw-icon-padding sw-text-white\"></span>\r\n    </a>\r\n  </div>\r\n</nav>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/event/event-list/event-list.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventListComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__ = __webpack_require__("../../../../../src/app/services/event.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__ = __webpack_require__("../../../../../src/app/services/shared.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__ = __webpack_require__("../../../../../src/app/services/user.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__ = __webpack_require__("./src/app/services/event.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__ = __webpack_require__("./src/app/services/shared.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__ = __webpack_require__("./src/app/services/user.service.client.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -567,8 +523,8 @@ var EventListComponent = (function () {
 EventListComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-event-list',
-        template: __webpack_require__("../../../../../src/app/components/event/event-list/event-list.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/event/event-list/event-list.component.css")]
+        template: __webpack_require__("./src/app/components/event/event-list/event-list.component.html"),
+        styles: [__webpack_require__("./src/app/components/event/event-list/event-list.component.css")]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__["a" /* EventService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__["a" /* EventService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__["a" /* SharedService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__["a" /* UserService */]) === "function" && _d || Object])
 ], EventListComponent);
@@ -578,40 +534,29 @@ var _a, _b, _c, _d;
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/event/event-new/event-new.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".sw-nav-blue {\r\n  background-color: #337ab7;\r\n}\r\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/event/event-new/event-new.component.html":
+/***/ "./src/app/components/event/event-new/event-new.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- top navbar-->\n<nav class=\"navbar navbar-fixed-top navbar-inverse\">\n  <div class=\"row\">\n    <div class=\"col-xs-4 hidden-xs\">\n      <div class=\"container-fluid\">\n        <p class=\"navbar-text pull-left\">\n          <a routerLink=\"/user/{{uid}}/event\"\n             class=\"navbar-link sw-text-white\">\n            <span class=\"glyphicon glyphicon-chevron-left\"></span>\n          </a>\n        </p>\n        <a routerLink=\"/user/{{uid}}/event\"\n           class=\"pull-left navbar-brand thick\">\n          <b class=\"sw-text-white\">Events</b>\n        </a>\n        <a routerLink=\"/user/{{uid}}/event/new\"\n           class=\"navbar-link navbar-text pull-right sw-icon-padding\">\n          <span class=\"glyphicon glyphicon-plus sw-text-white\"></span>\n        </a>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-8 pull-right\">\n      <div class=\"container-fluid\">\n        <a routerLink=\"/user/{{uid}}/event/new\"\n           class=\"pull-left navbar-brand thick\">\n          <b class=\"sw-text-white\">New Event</b>\n        </a>\n        <button type=\"submit\"\n                [disabled]=\"!f.valid\"\n                form=\"webForm\"\n                class=\"btn btn-xs navbar-link navbar-text pull-right sw-icon-padding sw-button-transparent\">\n          <span class=\"glyphicon glyphicon-ok sw-text-white\"></span>\n        </button>\n      </div>\n    </div>\n  </div>\n</nav>\n\n<!--left events-->\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-xs-4 hidden-xs\">\n      <ul class=\"list-group\">\n        <li class=\"list-group-item sw-borderless\"\n            *ngFor=\"let event of events\">\n          <a class=\"sw-link\"\n             routerLink=\"/user/{{uid}}/event/{{event._id}}/page\">{{event.name}}</a>\n          <a routerLink=\"/user/{{uid}}/event/{{event._id}}\">\n            <span class=\"glyphicon glyphicon-cog pull-right\"></span>\n          </a>\n        </li>\n      </ul>\n    </div>\n\n    <!--right editor-->\n    <div class=\"col-sm-8 col-xs-12\">\n      <form (ngSubmit)=\"create()\"\n            #f =\"ngForm\"\n            id=\"webForm\">\n        <div class=\"form-group\">\n          <label for=\"name\">Name</label>\n          <input type=\"text\"\n                 id=\"name\"\n                 placeholder=\"Name\"\n                 name=\"name\"\n                 required\n                 ngModel\n                 #name=\"ngModel\"\n                 class=\"form-control\"/>\n        </div>\n        <span class=\"help-block\"\n              *ngIf=\"!name.valid && name.touched\">Name can't be empty!</span>\n        <div class=\"form-group\">\n          <label for=\"description\">Event Description</label>\n          <textarea id=\"description\"\n                    rows=\"5\"\n                    name=\"description\"\n                    placeholder=\"Description\"\n                    ngModel\n                    #description=\"ngModel\"\n                    class=\"form-control\"></textarea>\n        </div>\n        <div class=\"form-group\">\n          <label for=\"address\">Street</label>\n          <input type=\"text\"\n                 id=\"address\"\n                 name=\"address\"\n                 placeholder=\"Address of the event\"\n                 ngModel\n                 #address=\"ngModel\"\n                 class=\"form-control\"/>\n        </div>\n        <div class=\"col-xs-6\">\n          <div class=\"form-group\">\n            <label for=\"city\">City</label>\n            <input type=\"text\"\n                   id=\"city\"\n                   name=\"city\"\n                   placeholder=\"City of event\"\n                   ngModel\n                   #city=\"ngModel\"\n                   class=\"form-control\"/>\n          </div>\n        </div>\n        <div class=\"col-xs-6\">\n          <div class=\"form-group\">\n            <label for=\"state\">State</label>\n            <input type=\"text\"\n                   id=\"state\"\n                   name=\"state\"\n                   placeholder=\"state of the event\"\n                   ngModel\n                   #state=\"ngModel\"\n                   class=\"form-control\"/>\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <label for=\"time\">Event Time</label>\n          <input type=\"datetime-local\"\n                 id=\"time\"\n                 name=\"time\"\n                 placeholder=\"Event Time\"\n                 ngModel\n                 #time=\"ngModel\"\n                 class=\"form-control\"/>\n        </div>\n        <div>\n          <a routerLink=\"/user/{{uid}}/event\"\n             class=\"btn btn-warning btn-block\">Cancel</a>\n        </div>\n      </form>\n    </div>\n  </div>\n</div>\n\n<!-- Footer -->\n<nav class=\"navbar navbar-inverse navbar-fixed-bottom\">\n  <div class=\"container-fluid\">\n    <a routerLink=\"/user\" class=\"navbar-text pull-right\">\n      <span class=\"glyphicon glyphicon-user sw-icon-padding sw-text-white\"></span>\n    </a>\n  </div>\n</nav>\n"
+module.exports = ".sw-nav-blue {\r\n  background-color: #337ab7;\r\n}\r\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/event/event-new/event-new.component.ts":
+/***/ "./src/app/components/event/event-new/event-new.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!-- top navbar-->\r\n<nav class=\"navbar navbar-fixed-top navbar-inverse\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xs-4 hidden-xs\">\r\n      <div class=\"container-fluid\">\r\n        <p class=\"navbar-text pull-left\">\r\n          <a routerLink=\"/user/{{uid}}/event\"\r\n             class=\"navbar-link sw-text-white\">\r\n            <span class=\"glyphicon glyphicon-chevron-left\"></span>\r\n          </a>\r\n        </p>\r\n        <a routerLink=\"/user/{{uid}}/event\"\r\n           class=\"pull-left navbar-brand thick\">\r\n          <b class=\"sw-text-white\">Events</b>\r\n        </a>\r\n        <a routerLink=\"/user/{{uid}}/event/new\"\r\n           class=\"navbar-link navbar-text pull-right sw-icon-padding\">\r\n          <span class=\"glyphicon glyphicon-plus sw-text-white\"></span>\r\n        </a>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-xs-12 col-sm-8 pull-right\">\r\n      <div class=\"container-fluid\">\r\n        <a routerLink=\"/user/{{uid}}/event/new\"\r\n           class=\"pull-left navbar-brand thick\">\r\n          <b class=\"sw-text-white\">New Event</b>\r\n        </a>\r\n        <button type=\"submit\"\r\n                [disabled]=\"!f.valid\"\r\n                form=\"webForm\"\r\n                class=\"btn btn-xs navbar-link navbar-text pull-right sw-icon-padding sw-button-transparent\">\r\n          <span class=\"glyphicon glyphicon-ok sw-text-white\"></span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</nav>\r\n\r\n<!--left events-->\r\n<div class=\"container-fluid\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xs-4 hidden-xs\">\r\n      <ul class=\"list-group\">\r\n        <li class=\"list-group-item sw-borderless\"\r\n            *ngFor=\"let event of events\">\r\n          <a class=\"sw-link\"\r\n             routerLink=\"/user/{{uid}}/event/{{event._id}}/page\">{{event.name}}</a>\r\n          <a routerLink=\"/user/{{uid}}/event/{{event._id}}\">\r\n            <span class=\"glyphicon glyphicon-cog pull-right\"></span>\r\n          </a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n\r\n    <!--right editor-->\r\n    <div class=\"col-sm-8 col-xs-12\">\r\n      <form (ngSubmit)=\"create()\"\r\n            #f =\"ngForm\"\r\n            id=\"webForm\">\r\n        <div class=\"form-group\">\r\n          <label for=\"name\">Name</label>\r\n          <input type=\"text\"\r\n                 id=\"name\"\r\n                 placeholder=\"Name\"\r\n                 name=\"name\"\r\n                 required\r\n                 ngModel\r\n                 #name=\"ngModel\"\r\n                 class=\"form-control\"/>\r\n        </div>\r\n        <span class=\"help-block\"\r\n              *ngIf=\"!name.valid && name.touched\">Name can't be empty!</span>\r\n        <div class=\"form-group\">\r\n          <label for=\"description\">Event Description</label>\r\n          <textarea id=\"description\"\r\n                    rows=\"5\"\r\n                    name=\"description\"\r\n                    placeholder=\"Description\"\r\n                    ngModel\r\n                    #description=\"ngModel\"\r\n                    class=\"form-control\"></textarea>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"address\">Street</label>\r\n          <input type=\"text\"\r\n                 id=\"address\"\r\n                 name=\"address\"\r\n                 placeholder=\"Address of the event\"\r\n                 ngModel\r\n                 #address=\"ngModel\"\r\n                 class=\"form-control\"/>\r\n        </div>\r\n        <div class=\"col-xs-6\">\r\n          <div class=\"form-group\">\r\n            <label for=\"city\">City</label>\r\n            <input type=\"text\"\r\n                   id=\"city\"\r\n                   name=\"city\"\r\n                   placeholder=\"City of event\"\r\n                   ngModel\r\n                   #city=\"ngModel\"\r\n                   class=\"form-control\"/>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-xs-6\">\r\n          <div class=\"form-group\">\r\n            <label for=\"state\">State</label>\r\n            <input type=\"text\"\r\n                   id=\"state\"\r\n                   name=\"state\"\r\n                   placeholder=\"state of the event\"\r\n                   ngModel\r\n                   #state=\"ngModel\"\r\n                   class=\"form-control\"/>\r\n          </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"time\">Event Time</label>\r\n          <input type=\"datetime-local\"\r\n                 id=\"time\"\r\n                 name=\"time\"\r\n                 placeholder=\"Event Time\"\r\n                 ngModel\r\n                 #time=\"ngModel\"\r\n                 class=\"form-control\"/>\r\n        </div>\r\n        <div>\r\n          <a routerLink=\"/user/{{uid}}/event\"\r\n             class=\"btn btn-warning btn-block\">Cancel</a>\r\n        </div>\r\n      </form>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Footer -->\r\n<nav class=\"navbar navbar-inverse navbar-fixed-bottom\">\r\n  <div class=\"container-fluid\">\r\n    <a routerLink=\"/user\" class=\"navbar-text pull-right\">\r\n      <span class=\"glyphicon glyphicon-user sw-icon-padding sw-text-white\"></span>\r\n    </a>\r\n  </div>\r\n</nav>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/event/event-new/event-new.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventNewComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__ = __webpack_require__("../../../../../src/app/services/event.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__ = __webpack_require__("./src/app/services/event.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/@angular/forms.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -672,8 +617,8 @@ __decorate([
 EventNewComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-event-new',
-        template: __webpack_require__("../../../../../src/app/components/event/event-new/event-new.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/event/event-new/event-new.component.css")]
+        template: __webpack_require__("./src/app/components/event/event-new/event-new.component.html"),
+        styles: [__webpack_require__("./src/app/components/event/event-new/event-new.component.css")]
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__["a" /* EventService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_event_service_client__["a" /* EventService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _d || Object])
 ], EventNewComponent);
@@ -683,43 +628,32 @@ var _a, _b, _c, _d;
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/home/home.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/home/home.component.html":
+/***/ "./src/app/components/home/home.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <div class=\"container-fluid\">\r\n    <a routerLink=\"/\"\r\n       class=\"navbar-header pull-left navbar-brand thick\">\r\n      <b class=\"sw-text-white\">Athlete</b>\r\n    </a>\r\n    <p class=\"navbar-text pull-right\">\r\n      <button routerLink=\"/login\"\r\n              *ngIf=\"!login\"\r\n              class=\"btn btn-xs navbar-link sw-button-transparent\">\r\n        <b>Login</b>\r\n      </button>\r\n      <button routerLink=\"/choose\"\r\n              *ngIf=\"!login\"\r\n              class=\"btn btn-xs navbar-link sw-button-transparent\">\r\n        <b>Sign up</b>\r\n      </button>\r\n      <button routerLink=\"/user\"\r\n         *ngIf=\"login\"\r\n         class=\"btn btn-xs navbar-link sw-button-transparent glyphicon glyphicon-user sw-icon-padding sw-text-white\">\r\n      </button>\r\n    </p>\r\n  </div>\r\n</nav>\r\n\r\n<div class=\"container\">\r\n  <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\r\n    <!-- Indicators -->\r\n    <ol class=\"carousel-indicators\">\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\">\r\n      <div class=\"item active\">\r\n        <img class=\"sw-img-slide\"\r\n             src=\"https://www.harmonygenevemarathon.com/images/uploads/heroes/marathon-header-en.jpg\"\r\n             alt=\"Los Angeles\">\r\n      </div>\r\n\r\n      <div class=\"item\">\r\n        <img class=\"item active\"\r\n             src=\"https://media.wired.com/photos/59c7ae866d668e01c65b1046/2:1/w_2500,c_limit/Berlin-FA-852825046.jpg\"\r\n             alt=\"Chicago\">\r\n      </div>\r\n\r\n      <div class=\"item\">\r\n        <img class=\"item active\"\r\n             src=\"https://eversport.tv/sites/default/files/marathon-frankfurt-.jpg\"\r\n             alt=\"New york\">\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Left and right controls -->\r\n    <a class=\"left carousel-control\" href=\"#myCarousel\" data-slide=\"prev\">\r\n      <span class=\"glyphicon glyphicon-chevron-left\"></span>\r\n      <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#myCarousel\" data-slide=\"next\">\r\n      <span class=\"glyphicon glyphicon-chevron-right\"></span>\r\n      <span class=\"sr-only\">Next</span>\r\n    </a>\r\n  </div>\r\n</div>\r\n\r\n<hr/>\r\n\r\n<div class=\"container\">\r\n  <div class=\"input-group\">\r\n    <input [(ngModel)]=\"key\"\r\n           type=\"text\"\r\n           class=\"form-control\"\r\n           placeholder=\"Search events\">\r\n    <span class=\"input-group-btn\">\r\n           <a (click)=\"searchEvents()\" class=\"btn btn-default\" type=\"button\">\r\n               <span class=\"glyphicon glyphicon-search\"></span>\r\n           </a>\r\n   </span>\r\n  </div>\r\n  <div class=\"container\" *ngIf=\"events\">\r\n    <h4>Searching Results for '{{key}}'</h4>\r\n    <div class=\"panel panel-default\">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n        <tr>\r\n          <th>Name</th>\r\n          <th>Organization</th>\r\n          <th>Post time</th>\r\n        </tr>\r\n        </thead>\r\n        <tbody *ngFor = \"let event of events\" >\r\n          <tr>\r\n            <td><a (click)=\"selectEvent(event._id)\"\r\n                   class=\"btn sw-button-transparent sw-link sw-button-transparent\">{{event.name}}</a></td>\r\n            <td><a class=\"btn sw-button-transparent sw-link sw-button-transparent\"\r\n                   data-toggle=\"modal\"\r\n                   data-target=\"#myModal\"\r\n                   (click)=\"selectOrg(event.orgId._id)\">{{event.orgId.organization}}</a></td>\r\n            <td>{{event.dateCreated}}</td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n  </div>\r\n\r\n  <hr/>\r\n  <div class=\"row\">\r\n    <div class=\"col-xs-6\">\r\n      <div class=\"col-xs-2\">\r\n      </div>\r\n      <div class=\"col-xs-10\">\r\n        <h3>Weather Tracking</h3>\r\n      </div>\r\n      <form (ngSubmit)=\"searchWeather()\"\r\n            #f =\"ngForm\">\r\n        <div>\r\n          <div class=\"form-group col-xs-6\">\r\n            <input type=\"text\"\r\n                   id=\"state\"\r\n                   name=\"state\"\r\n                   required\r\n                   ngModel\r\n                   placeholder=\"Specify the state\"\r\n                   class=\"form-control\"\r\n                   #state=\"ngModel\"/>\r\n          </div>\r\n          <div class=\"form-group col-xs-6\">\r\n            <input type=\"text\"\r\n                   id=\"city\"\r\n                   name=\"city\"\r\n                   required\r\n                   ngModel\r\n                   placeholder=\"Specify the city\"\r\n                   class=\"form-control\"\r\n                   #city=\"ngModel\"/>\r\n          </div>\r\n        </div>\r\n        <button class=\"btn btn-success btn-block\"\r\n                type=\"submit\"\r\n                [disabled]=\"!f.valid\">Check</button>\r\n      </form>\r\n    </div>\r\n    <div class=\"col-xs-6\">\r\n      <div class=\"col-xs-4\">\r\n      </div>\r\n      <div class=\"col-xs-8\">\r\n        <img src={{result.icon_url}}>\r\n      </div>\r\n      <hr/>\r\n      <hr/>\r\n      <div class=\"panel panel-default\" *ngIf=\"result !== ''\">\r\n        <div class=\"panel-body\">Weather: {{result.weather}}</div>\r\n        <div class=\"panel-body\">Temprature: {{result.temperature_string}}</div>\r\n        <div class=\"panel-body\">Feels like: {{result.feelslike_string}}</div>\r\n        <div class=\"panel-body\">Wind: {{result.wind_string}}</div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <hr/>\r\n  <div *ngIf=\"user.role === 'admin'\">\r\n    <button class=\"btn btn-warning btn-block\"\r\n            data-toggle=\"modal\"\r\n            data-target=\"#userModal\"\r\n            (click)=\"list('user')\">All Users</button>\r\n    <button class=\"btn btn-warning btn-block\"\r\n            data-toggle=\"modal\"\r\n            data-target=\"#eventModal\"\r\n            (click)=\"list('event')\">All Events</button>\r\n  </div>\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"myModal\" role=\"dialog\">\r\n    <div class=\"modal-dialog\">\r\n      <!-- Modal content-->\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n          <h4 class=\"modal-title\">{{org.organization}}</h4>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <p>{{org.intro}}</p>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button *ngIf=\"!following && login\" (click)=\"follow(user._id, org._id)\" class=\"btn btn-lg sw-text-yellow pull-left sw-button-transparent glyphicon glyphicon-star-empty sw-button-transparent\"></button>\r\n          <button *ngIf=\"following && login && user.role !== 'organization'\" class=\"btn btn-lg sw-text-yellow pull-left sw-button-transparent glyphicon glyphicon-star sw-button-transparent\"></button>\r\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"userModal\" role=\"dialog\">\r\n    <div class=\"modal-dialog\">\r\n      <!-- Modal content-->\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n          <h4 class=\"modal-title\">All Users</h4>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <table class=\"table table-striped\">\r\n            <thead>\r\n            <tr>\r\n              <th>Username</th>\r\n              <th>Role</th>\r\n              <th>Date Created</th>\r\n              <th></th>\r\n            </tr>\r\n            </thead>\r\n            <tbody *ngFor = \"let data of userData\" >\r\n            <tr>\r\n              <td><a (click)=\"selectUser(data._id)\" class=\"btn sw-button-transparent sw-link sw-button-transparent\">{{data.username}}</a></td>\r\n              <td>{{data.role}}</td>\r\n              <td>{{data.dateCreated}}</td>\r\n              <td><button class=\"btn pull-right sw-button-transparent\">\r\n                  <span class=\"glyphicon glyphicon-remove sw-text-red\"\r\n                        (click)=\"deleteUser(data._id)\"></span></button></td>\r\n            </tr>\r\n            </tbody>\r\n          </table>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button routerLink=\"/choose\" class=\"btn btn-block\" data-dismiss=\"modal\">Create New User</button>\r\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"eventModal\" role=\"dialog\">\r\n    <div class=\"modal-dialog\">\r\n\r\n      <!-- Modal content-->\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n          <h4 class=\"modal-title\">All Events</h4>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <table class=\"table table-striped\">\r\n            <thead>\r\n            <tr>\r\n              <th>Name</th>\r\n              <th>Date Created</th>\r\n              <th></th>\r\n            </tr>\r\n            </thead>\r\n            <tbody *ngFor = \"let data of eventData\" >\r\n            <tr>\r\n              <td><a (click)=\"selectEvent(data._id)\" class=\"btn sw-button-transparent sw-link sw-button-transparent\">{{data.name}}</a></td>\r\n              <td>{{data.dateCreated}}</td>\r\n              <td><button class=\"btn pull-right sw-button-transparent\">\r\n                  <span class=\"glyphicon glyphicon-remove sw-text-red\"\r\n                        (click)=\"deleteEvent(data._id)\"></span></button></td>\r\n            </tr>\r\n            </tbody>\r\n          </table>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n"
+module.exports = ""
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/home/home.component.ts":
+/***/ "./src/app/components/home/home.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <div class=\"container-fluid\">\r\n    <a routerLink=\"/\" class=\"navbar-header pull-left navbar-brand thick\">\r\n      <b class=\"sw-text-white\">Athlete</b>\r\n    </a>\r\n    <p class=\"navbar-text pull-right\">\r\n      <button\r\n        routerLink=\"/login\"\r\n        *ngIf=\"!login\"\r\n        class=\"btn btn-xs navbar-link sw-button-transparent\"\r\n      >\r\n        <b>Login</b>\r\n      </button>\r\n      <button\r\n        routerLink=\"/choose\"\r\n        *ngIf=\"!login\"\r\n        class=\"btn btn-xs navbar-link sw-button-transparent\"\r\n      >\r\n        <b>Sign up</b>\r\n      </button>\r\n      <button\r\n        routerLink=\"/user\"\r\n        *ngIf=\"login\"\r\n        class=\"btn btn-xs navbar-link sw-button-transparent glyphicon glyphicon-user sw-icon-padding sw-text-white\"\r\n      ></button>\r\n    </p>\r\n  </div>\r\n</nav>\r\n\r\n<div class=\"container\">\r\n  <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\r\n    <!-- Indicators -->\r\n    <ol class=\"carousel-indicators\">\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>\r\n    </ol>\r\n\r\n    <!-- Wrapper for slides -->\r\n    <div class=\"carousel-inner\">\r\n      <div class=\"item active\">\r\n        <img\r\n          class=\"sw-img-slide\"\r\n          src=\"https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1047&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F35%2F2020%2F03%2Ffb-average-marathon-time-2000.jpg\"\r\n          alt=\"Los Angeles\"\r\n        />\r\n      </div>\r\n\r\n      <div class=\"item\">\r\n        <img\r\n          class=\"item active\"\r\n          src=\"https://media.wired.com/photos/59c7ae866d668e01c65b1046/2:1/w_2500,c_limit/Berlin-FA-852825046.jpg\"\r\n          alt=\"Chicago\"\r\n        />\r\n      </div>\r\n\r\n      <div class=\"item\">\r\n        <img\r\n          class=\"item active\"\r\n          src=\"https://eversport.tv/sites/default/files/marathon-frankfurt-.jpg\"\r\n          alt=\"New york\"\r\n        />\r\n      </div>\r\n    </div>\r\n\r\n    <!-- Left and right controls -->\r\n    <a class=\"left carousel-control\" href=\"#myCarousel\" data-slide=\"prev\">\r\n      <span class=\"glyphicon glyphicon-chevron-left\"></span>\r\n      <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#myCarousel\" data-slide=\"next\">\r\n      <span class=\"glyphicon glyphicon-chevron-right\"></span>\r\n      <span class=\"sr-only\">Next</span>\r\n    </a>\r\n  </div>\r\n</div>\r\n\r\n<hr />\r\n\r\n<div class=\"container\">\r\n  <div class=\"input-group\">\r\n    <input\r\n      [(ngModel)]=\"key\"\r\n      type=\"text\"\r\n      class=\"form-control\"\r\n      placeholder=\"Search events\"\r\n    />\r\n    <span class=\"input-group-btn\">\r\n      <a (click)=\"searchEvents()\" class=\"btn btn-default\" type=\"button\">\r\n        <span class=\"glyphicon glyphicon-search\"></span>\r\n      </a>\r\n    </span>\r\n  </div>\r\n  <div class=\"container\" *ngIf=\"events\">\r\n    <h4>Searching Results for '{{ key }}'</h4>\r\n    <div class=\"panel panel-default\">\r\n      <table class=\"table table-striped\">\r\n        <thead>\r\n          <tr>\r\n            <th>Name</th>\r\n            <th>Organization</th>\r\n            <th>Post time</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody *ngFor=\"let event of events\">\r\n          <tr>\r\n            <td>\r\n              <a\r\n                (click)=\"selectEvent(event._id)\"\r\n                class=\"btn sw-button-transparent sw-link sw-button-transparent\"\r\n                >{{ event.name }}</a\r\n              >\r\n            </td>\r\n            <td>\r\n              <a\r\n                class=\"btn sw-button-transparent sw-link sw-button-transparent\"\r\n                data-toggle=\"modal\"\r\n                data-target=\"#myModal\"\r\n                (click)=\"selectOrg(event.orgId._id)\"\r\n                >{{ event.orgId.organization }}</a\r\n              >\r\n            </td>\r\n            <td>{{ event.dateCreated }}</td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n    </div>\r\n  </div>\r\n\r\n  <hr />\r\n  <div class=\"row\">\r\n    <div class=\"col-xs-6\">\r\n      <div class=\"col-xs-2\"></div>\r\n      <div class=\"col-xs-10\">\r\n        <h3>Weather Tracking</h3>\r\n      </div>\r\n      <form (ngSubmit)=\"searchWeather()\" #f=\"ngForm\">\r\n        <div>\r\n          <div class=\"form-group col-xs-6\">\r\n            <input\r\n              type=\"text\"\r\n              id=\"state\"\r\n              name=\"state\"\r\n              required\r\n              ngModel\r\n              placeholder=\"Specify the state\"\r\n              class=\"form-control\"\r\n              #state=\"ngModel\"\r\n            />\r\n          </div>\r\n          <div class=\"form-group col-xs-6\">\r\n            <input\r\n              type=\"text\"\r\n              id=\"city\"\r\n              name=\"city\"\r\n              required\r\n              ngModel\r\n              placeholder=\"Specify the city\"\r\n              class=\"form-control\"\r\n              #city=\"ngModel\"\r\n            />\r\n          </div>\r\n        </div>\r\n        <button\r\n          class=\"btn btn-success btn-block\"\r\n          type=\"submit\"\r\n          [disabled]=\"!f.valid\"\r\n        >\r\n          Check\r\n        </button>\r\n      </form>\r\n    </div>\r\n    <div class=\"col-xs-6\">\r\n      <div class=\"col-xs-4\"></div>\r\n      <div class=\"col-xs-8\">\r\n        <img src=\"{{ result.icon_url }}\" />\r\n      </div>\r\n      <hr />\r\n      <hr />\r\n      <div class=\"panel panel-default\" *ngIf=\"result !== ''\">\r\n        <div class=\"panel-body\">Weather: {{ result.weather }}</div>\r\n        <div class=\"panel-body\">\r\n          Temprature: {{ result.temperature_string }}\r\n        </div>\r\n        <div class=\"panel-body\">Feels like: {{ result.feelslike_string }}</div>\r\n        <div class=\"panel-body\">Wind: {{ result.wind_string }}</div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <hr />\r\n  <div *ngIf=\"user.role === 'admin'\">\r\n    <button\r\n      class=\"btn btn-warning btn-block\"\r\n      data-toggle=\"modal\"\r\n      data-target=\"#userModal\"\r\n      (click)=\"list('user')\"\r\n    >\r\n      All Users\r\n    </button>\r\n    <button\r\n      class=\"btn btn-warning btn-block\"\r\n      data-toggle=\"modal\"\r\n      data-target=\"#eventModal\"\r\n      (click)=\"list('event')\"\r\n    >\r\n      All Events\r\n    </button>\r\n  </div>\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"myModal\" role=\"dialog\">\r\n    <div class=\"modal-dialog\">\r\n      <!-- Modal content-->\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">\r\n            &times;\r\n          </button>\r\n          <h4 class=\"modal-title\">{{ org.organization }}</h4>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <p>{{ org.intro }}</p>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button\r\n            *ngIf=\"!following && login\"\r\n            (click)=\"follow(user._id, org._id)\"\r\n            class=\"btn btn-lg sw-text-yellow pull-left sw-button-transparent glyphicon glyphicon-star-empty sw-button-transparent\"\r\n          ></button>\r\n          <button\r\n            *ngIf=\"following && login && user.role !== 'organization'\"\r\n            class=\"btn btn-lg sw-text-yellow pull-left sw-button-transparent glyphicon glyphicon-star sw-button-transparent\"\r\n          ></button>\r\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">\r\n            Close\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"userModal\" role=\"dialog\">\r\n    <div class=\"modal-dialog\">\r\n      <!-- Modal content-->\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">\r\n            &times;\r\n          </button>\r\n          <h4 class=\"modal-title\">All Users</h4>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <table class=\"table table-striped\">\r\n            <thead>\r\n              <tr>\r\n                <th>Username</th>\r\n                <th>Role</th>\r\n                <th>Date Created</th>\r\n                <th></th>\r\n              </tr>\r\n            </thead>\r\n            <tbody *ngFor=\"let data of userData\">\r\n              <tr>\r\n                <td>\r\n                  <a\r\n                    (click)=\"selectUser(data._id)\"\r\n                    class=\"btn sw-button-transparent sw-link sw-button-transparent\"\r\n                    >{{ data.username }}</a\r\n                  >\r\n                </td>\r\n                <td>{{ data.role }}</td>\r\n                <td>{{ data.dateCreated }}</td>\r\n                <td>\r\n                  <button class=\"btn pull-right sw-button-transparent\">\r\n                    <span\r\n                      class=\"glyphicon glyphicon-remove sw-text-red\"\r\n                      (click)=\"deleteUser(data._id)\"\r\n                    ></span>\r\n                  </button>\r\n                </td>\r\n              </tr>\r\n            </tbody>\r\n          </table>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button\r\n            routerLink=\"/choose\"\r\n            class=\"btn btn-block\"\r\n            data-dismiss=\"modal\"\r\n          >\r\n            Create New User\r\n          </button>\r\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">\r\n            Close\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"eventModal\" role=\"dialog\">\r\n    <div class=\"modal-dialog\">\r\n      <!-- Modal content-->\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">\r\n            &times;\r\n          </button>\r\n          <h4 class=\"modal-title\">All Events</h4>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <table class=\"table table-striped\">\r\n            <thead>\r\n              <tr>\r\n                <th>Name</th>\r\n                <th>Date Created</th>\r\n                <th></th>\r\n              </tr>\r\n            </thead>\r\n            <tbody *ngFor=\"let data of eventData\">\r\n              <tr>\r\n                <td>\r\n                  <a\r\n                    (click)=\"selectEvent(data._id)\"\r\n                    class=\"btn sw-button-transparent sw-link sw-button-transparent\"\r\n                    >{{ data.name }}</a\r\n                  >\r\n                </td>\r\n                <td>{{ data.dateCreated }}</td>\r\n                <td>\r\n                  <button class=\"btn pull-right sw-button-transparent\">\r\n                    <span\r\n                      class=\"glyphicon glyphicon-remove sw-text-red\"\r\n                      (click)=\"deleteEvent(data._id)\"\r\n                    ></span>\r\n                  </button>\r\n                </td>\r\n              </tr>\r\n            </tbody>\r\n          </table>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">\r\n            Close\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/home/home.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_home_service_client__ = __webpack_require__("../../../../../src/app/services/home.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__ = __webpack_require__("../../../../../src/app/services/shared.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__ = __webpack_require__("../../../../../src/app/services/user.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_event_service_client__ = __webpack_require__("../../../../../src/app/services/event.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_home_service_client__ = __webpack_require__("./src/app/services/home.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__ = __webpack_require__("./src/app/services/shared.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__ = __webpack_require__("./src/app/services/user.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_event_service_client__ = __webpack_require__("./src/app/services/event.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -856,8 +790,8 @@ __decorate([
 HomeComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-home',
-        template: __webpack_require__("../../../../../src/app/components/home/home.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/home/home.component.css")]
+        template: __webpack_require__("./src/app/components/home/home.component.html"),
+        styles: [__webpack_require__("./src/app/components/home/home.component.css")]
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_home_service_client__["a" /* HomeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_home_service_client__["a" /* HomeService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_shared_service_client__["a" /* SharedService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service_client__["a" /* UserService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__services_event_service_client__["a" /* EventService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_event_service_client__["a" /* EventService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */]) === "function" && _f || Object])
 ], HomeComponent);
@@ -867,39 +801,28 @@ var _a, _b, _c, _d, _e, _f;
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/user/choose/choose.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/user/choose/choose.component.html":
+/***/ "./src/app/components/user/choose/choose.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n  <div class=\"container-fluid\">\n    <a routerLink=\"/\"\n       class=\"navbar-header pull-left navbar-brand thick\">\n      <b class=\"sw-text-white\">Athelete</b>\n    </a>\n    <a routerLink=\"/\"\n       class=\"navbar-header pull-left navbar-brand thick\">\n      <b class=\"sw-text-white\">Home</b>\n    </a>\n    <p class=\"navbar-text pull-right\">\n      <button routerLink=\"/login\"\n              *ngIf=\"user === ''\"\n              class=\"btn btn-xs navbar-link sw-button-transparent\">\n        <b>Login</b>\n      </button>\n    </p>\n  </div>\n</nav>\n<div class=\"container\">\n  <hr/>\n  <div class=\"raw\">\n    <div class=\"col-sm-4\">\n      <p>For many runners, the desire to do a marathon is about personal challenge. You might want to test your limits or prove that you can go the distance. Perhaps a friend has talked you into it. Maybe you'd like to lose weight, get healthier or raise awareness for a charity.</p>\n      <button *ngIf=\"user.role !== 'admin'\" (click)=\"runnerRegister()\" class=\"btn btn-info btn-lg btn-block\">Register as runner</button>\n      <button *ngIf=\"user.role === 'admin'\" (click)=\"runnerRegister()\" class=\"btn btn-success btn-lg btn-block\">Create new runner</button>\n    </div>\n    <div class=\"col-sm-4\">\n      <p>Marathon volunteers represent the best that a city has to offer: They’re helpful, enthusiastic, friendly, and proud of our amazing city. Fulfilling a volunteer opportunity on race day is a great way to pay it forward for your future marathon or to show your thanks for a past race.</p>\n      <button *ngIf=\"user.role !== 'admin'\" (click)=\"volunteerRegister()\" class=\"btn btn-info btn-lg btn-block\">Register as volunteer</button>\n      <button *ngIf=\"user.role === 'admin'\" (click)=\"volunteerRegister()\" class=\"btn btn-success btn-lg btn-block\">Create new volunteer</button>\n    </div>\n    <div class=\"col-sm-4\">\n      <p>A successfully planned and executed marathon can raise public awareness, and money, for a worthy cause. The logistics of planning a marathon is vary depending on the type of event. Many of the details involved in planning and hosting popular types of marathons.</p>\n      <button *ngIf=\"user.role !== 'admin'\" (click)=\"organizationRegister()\" class=\"btn btn-info btn-lg btn-block\">Register as organization</button>\n      <button *ngIf=\"user.role === 'admin'\" (click)=\"organizationRegister()\" class=\"btn btn-success btn-lg btn-block\">Create new organization</button>\n    </div>\n  </div>\n</div>\n"
+module.exports = ""
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/user/choose/choose.component.ts":
+/***/ "./src/app/components/user/choose/choose.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <div class=\"container-fluid\">\r\n    <a routerLink=\"/\"\r\n       class=\"navbar-header pull-left navbar-brand thick\">\r\n      <b class=\"sw-text-white\">Athelete</b>\r\n    </a>\r\n    <a routerLink=\"/\"\r\n       class=\"navbar-header pull-left navbar-brand thick\">\r\n      <b class=\"sw-text-white\">Home</b>\r\n    </a>\r\n    <p class=\"navbar-text pull-right\">\r\n      <button routerLink=\"/login\"\r\n              *ngIf=\"user === ''\"\r\n              class=\"btn btn-xs navbar-link sw-button-transparent\">\r\n        <b>Login</b>\r\n      </button>\r\n    </p>\r\n  </div>\r\n</nav>\r\n<div class=\"container\">\r\n  <hr/>\r\n  <div class=\"raw\">\r\n    <div class=\"col-sm-4\">\r\n      <p>For many runners, the desire to do a marathon is about personal challenge. You might want to test your limits or prove that you can go the distance. Perhaps a friend has talked you into it. Maybe you'd like to lose weight, get healthier or raise awareness for a charity.</p>\r\n      <button *ngIf=\"user.role !== 'admin'\" (click)=\"runnerRegister()\" class=\"btn btn-info btn-lg btn-block\">Register as runner</button>\r\n      <button *ngIf=\"user.role === 'admin'\" (click)=\"runnerRegister()\" class=\"btn btn-success btn-lg btn-block\">Create new runner</button>\r\n    </div>\r\n    <div class=\"col-sm-4\">\r\n      <p>Marathon volunteers represent the best that a city has to offer: They’re helpful, enthusiastic, friendly, and proud of our amazing city. Fulfilling a volunteer opportunity on race day is a great way to pay it forward for your future marathon or to show your thanks for a past race.</p>\r\n      <button *ngIf=\"user.role !== 'admin'\" (click)=\"volunteerRegister()\" class=\"btn btn-info btn-lg btn-block\">Register as volunteer</button>\r\n      <button *ngIf=\"user.role === 'admin'\" (click)=\"volunteerRegister()\" class=\"btn btn-success btn-lg btn-block\">Create new volunteer</button>\r\n    </div>\r\n    <div class=\"col-sm-4\">\r\n      <p>A successfully planned and executed marathon can raise public awareness, and money, for a worthy cause. The logistics of planning a marathon is vary depending on the type of event. Many of the details involved in planning and hosting popular types of marathons.</p>\r\n      <button *ngIf=\"user.role !== 'admin'\" (click)=\"organizationRegister()\" class=\"btn btn-info btn-lg btn-block\">Register as organization</button>\r\n      <button *ngIf=\"user.role === 'admin'\" (click)=\"organizationRegister()\" class=\"btn btn-success btn-lg btn-block\">Create new organization</button>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/user/choose/choose.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChooseComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_shared_service_client__ = __webpack_require__("../../../../../src/app/services/shared.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_shared_service_client__ = __webpack_require__("./src/app/services/shared.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -937,8 +860,8 @@ var ChooseComponent = (function () {
 ChooseComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-choose',
-        template: __webpack_require__("../../../../../src/app/components/user/choose/choose.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/user/choose/choose.component.css")]
+        template: __webpack_require__("./src/app/components/user/choose/choose.component.html"),
+        styles: [__webpack_require__("./src/app/components/user/choose/choose.component.css")]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_shared_service_client__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_shared_service_client__["a" /* SharedService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
 ], ChooseComponent);
@@ -948,41 +871,30 @@ var _a, _b;
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/user/login/login.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/user/login/login.component.html":
+/***/ "./src/app/components/user/login/login.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n  <div class=\"container-fluid\">\n    <a routerLink=\"/\"\n       class=\"navbar-header pull-left navbar-brand thick\">\n      <b class=\"sw-text-white\">Athelete</b>\n    </a>\n    <a routerLink=\"/\"\n       class=\"navbar-header pull-left navbar-brand thick\">\n      <b class=\"sw-text-white\">Home</b>\n    </a>\n  </div>\n</nav>\n\n<div class=\"container\">\n  <div *ngIf=\"errorFlag\"\n       class=\"alert alert-danger\" >\n    Invalid username or password!\n  </div>\n  <h1>Login</h1>\n  <form (ngSubmit)=\"login()\"\n        #f =\"ngForm\">\n    <div class=\"form-group\">\n      <input type=\"text\"\n             id=\"username\"\n             name=\"username\"\n             required\n             ngModel\n             placeholder=\"username\"\n             class=\"form-control\"\n             #username=\"ngModel\"/>\n    </div>\n    <span class=\"help-block\"\n          *ngIf=\"!username.valid && username.touched\">Please enter username!</span>\n    <div class=\"form-group\">\n      <input type=\"password\"\n             id=\"password\"\n             name=\"password\"\n             required\n             placeholder=\"password\"\n             ngModel\n             #password=\"ngModel\"\n             class=\"form-control\"/>\n    </div>\n    <span class=\"help-block\" *ngIf=\"!password.valid && password.touched\">Please enter password!</span>\n    <button class=\"btn btn-primary btn-block\"\n       type=\"submit\"\n       [disabled]=\"!f.valid\">Login</button>\n    <a routerLink=\"/facebook/login\" class=\"btn btn-primary btn-block\">\n      <span class=\"fa fa-facebook\"></span>\n      Facebook\n    </a>\n    <button class=\"btn btn-success btn-block\" routerLink=\"/choose\">Register</button>\n  </form>\n</div>\n"
+module.exports = ""
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/user/login/login.component.ts":
+/***/ "./src/app/components/user/login/login.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <div class=\"container-fluid\">\r\n    <a routerLink=\"/\"\r\n       class=\"navbar-header pull-left navbar-brand thick\">\r\n      <b class=\"sw-text-white\">Athelete</b>\r\n    </a>\r\n    <a routerLink=\"/\"\r\n       class=\"navbar-header pull-left navbar-brand thick\">\r\n      <b class=\"sw-text-white\">Home</b>\r\n    </a>\r\n  </div>\r\n</nav>\r\n\r\n<div class=\"container\">\r\n  <div *ngIf=\"errorFlag\"\r\n       class=\"alert alert-danger\" >\r\n    Invalid username or password!\r\n  </div>\r\n  <h1>Login</h1>\r\n  <form (ngSubmit)=\"login()\"\r\n        #f =\"ngForm\">\r\n    <div class=\"form-group\">\r\n      <input type=\"text\"\r\n             id=\"username\"\r\n             name=\"username\"\r\n             required\r\n             ngModel\r\n             placeholder=\"username\"\r\n             class=\"form-control\"\r\n             #username=\"ngModel\"/>\r\n    </div>\r\n    <span class=\"help-block\"\r\n          *ngIf=\"!username.valid && username.touched\">Please enter username!</span>\r\n    <div class=\"form-group\">\r\n      <input type=\"password\"\r\n             id=\"password\"\r\n             name=\"password\"\r\n             required\r\n             placeholder=\"password\"\r\n             ngModel\r\n             #password=\"ngModel\"\r\n             class=\"form-control\"/>\r\n    </div>\r\n    <span class=\"help-block\" *ngIf=\"!password.valid && password.touched\">Please enter password!</span>\r\n    <button class=\"btn btn-primary btn-block\"\r\n       type=\"submit\"\r\n       [disabled]=\"!f.valid\">Login</button>\r\n    <a routerLink=\"/facebook/login\" class=\"btn btn-primary btn-block\">\r\n      <span class=\"fa fa-facebook\"></span>\r\n      Facebook\r\n    </a>\r\n    <button class=\"btn btn-success btn-block\" routerLink=\"/choose\">Register</button>\r\n  </form>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/user/login/login.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__ = __webpack_require__("../../../../../src/app/services/user.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_shared_service_client__ = __webpack_require__("../../../../../src/app/services/shared.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__ = __webpack_require__("./src/app/services/user.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_shared_service_client__ = __webpack_require__("./src/app/services/shared.service.client.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1033,8 +945,8 @@ __decorate([
 LoginComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-login',
-        template: __webpack_require__("../../../../../src/app/components/user/login/login.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/user/login/login.component.css")]
+        template: __webpack_require__("./src/app/components/user/login/login.component.html"),
+        styles: [__webpack_require__("./src/app/components/user/login/login.component.css")]
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__services_shared_service_client__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_shared_service_client__["a" /* SharedService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _d || Object])
 ], LoginComponent);
@@ -1044,39 +956,28 @@ var _a, _b, _c, _d;
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/user/profile/detail/detail.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/user/profile/detail/detail.component.html":
+/***/ "./src/app/components/user/profile/detail/detail.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "\n<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n  <div class=\"container-fluid\">\n    <a routerLink=\"/\"\n       class=\"navbar-header pull-left navbar-brand thick\">\n      <b class=\"sw-text-white\">Home</b>\n    </a>\n    <a routerLink=\"/user\"\n       class=\"navbar-header pull-left navbar-brand thick\">\n      <b class=\"sw-text-white\">Profile</b>\n    </a>\n  </div>\n</nav>\n\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-xs-2\">\n    </div>\n    <div class=\"col-xs-8\">\n      <form (ngSubmit)=\"update()\"\n            #f =\"ngForm\"\n            id=\"profileForm\">\n        <div class=\"form-group\">\n          <label for=\"username\">Username</label>\n          <input type=\"text\"\n                 class=\"form-control\"\n                 id=\"username\"\n                 name=\"username\"\n                 readonly\n                 #username=\"ngModel\"\n                 ngModel=\"{{user.username}}\">\n        </div>\n        <span class=\"help-block\"\n              *ngIf=\"!username.valid && username.touched\">Username can't be empty!</span>\n\n        <div class=\"form-group\">\n          <label for=\"email\">Email address</label>\n          <input type=\"email\"\n                 class=\"form-control\"\n                 id=\"email\"\n                 name=\"email\"\n                 email\n                 readonly\n                 ngModel=\"{{user.email}}\"\n                 #email=\"ngModel\">\n        </div>\n        <div class=\"form-group\">\n          <label for=\"firstName\">First Name</label>\n          <input type=\"text\"\n                 class=\"form-control\"\n                 id=\"firstName\"\n                 name=\"firstName\"\n                 readonly\n                 ngModel=\"{{user.firstName}}\"\n                 #firstName=\"ngModel\">\n        </div>\n        <div class=\"form-group\">\n          <label for=\"lastName\">Last Name</label>\n          <input type=\"text\"\n                 class=\"form-control\"\n                 id=\"lastName\"\n                 name=\"lastName\"\n                 readonly\n                 ngModel=\"{{user.lastName}}\"\n                 #lastName=\"ngModel\">\n        </div>\n        <div class=\"form-group\">\n          <label for=\"gender\">Gender</label>\n          <input type=\"text\"\n                 id=\"gender\"\n                 readonly\n                 name=\"gender\"\n                 [(ngModel)]=\"user.gender\"\n                 #gender=\"ngModel\"\n                 class=\"form-control\">\n        </div>\n        <div class=\"form-group\">\n          <label for=\"intro\">Short Introduction</label>\n          <textarea type=\"text\"\n                    id=\"intro\"\n                    name=\"intro\"\n                    ngModel=\"{{user.intro}}\"\n                    #intro=\"ngModel\"\n                    rows=\"3\"\n                    readonly\n                    class=\"form-control\"></textarea>\n        </div>\n      </form>\n    </div>\n    <div class=\"col-xs-2\">\n    </div>\n  </div>\n</div>\n\n<!-- Footer -->\n<nav class=\"navbar navbar-inverse navbar-fixed-bottom\">\n  <div class=\"container-fluid\">\n    <a routerLink=\"/user\"\n       class=\"navbar-text pull-right\">\n      <span class=\"glyphicon glyphicon-user sw-text-white\"></span>\n    </a>\n  </div>\n</nav>\n"
+module.exports = ""
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/user/profile/detail/detail.component.ts":
+/***/ "./src/app/components/user/profile/detail/detail.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <div class=\"container-fluid\">\r\n    <a routerLink=\"/\"\r\n       class=\"navbar-header pull-left navbar-brand thick\">\r\n      <b class=\"sw-text-white\">Home</b>\r\n    </a>\r\n    <a routerLink=\"/user\"\r\n       class=\"navbar-header pull-left navbar-brand thick\">\r\n      <b class=\"sw-text-white\">Profile</b>\r\n    </a>\r\n  </div>\r\n</nav>\r\n\r\n<div class=\"container-fluid\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xs-2\">\r\n    </div>\r\n    <div class=\"col-xs-8\">\r\n      <form (ngSubmit)=\"update()\"\r\n            #f =\"ngForm\"\r\n            id=\"profileForm\">\r\n        <div class=\"form-group\">\r\n          <label for=\"username\">Username</label>\r\n          <input type=\"text\"\r\n                 class=\"form-control\"\r\n                 id=\"username\"\r\n                 name=\"username\"\r\n                 readonly\r\n                 #username=\"ngModel\"\r\n                 ngModel=\"{{user.username}}\">\r\n        </div>\r\n        <span class=\"help-block\"\r\n              *ngIf=\"!username.valid && username.touched\">Username can't be empty!</span>\r\n\r\n        <div class=\"form-group\">\r\n          <label for=\"email\">Email address</label>\r\n          <input type=\"email\"\r\n                 class=\"form-control\"\r\n                 id=\"email\"\r\n                 name=\"email\"\r\n                 email\r\n                 readonly\r\n                 ngModel=\"{{user.email}}\"\r\n                 #email=\"ngModel\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"firstName\">First Name</label>\r\n          <input type=\"text\"\r\n                 class=\"form-control\"\r\n                 id=\"firstName\"\r\n                 name=\"firstName\"\r\n                 readonly\r\n                 ngModel=\"{{user.firstName}}\"\r\n                 #firstName=\"ngModel\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"lastName\">Last Name</label>\r\n          <input type=\"text\"\r\n                 class=\"form-control\"\r\n                 id=\"lastName\"\r\n                 name=\"lastName\"\r\n                 readonly\r\n                 ngModel=\"{{user.lastName}}\"\r\n                 #lastName=\"ngModel\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"gender\">Gender</label>\r\n          <input type=\"text\"\r\n                 id=\"gender\"\r\n                 readonly\r\n                 name=\"gender\"\r\n                 [(ngModel)]=\"user.gender\"\r\n                 #gender=\"ngModel\"\r\n                 class=\"form-control\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"intro\">Short Introduction</label>\r\n          <textarea type=\"text\"\r\n                    id=\"intro\"\r\n                    name=\"intro\"\r\n                    ngModel=\"{{user.intro}}\"\r\n                    #intro=\"ngModel\"\r\n                    rows=\"3\"\r\n                    readonly\r\n                    class=\"form-control\"></textarea>\r\n        </div>\r\n      </form>\r\n    </div>\r\n    <div class=\"col-xs-2\">\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Footer -->\r\n<nav class=\"navbar navbar-inverse navbar-fixed-bottom\">\r\n  <div class=\"container-fluid\">\r\n    <a routerLink=\"/user\"\r\n       class=\"navbar-text pull-right\">\r\n      <span class=\"glyphicon glyphicon-user sw-text-white\"></span>\r\n    </a>\r\n  </div>\r\n</nav>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/user/profile/detail/detail.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetailComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__ = __webpack_require__("../../../../../src/app/services/user.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__ = __webpack_require__("./src/app/services/user.service.client.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1120,8 +1021,8 @@ var DetailComponent = (function () {
 DetailComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-detail',
-        template: __webpack_require__("../../../../../src/app/components/user/profile/detail/detail.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/user/profile/detail/detail.component.css")]
+        template: __webpack_require__("./src/app/components/user/profile/detail/detail.component.html"),
+        styles: [__webpack_require__("./src/app/components/user/profile/detail/detail.component.css")]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__["a" /* UserService */]) === "function" && _b || Object])
 ], DetailComponent);
@@ -1131,42 +1032,31 @@ var _a, _b;
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/user/profile/profile.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".sw-nav-blue {\r\n  background-color: #337ab7;\r\n}\r\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/user/profile/profile.component.html":
+/***/ "./src/app/components/user/profile/profile.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "\n<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n  <div class=\"container-fluid\">\n    <a routerLink=\"/\"\n       class=\"navbar-header pull-left navbar-brand thick\">\n      <b class=\"sw-text-white\">Home</b>\n    </a>\n    <a routerLink=\"/user\"\n       class=\"navbar-header pull-left navbar-brand thick\">\n      <b class=\"sw-text-white\">Profile</b>\n    </a>\n\n    <!--tick mark-->\n    <p class=\"navbar-text pull-right\">\n      <button type=\"submit\"\n              [disabled]=\"!f.valid\"\n              form=\"profileForm\"\n              class=\"btn btn-xs navbar-link sw-button-transparent\">\n        <span class=\"glyphicon glyphicon-ok sw-text-white\"></span>\n      </button>\n    </p>\n  </div>\n</nav>\n\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-xs-2\">\n      <div class=\"panel panel-info\" *ngIf=\"user.role !== 'organization'\">\n        <div class = \"panel-heading\">\n          <h3 class = \"panel-title\">Following Organization</h3>\n        </div>\n        <ul class=\"list-group\">\n          <li class=\"list-group-item sw-borderless\"\n              *ngFor=\"let org of orgs\">\n            <button class=\"btn sw-button-transparent\" routerLink=\"/user/{{org._id}}/event\">{{org.organization}}</button>\n            <button class=\"btn pull-right sw-button-transparent\">\n              <span class=\"glyphicon glyphicon-star sw-text-yellow\"\n                    (click)=\"unfollow(uid, org._id)\"></span>\n            </button>\n          </li>\n        </ul>\n      </div>\n    </div>\n    <div class=\"col-xs-8\">\n      <div *ngIf=\"usernameTaken\"\n           class=\"alert alert-danger\" >\n        Username was taken!\n      </div>\n      <div *ngIf=\"submitSuccess\"\n           class=\"alert alert-success\" >\n        Submit successfully!\n      </div>\n      <form (ngSubmit)=\"update()\"\n            #f =\"ngForm\"\n            id=\"profileForm\">\n        <div class=\"form-group\">\n          <label for=\"username\">Username</label>\n          <input type=\"text\"\n                 class=\"form-control\"\n                 id=\"username\"\n                 name=\"username\"\n                 required\n                 #username=\"ngModel\"\n                 ngModel=\"{{user.username}}\"\n                 placeholder=\"username\">\n        </div>\n        <span class=\"help-block\"\n              *ngIf=\"!username.valid && username.touched\">Username can't be empty!</span>\n\n        <div class=\"form-group\">\n          <label for=\"email\">Email address</label>\n          <input type=\"email\"\n                 class=\"form-control\"\n                 id=\"email\"\n                 name=\"email\"\n                 email\n                 ngModel=\"{{user.email}}\"\n                 #email=\"ngModel\"\n                 placeholder=\"alice.wonderland@unicorn.com\">\n        </div>\n        <span class=\"help-block\"\n              *ngIf=\"!email.valid && email.touched\">Invalid email!</span>\n        <div class=\"form-group\"\n             *ngIf=\"role !=='organization'\">\n          <label for=\"firstName\">First Name</label>\n          <input type=\"text\"\n                 class=\"form-control\"\n                 id=\"firstName\"\n                 name=\"firstName\"\n                 ngModel=\"{{user.firstName}}\"\n                 #firstName=\"ngModel\"\n                 placeholder=\"Alice\">\n        </div>\n        <div class=\"form-group\"\n             *ngIf=\"role !=='organization'\">\n          <label for=\"lastName\">Last Name</label>\n          <input type=\"text\"\n                 class=\"form-control\"\n                 id=\"lastName\"\n                 name=\"lastName\"\n                 ngModel=\"{{user.lastName}}\"\n                 #lastName=\"ngModel\"\n                 placeholder=\"Wonderland\">\n        </div>\n        <div class=\"form-group\"\n             *ngIf=\"role !=='organization'\">\n          <label for=\"gender\">Gender</label>\n          <select type=\"text\"\n                  id=\"gender\"\n                  name=\"gender\"\n                  [(ngModel)]=\"user.gender\"\n                  #gender=\"ngModel\"\n                  placeholder=\"Gender\"\n                  class=\"form-control\">\n            <option value='male'>Male</option>\n            <option value='female'>Female</option>\n            <option value='secret'>Not Specified</option>\n          </select>\n        </div>\n        <div class=\"form-group\"\n             *ngIf=\"role ==='organization'\">\n          <label for=\"organization\">Organization Name</label>\n          <input type=\"text\"\n                 id=\"organization\"\n                 name=\"organization\"\n                 ngModel=\"{{user.organization}}\"\n                 #organization=\"ngModel\"\n                 placeholder=\"Organization Name\"\n                 class=\"form-control\"/>\n        </div>\n        <div class=\"form-group\">\n          <label for=\"intro\">Short Introduction</label>\n          <textarea type=\"text\"\n                    id=\"intro\"\n                    name=\"intro\"\n                    ngModel=\"{{user.intro}}\"\n                    #intro=\"ngModel\"\n                    placeholder=\"Short introduction\"\n                    rows=\"3\"\n                    class=\"form-control\"></textarea>\n        </div>\n      </form>\n\n      <a class=\"btn btn-primary btn-block\"\n         *ngIf=\"role === 'organization'\"\n         routerLink=\"/user/{{uid}}/event\">Events</a>\n      <a class=\"btn btn-danger btn-block\"\n         (click)=\"logout()\">Logout</a>\n    </div>\n    <div class=\"col-xs-2\">\n      <div class=\"panel panel-info\" *ngIf=\"user.role !== 'organization'\">\n        <div class = \"panel-heading\">\n          <h3 class = \"panel-title\">Registered Events</h3>\n        </div>\n        <ul class=\"list-group\">\n          <li class=\"list-group-item sw-borderless\"\n              *ngFor=\"let eve of eves\">\n            <button class=\"btn sw-button-transparent\" routerLink=\"/user/{{eve.orgId}}/event/{{eve._id}}/detail\">{{eve.name}}</button>\n            <button class=\"btn pull-right sw-button-transparent\">\n              <span class=\"glyphicon glyphicon-remove sw-text-red\"\n                    (click)=\"cancel(uid, eve._id)\"></span>\n            </button>\n          </li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- Footer -->\n<nav class=\"navbar navbar-inverse navbar-fixed-bottom\">\n  <div class=\"container-fluid\">\n    <a routerLink=\"/user\"\n       class=\"navbar-text pull-right\">\n      <span class=\"glyphicon glyphicon-user sw-text-white\"></span>\n    </a>\n  </div>\n</nav>\n"
+module.exports = ".sw-nav-blue {\r\n  background-color: #337ab7;\r\n}\r\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/user/profile/profile.component.ts":
+/***/ "./src/app/components/user/profile/profile.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <div class=\"container-fluid\">\r\n    <a routerLink=\"/\"\r\n       class=\"navbar-header pull-left navbar-brand thick\">\r\n      <b class=\"sw-text-white\">Home</b>\r\n    </a>\r\n    <a routerLink=\"/user\"\r\n       class=\"navbar-header pull-left navbar-brand thick\">\r\n      <b class=\"sw-text-white\">Profile</b>\r\n    </a>\r\n\r\n    <!--tick mark-->\r\n    <p class=\"navbar-text pull-right\">\r\n      <button type=\"submit\"\r\n              [disabled]=\"!f.valid\"\r\n              form=\"profileForm\"\r\n              class=\"btn btn-xs navbar-link sw-button-transparent\">\r\n        <span class=\"glyphicon glyphicon-ok sw-text-white\"></span>\r\n      </button>\r\n    </p>\r\n  </div>\r\n</nav>\r\n\r\n<div class=\"container-fluid\">\r\n  <div class=\"row\">\r\n    <div class=\"col-xs-2\">\r\n      <div class=\"panel panel-info\" *ngIf=\"user.role !== 'organization'\">\r\n        <div class = \"panel-heading\">\r\n          <h3 class = \"panel-title\">Following Organization</h3>\r\n        </div>\r\n        <ul class=\"list-group\">\r\n          <li class=\"list-group-item sw-borderless\"\r\n              *ngFor=\"let org of orgs\">\r\n            <button class=\"btn sw-button-transparent\" routerLink=\"/user/{{org._id}}/event\">{{org.organization}}</button>\r\n            <button class=\"btn pull-right sw-button-transparent\">\r\n              <span class=\"glyphicon glyphicon-star sw-text-yellow\"\r\n                    (click)=\"unfollow(uid, org._id)\"></span>\r\n            </button>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-xs-8\">\r\n      <div *ngIf=\"usernameTaken\"\r\n           class=\"alert alert-danger\" >\r\n        Username was taken!\r\n      </div>\r\n      <div *ngIf=\"submitSuccess\"\r\n           class=\"alert alert-success\" >\r\n        Submit successfully!\r\n      </div>\r\n      <form (ngSubmit)=\"update()\"\r\n            #f =\"ngForm\"\r\n            id=\"profileForm\">\r\n        <div class=\"form-group\">\r\n          <label for=\"username\">Username</label>\r\n          <input type=\"text\"\r\n                 class=\"form-control\"\r\n                 id=\"username\"\r\n                 name=\"username\"\r\n                 required\r\n                 #username=\"ngModel\"\r\n                 ngModel=\"{{user.username}}\"\r\n                 placeholder=\"username\">\r\n        </div>\r\n        <span class=\"help-block\"\r\n              *ngIf=\"!username.valid && username.touched\">Username can't be empty!</span>\r\n\r\n        <div class=\"form-group\">\r\n          <label for=\"email\">Email address</label>\r\n          <input type=\"email\"\r\n                 class=\"form-control\"\r\n                 id=\"email\"\r\n                 name=\"email\"\r\n                 email\r\n                 ngModel=\"{{user.email}}\"\r\n                 #email=\"ngModel\"\r\n                 placeholder=\"alice.wonderland@unicorn.com\">\r\n        </div>\r\n        <span class=\"help-block\"\r\n              *ngIf=\"!email.valid && email.touched\">Invalid email!</span>\r\n        <div class=\"form-group\"\r\n             *ngIf=\"role !=='organization'\">\r\n          <label for=\"firstName\">First Name</label>\r\n          <input type=\"text\"\r\n                 class=\"form-control\"\r\n                 id=\"firstName\"\r\n                 name=\"firstName\"\r\n                 ngModel=\"{{user.firstName}}\"\r\n                 #firstName=\"ngModel\"\r\n                 placeholder=\"Alice\">\r\n        </div>\r\n        <div class=\"form-group\"\r\n             *ngIf=\"role !=='organization'\">\r\n          <label for=\"lastName\">Last Name</label>\r\n          <input type=\"text\"\r\n                 class=\"form-control\"\r\n                 id=\"lastName\"\r\n                 name=\"lastName\"\r\n                 ngModel=\"{{user.lastName}}\"\r\n                 #lastName=\"ngModel\"\r\n                 placeholder=\"Wonderland\">\r\n        </div>\r\n        <div class=\"form-group\"\r\n             *ngIf=\"role !=='organization'\">\r\n          <label for=\"gender\">Gender</label>\r\n          <select type=\"text\"\r\n                  id=\"gender\"\r\n                  name=\"gender\"\r\n                  [(ngModel)]=\"user.gender\"\r\n                  #gender=\"ngModel\"\r\n                  placeholder=\"Gender\"\r\n                  class=\"form-control\">\r\n            <option value='male'>Male</option>\r\n            <option value='female'>Female</option>\r\n            <option value='secret'>Not Specified</option>\r\n          </select>\r\n        </div>\r\n        <div class=\"form-group\"\r\n             *ngIf=\"role ==='organization'\">\r\n          <label for=\"organization\">Organization Name</label>\r\n          <input type=\"text\"\r\n                 id=\"organization\"\r\n                 name=\"organization\"\r\n                 ngModel=\"{{user.organization}}\"\r\n                 #organization=\"ngModel\"\r\n                 placeholder=\"Organization Name\"\r\n                 class=\"form-control\"/>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"intro\">Short Introduction</label>\r\n          <textarea type=\"text\"\r\n                    id=\"intro\"\r\n                    name=\"intro\"\r\n                    ngModel=\"{{user.intro}}\"\r\n                    #intro=\"ngModel\"\r\n                    placeholder=\"Short introduction\"\r\n                    rows=\"3\"\r\n                    class=\"form-control\"></textarea>\r\n        </div>\r\n      </form>\r\n\r\n      <a class=\"btn btn-primary btn-block\"\r\n         *ngIf=\"role === 'organization'\"\r\n         routerLink=\"/user/{{uid}}/event\">Events</a>\r\n      <a class=\"btn btn-danger btn-block\"\r\n         (click)=\"logout()\">Logout</a>\r\n    </div>\r\n    <div class=\"col-xs-2\">\r\n      <div class=\"panel panel-info\" *ngIf=\"user.role !== 'organization'\">\r\n        <div class = \"panel-heading\">\r\n          <h3 class = \"panel-title\">Registered Events</h3>\r\n        </div>\r\n        <ul class=\"list-group\">\r\n          <li class=\"list-group-item sw-borderless\"\r\n              *ngFor=\"let eve of eves\">\r\n            <button class=\"btn sw-button-transparent\" routerLink=\"/user/{{eve.orgId}}/event/{{eve._id}}/detail\">{{eve.name}}</button>\r\n            <button class=\"btn pull-right sw-button-transparent\">\r\n              <span class=\"glyphicon glyphicon-remove sw-text-red\"\r\n                    (click)=\"cancel(uid, eve._id)\"></span>\r\n            </button>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Footer -->\r\n<nav class=\"navbar navbar-inverse navbar-fixed-bottom\">\r\n  <div class=\"container-fluid\">\r\n    <a routerLink=\"/user\"\r\n       class=\"navbar-text pull-right\">\r\n      <span class=\"glyphicon glyphicon-user sw-text-white\"></span>\r\n    </a>\r\n  </div>\r\n</nav>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/user/profile/profile.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__ = __webpack_require__("../../../../../src/app/services/user.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_shared_service_client__ = __webpack_require__("../../../../../src/app/services/shared.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_event_service_client__ = __webpack_require__("../../../../../src/app/services/event.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__ = __webpack_require__("./src/app/services/user.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_shared_service_client__ = __webpack_require__("./src/app/services/shared.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_event_service_client__ = __webpack_require__("./src/app/services/event.service.client.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1302,8 +1192,8 @@ __decorate([
 ProfileComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-profile',
-        template: __webpack_require__("../../../../../src/app/components/user/profile/profile.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/user/profile/profile.component.css")]
+        template: __webpack_require__("./src/app/components/user/profile/profile.component.html"),
+        styles: [__webpack_require__("./src/app/components/user/profile/profile.component.css")]
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__services_shared_service_client__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_shared_service_client__["a" /* SharedService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_5__services_event_service_client__["a" /* EventService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_event_service_client__["a" /* EventService */]) === "function" && _f || Object])
 ], ProfileComponent);
@@ -1313,41 +1203,30 @@ var _a, _b, _c, _d, _e, _f;
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/user/register/register.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/user/register/register.component.html":
+/***/ "./src/app/components/user/register/register.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n  <div class=\"container-fluid\">\n    <a routerLink=\"/\"\n       class=\"navbar-header pull-left navbar-brand thick\">\n      <b class=\"sw-text-white\">Athelete</b>\n    </a>\n    <a routerLink=\"/\"\n       class=\"navbar-header pull-left navbar-brand thick\">\n      <b class=\"sw-text-white\">Home</b>\n    </a>\n  </div>\n</nav>\n\n<div class=\"container\">\n  <div *ngIf=\"usernameError\"\n       class=\"alert alert-danger\" >\n    Username was taken!\n  </div>\n  <div *ngIf=\"passwordError\"\n       class=\"alert alert-danger\" >\n    Two passwords are not match!\n  </div>\n  <h1>Register</h1>\n  <form (ngSubmit)=\"register()\"\n        #f =\"ngForm\">\n    <div class=\"form-group\">\n      <input type=\"text\"\n             id=\"username\"\n             name=\"username\"\n             required\n             ngModel\n             #username=\"ngModel\"\n             placeholder=\"username\"\n             class=\"form-control\"/>\n    </div>\n    <span class=\"help-block\"\n          *ngIf=\"!username.valid && username.touched\">Please enter username!</span>\n    <div class=\"form-group\">\n      <input type=\"password\"\n             id=\"password\"\n             name=\"password\"\n             required\n             ngModel\n             #password=\"ngModel\"\n             placeholder=\"password\"\n             class=\"form-control\"/>\n    </div>\n    <span class=\"help-block\"\n          *ngIf=\"!password.valid && password.touched\">Please enter password!</span>\n    <div class=\"form-group\">\n      <input type=\"password\"\n             id=\"verifyPassword\"\n             name=\"verifyPassword\"\n             required\n             ngModel\n             #verifyPassword=\"ngModel\"\n             placeholder=\"verify password\"\n             class=\"form-control\"/>\n    </div>\n    <span class=\"help-block\"\n          *ngIf=\"!verifyPassword.valid && verifyPassword.touched\">Please verify username!</span>\n    <button class=\"btn btn-primary btn-block\"\n       type=\"submit\"\n       [disabled]=\"!f.valid\">Register</button>\n    <button class=\"btn btn-danger btn-block\"\n       routerLink=\"/choose\" >Cancel</button>\n  </form>\n</div>\n"
+module.exports = ""
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/user/register/register.component.ts":
+/***/ "./src/app/components/user/register/register.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <div class=\"container-fluid\">\r\n    <a routerLink=\"/\"\r\n       class=\"navbar-header pull-left navbar-brand thick\">\r\n      <b class=\"sw-text-white\">Athelete</b>\r\n    </a>\r\n    <a routerLink=\"/\"\r\n       class=\"navbar-header pull-left navbar-brand thick\">\r\n      <b class=\"sw-text-white\">Home</b>\r\n    </a>\r\n  </div>\r\n</nav>\r\n\r\n<div class=\"container\">\r\n  <div *ngIf=\"usernameError\"\r\n       class=\"alert alert-danger\" >\r\n    Username was taken!\r\n  </div>\r\n  <div *ngIf=\"passwordError\"\r\n       class=\"alert alert-danger\" >\r\n    Two passwords are not match!\r\n  </div>\r\n  <h1>Register</h1>\r\n  <form (ngSubmit)=\"register()\"\r\n        #f =\"ngForm\">\r\n    <div class=\"form-group\">\r\n      <input type=\"text\"\r\n             id=\"username\"\r\n             name=\"username\"\r\n             required\r\n             ngModel\r\n             #username=\"ngModel\"\r\n             placeholder=\"username\"\r\n             class=\"form-control\"/>\r\n    </div>\r\n    <span class=\"help-block\"\r\n          *ngIf=\"!username.valid && username.touched\">Please enter username!</span>\r\n    <div class=\"form-group\">\r\n      <input type=\"password\"\r\n             id=\"password\"\r\n             name=\"password\"\r\n             required\r\n             ngModel\r\n             #password=\"ngModel\"\r\n             placeholder=\"password\"\r\n             class=\"form-control\"/>\r\n    </div>\r\n    <span class=\"help-block\"\r\n          *ngIf=\"!password.valid && password.touched\">Please enter password!</span>\r\n    <div class=\"form-group\">\r\n      <input type=\"password\"\r\n             id=\"verifyPassword\"\r\n             name=\"verifyPassword\"\r\n             required\r\n             ngModel\r\n             #verifyPassword=\"ngModel\"\r\n             placeholder=\"verify password\"\r\n             class=\"form-control\"/>\r\n    </div>\r\n    <span class=\"help-block\"\r\n          *ngIf=\"!verifyPassword.valid && verifyPassword.touched\">Please verify username!</span>\r\n    <button class=\"btn btn-primary btn-block\"\r\n       type=\"submit\"\r\n       [disabled]=\"!f.valid\">Register</button>\r\n    <button class=\"btn btn-danger btn-block\"\r\n       routerLink=\"/choose\" >Cancel</button>\r\n  </form>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/user/register/register.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__ = __webpack_require__("../../../../../src/app/services/user.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_shared_service_client__ = __webpack_require__("../../../../../src/app/services/shared.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__ = __webpack_require__("./src/app/services/user.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_shared_service_client__ = __webpack_require__("./src/app/services/shared.service.client.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1399,8 +1278,8 @@ __decorate([
 RegisterComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-register',
-        template: __webpack_require__("../../../../../src/app/components/user/register/register.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/user/register/register.component.css")]
+        template: __webpack_require__("./src/app/components/user/register/register.component.html"),
+        styles: [__webpack_require__("./src/app/components/user/register/register.component.css")]
     }),
     __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__services_shared_service_client__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_shared_service_client__["a" /* SharedService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service_client__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _d || Object])
 ], RegisterComponent);
@@ -1410,13 +1289,13 @@ var _a, _b, _c, _d;
 
 /***/ }),
 
-/***/ "../../../../../src/app/services/authentication.service.client.ts":
+/***/ "./src/app/services/authentication.service.client.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthenticationService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user_service_client__ = __webpack_require__("../../../../../src/app/services/user.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__user_service_client__ = __webpack_require__("./src/app/services/user.service.client.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1447,15 +1326,16 @@ var _a;
 
 /***/ }),
 
-/***/ "../../../../../src/app/services/event.service.client.ts":
+/***/ "./src/app/services/event.service.client.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__("../../../../rxjs/_esm5/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("./node_modules/@angular/http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__("./node_modules/rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1554,14 +1434,15 @@ var _a;
 
 /***/ }),
 
-/***/ "../../../../../src/app/services/home.service.client.ts":
+/***/ "./src/app/services/home.service.client.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__("../../../../rxjs/_esm5/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__("./node_modules/@angular/http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__("./node_modules/rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1597,12 +1478,12 @@ var _a;
 
 /***/ }),
 
-/***/ "../../../../../src/app/services/shared.service.client.ts":
+/***/ "./src/app/services/shared.service.client.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SharedService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1625,17 +1506,18 @@ SharedService = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/services/user.service.client.ts":
+/***/ "./src/app/services/user.service.client.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__("../../../../rxjs/_esm5/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_service_client__ = __webpack_require__("../../../../../src/app/services/shared.service.client.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("./node_modules/@angular/http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__("./node_modules/rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_service_client__ = __webpack_require__("./src/app/services/shared.service.client.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1833,28 +1715,33 @@ var _a, _b, _c;
 
 /***/ }),
 
-/***/ "../../../../../src/environments/environment.ts":
+/***/ "./src/environments/environment.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+// The file contents for the current environment will overwrite these during build.
+// The build system defaults to the dev environment which uses `environment.ts`, but if you do
+// `ng build --env=prod` then `environment.prod.ts` will be used instead.
+// The list of which env maps to which file can be found in `.angular-cli.json`.
+// The file contents for the current environment will overwrite these during build.
 var environment = {
-    production: true,
-    baseUrl: ''
+    production: false,
+    baseUrl: 'http://localhost:3100'
 };
 //# sourceMappingURL=environment.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/main.ts":
+/***/ "./src/main.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("../../../../../src/app/app.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("./node_modules/@angular/platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("./src/app/app.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
 
 
 
@@ -1870,7 +1757,7 @@ Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* pl
 /***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("../../../../../src/main.ts");
+module.exports = __webpack_require__("./src/main.ts");
 
 
 /***/ })
